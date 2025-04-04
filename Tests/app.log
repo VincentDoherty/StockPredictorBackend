@@ -1,2 +1,115 @@
-ERROR:root:Error during login: name 'password' is not defined
-ERROR:root:Error during login: name 'password' is not defined
+DEBUG:root:Received stock symbol: GOOGL
+DEBUG:root:Existing data columns: Index(['date', 'close'], dtype='object')
+DEBUG:yfinance:Entering download()
+DEBUG:yfinance:Disabling multithreading because DEBUG logging enabled
+DEBUG:yfinance:Using User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36
+DEBUG:yfinance: Entering history()
+DEBUG:peewee:('CREATE TABLE IF NOT EXISTS "_kv" ("key" VARCHAR(255) NOT NULL PRIMARY KEY, "value" VARCHAR(255)) WITHOUT ROWID', [])
+DEBUG:peewee:('SELECT "t1"."key", "t1"."value" FROM "_kv" AS "t1" WHERE ("t1"."key" = ?) LIMIT ? OFFSET ?', ['GOOGL', 1, 0])
+DEBUG:yfinance:  Entering history()
+DEBUG:yfinance:GOOGL: Yahoo GET parameters: {'period1': '2020-01-01 00:00:00-05:00', 'period2': '2025-04-04 00:00:00-04:00', 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+DEBUG:yfinance:   Entering get()
+DEBUG:yfinance:    Entering _make_request()
+DEBUG:yfinance:url=https://query2.finance.yahoo.com/v8/finance/chart/GOOGL
+DEBUG:yfinance:params=frozendict.frozendict({'period1': 1577854800, 'period2': 1743739200, 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'})
+DEBUG:yfinance:     Entering _get_cookie_and_crumb()
+DEBUG:yfinance:cookie_mode = 'basic'
+DEBUG:yfinance:      Entering _get_cookie_and_crumb_basic()
+DEBUG:peewee:('CREATE TABLE IF NOT EXISTS "_cookieschema" ("strategy" VARCHAR(255) NOT NULL PRIMARY KEY, "fetch_date" DATETIME NOT NULL, "cookie_bytes" BLOB NOT NULL) WITHOUT ROWID', [])
+DEBUG:peewee:('SELECT "t1"."strategy", "t1"."fetch_date", "t1"."cookie_bytes" FROM "_cookieschema" AS "t1" WHERE ("t1"."strategy" = ?) LIMIT ? OFFSET ?', ['basic', 1, 0])
+DEBUG:yfinance:loaded persistent cookie
+DEBUG:yfinance:reusing cookie
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): query1.finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://query1.finance.yahoo.com:443 "GET /v1/test/getcrumb HTTP/1.1" 200 11
+DEBUG:yfinance:crumb = 'uMDJ1T0vN67'
+DEBUG:yfinance:      Exiting _get_cookie_and_crumb_basic()
+DEBUG:yfinance:     Exiting _get_cookie_and_crumb()
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): query2.finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://query2.finance.yahoo.com:443 "GET /v8/finance/chart/GOOGL?period1=1577854800&period2=1743739200&interval=1d&includePrePost=False&events=div%2Csplits%2CcapitalGains&crumb=uMDJ1T0vN67 HTTP/1.1" 200 None
+DEBUG:yfinance:response code=200
+DEBUG:yfinance:    Exiting _make_request()
+DEBUG:yfinance:   Exiting get()
+DEBUG:yfinance:GOOGL: yfinance received OHLC data: 2020-01-02 14:30:00 -> 2025-04-03 13:30:00
+DEBUG:yfinance:GOOGL: OHLC after cleaning: 2020-01-02 09:30:00-05:00 -> 2025-04-03 09:30:00-04:00
+DEBUG:yfinance:GOOGL: OHLC after combining events: 2020-01-02 00:00:00-05:00 -> 2025-04-03 00:00:00-04:00
+DEBUG:yfinance:GOOGL: yfinance returning OHLC: 2020-01-02 00:00:00-05:00 -> 2025-04-03 00:00:00-04:00
+DEBUG:yfinance:  Exiting history()
+DEBUG:yfinance: Exiting history()
+DEBUG:yfinance:Exiting download()
+DEBUG:root:New data columns: MultiIndex([('Adj Close', 'GOOGL'),
+            (    'Close', 'GOOGL'),
+            (     'High', 'GOOGL'),
+            (      'Low', 'GOOGL'),
+            (     'Open', 'GOOGL'),
+            (   'Volume', 'GOOGL')],
+           names=['Price', 'Ticker'])
+DEBUG:root:Final existing data columns: Index(['date', 'close', 'Close'], dtype='object')
+ERROR:root:Error in /stock endpoint: module 'keras.src.callbacks.early_stopping' has no attribute 'set_model'
+Traceback (most recent call last):
+  File "C:\Users\vpjd8\PycharmProjects\StockPredictorBackend\routes.py", line 63, in stock
+    retrain_model(stock_symbol)
+  File "C:\Users\vpjd8\PycharmProjects\StockPredictorBackend\retrain_model.py", line 53, in retrain_model
+    model.fit(train_data, target_data, epochs=10, batch_size=32, callbacks=[early_stopping])
+  File "C:\Users\vpjd8\PycharmProjects\StockPredictorBackend\venv\Lib\site-packages\keras\src\utils\traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\vpjd8\PycharmProjects\StockPredictorBackend\venv\Lib\site-packages\keras\src\callbacks\callback_list.py", line 114, in set_model
+    callback.set_model(model)
+    ^^^^^^^^^^^^^^^^^^
+AttributeError: module 'keras.src.callbacks.early_stopping' has no attribute 'set_model'
+DEBUG:root:Received stock symbol: GOOGL
+DEBUG:root:Existing data columns: Index(['date', 'close'], dtype='object')
+DEBUG:yfinance:Entering download()
+DEBUG:yfinance:Disabling multithreading because DEBUG logging enabled
+DEBUG:yfinance:Using User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:135.0) Gecko/20100101 Firefox/135.0
+DEBUG:yfinance: Entering history()
+DEBUG:peewee:('CREATE TABLE IF NOT EXISTS "_kv" ("key" VARCHAR(255) NOT NULL PRIMARY KEY, "value" VARCHAR(255)) WITHOUT ROWID', [])
+DEBUG:peewee:('SELECT "t1"."key", "t1"."value" FROM "_kv" AS "t1" WHERE ("t1"."key" = ?) LIMIT ? OFFSET ?', ['GOOGL', 1, 0])
+DEBUG:yfinance:  Entering history()
+DEBUG:yfinance:GOOGL: Yahoo GET parameters: {'period1': '2020-01-01 00:00:00-05:00', 'period2': '2025-04-04 00:00:00-04:00', 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+DEBUG:yfinance:   Entering get()
+DEBUG:yfinance:    Entering _make_request()
+DEBUG:yfinance:url=https://query2.finance.yahoo.com/v8/finance/chart/GOOGL
+DEBUG:yfinance:params=frozendict.frozendict({'period1': 1577854800, 'period2': 1743739200, 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'})
+DEBUG:yfinance:     Entering _get_cookie_and_crumb()
+DEBUG:yfinance:cookie_mode = 'basic'
+DEBUG:yfinance:      Entering _get_cookie_and_crumb_basic()
+DEBUG:peewee:('CREATE TABLE IF NOT EXISTS "_cookieschema" ("strategy" VARCHAR(255) NOT NULL PRIMARY KEY, "fetch_date" DATETIME NOT NULL, "cookie_bytes" BLOB NOT NULL) WITHOUT ROWID', [])
+DEBUG:peewee:('SELECT "t1"."strategy", "t1"."fetch_date", "t1"."cookie_bytes" FROM "_cookieschema" AS "t1" WHERE ("t1"."strategy" = ?) LIMIT ? OFFSET ?', ['basic', 1, 0])
+DEBUG:yfinance:loaded persistent cookie
+DEBUG:yfinance:reusing cookie
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): query1.finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://query1.finance.yahoo.com:443 "GET /v1/test/getcrumb HTTP/1.1" 200 11
+DEBUG:yfinance:crumb = 'uMDJ1T0vN67'
+DEBUG:yfinance:      Exiting _get_cookie_and_crumb_basic()
+DEBUG:yfinance:     Exiting _get_cookie_and_crumb()
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): query2.finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://query2.finance.yahoo.com:443 "GET /v8/finance/chart/GOOGL?period1=1577854800&period2=1743739200&interval=1d&includePrePost=False&events=div%2Csplits%2CcapitalGains&crumb=uMDJ1T0vN67 HTTP/1.1" 200 None
+DEBUG:yfinance:response code=200
+DEBUG:yfinance:    Exiting _make_request()
+DEBUG:yfinance:   Exiting get()
+DEBUG:yfinance:GOOGL: yfinance received OHLC data: 2020-01-02 14:30:00 -> 2025-04-03 13:30:00
+DEBUG:yfinance:GOOGL: OHLC after cleaning: 2020-01-02 09:30:00-05:00 -> 2025-04-03 09:30:00-04:00
+DEBUG:yfinance:GOOGL: OHLC after combining events: 2020-01-02 00:00:00-05:00 -> 2025-04-03 00:00:00-04:00
+DEBUG:yfinance:GOOGL: yfinance returning OHLC: 2020-01-02 00:00:00-05:00 -> 2025-04-03 00:00:00-04:00
+DEBUG:yfinance:  Exiting history()
+DEBUG:yfinance: Exiting history()
+DEBUG:yfinance:Exiting download()
+DEBUG:root:New data columns: MultiIndex([('Adj Close', 'GOOGL'),
+            (    'Close', 'GOOGL'),
+            (     'High', 'GOOGL'),
+            (      'Low', 'GOOGL'),
+            (     'Open', 'GOOGL'),
+            (   'Volume', 'GOOGL')],
+           names=['Price', 'Ticker'])
+DEBUG:root:Final existing data columns: Index(['date', 'close', 'Close'], dtype='object')
+ERROR:root:Error in /stock endpoint: You must call `compile()` before using the model.
+Traceback (most recent call last):
+  File "C:\Users\vpjd8\PycharmProjects\StockPredictorBackend\routes.py", line 63, in stock
+    retrain_model(stock_symbol)
+  File "C:\Users\vpjd8\PycharmProjects\StockPredictorBackend\retrain_model.py", line 52, in retrain_model
+    model.fit(train_data, target_data, epochs=10, batch_size=32, callbacks=[early_stopping])
+  File "C:\Users\vpjd8\PycharmProjects\StockPredictorBackend\venv\Lib\site-packages\keras\src\utils\traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\vpjd8\PycharmProjects\StockPredictorBackend\venv\Lib\site-packages\keras\src\trainers\trainer.py", line 1049, in _assert_compile_called
+    raise ValueError(msg)
+ValueError: You must call `compile()` before using the model.

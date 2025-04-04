@@ -1,7 +1,8 @@
-import os
+import logging
+
 from flask import Flask
 from flask_login import LoginManager
-import logging
+
 from routes import register_routes
 
 app = Flask(__name__)
@@ -18,4 +19,4 @@ login_manager.login_view = 'login'
 register_routes(app, login_manager)
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
