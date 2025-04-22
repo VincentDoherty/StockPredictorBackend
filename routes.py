@@ -1,3 +1,5 @@
+from functools import wraps
+
 from flask import request, jsonify
 from flask_login import login_user, login_required, logout_user, current_user
 from werkzeug.security import generate_password_hash
@@ -12,6 +14,14 @@ from sklearn.preprocessing import MinMaxScaler
 from retrain_model import retrain_model, load_model_from_db
 from services.db_utils import get_stock_data, store_predictions, store_stock_data, get_db_connection
 
+#
+def admin_required(f):
+    @wraps(f)
+    def decorated_function(*args, **kwargs):
+        if not current_user.is_authenticated or not getattr(current_user, 'is_admin', False):
+            return jsonify({'error': 'Admin access required'}), 403
+        return f(*args, **kwargs)
+    return decorated_function
 
 def register_routes(app, login_manager):
 
@@ -863,5 +873,97 @@ def goal_routes(app):
         except Exception as e:
             logging.error(f"Error fetching goals: {e}", exc_info=True)
             return jsonify({'error': 'Failed to fetch goals'}), 500
+        finally:
+            conn.close()
+
+
+def feedback_routes(app):
+    @app.route('/api/feedback', methods=['POST'])
+    def submit_basic_feedback():
+        data = request.get_json()
+        comment = data.get('comment')
+
+        if not comment:
+            return jsonify({'error': 'Comment is required'}), 400
+
+        conn = get_db_connection()
+        try:
+            with conn.cursor() as cursor:
+                cursor.execute(
+                    """
+                    INSERT INTO feedback_basic (comment)
+                    VALUES (%s)
+                    """,
+                    (comment,)
+                )
+            conn.commit()
+            return jsonify({'message': 'Feedback submitted successfully'}), 201
+        except Exception as e:
+            return jsonify({'error': 'Failed to submit feedback'}), 500
+        finally:
+            conn.close()
+
+    @app.route('/api/feedback/advanced', methods=['POST'])
+    def submit_advanced_feedback():
+        data = request.get_json()
+        rating = data.get('rating')
+        ease_of_use = data.get('ease_of_use')
+        useful_features = data.get('useful_features')
+        missing_features = data.get('missing_features')
+        general_comments = data.get('general_comments')
+
+        if not rating or not ease_of_use:
+            return jsonify({'error': 'Rating and ease_of_use are required'}), 400
+
+        conn = get_db_connection()
+        try:
+            with conn.cursor() as cursor:
+                cursor.execute(
+                    """
+                    INSERT INTO feedback_advanced (rating, ease_of_use, useful_features, missing_features, general_comments)
+                    VALUES (%s, %s, %s, %s, %s)
+                    """,
+                    (rating, ease_of_use, useful_features, missing_features, general_comments)
+                )
+            conn.commit()
+            return jsonify({'message': 'Advanced feedback submitted successfully'}), 201
+        except Exception as e:
+            return jsonify({'error': 'Failed to submit advanced feedback'}), 500
+        finally:
+            conn.close()
+
+    @app.route('/api/feedback/all', methods=['GET'])
+    @admin_required
+    def get_all_feedback():
+        conn = get_db_connection()
+        try:
+            with conn.cursor() as cursor:
+                cursor.execute("SELECT id, comment FROM feedback_basic ORDER BY id DESC")
+                basic = [{'id': row[0], 'comment': row[1]} for row in cursor.fetchall()]
+
+                cursor.execute("""
+                               SELECT id, rating, ease_of_use, useful_features, missing_features, general_comments
+                               FROM feedback_advanced
+                               ORDER BY id DESC
+                               """)
+                advanced = [
+                    {
+                        'id': row[0],
+                        'rating': row[1],
+                        'ease_of_use': row[2],
+                        'useful_features': row[3],
+                        'missing_features': row[4],
+                        'general_comments': row[5]
+                    } for row in cursor.fetchall()
+                ]
+
+            return jsonify({
+                'basic_feedback': basic,
+                'advanced_feedback': advanced
+            }), 200
+
+        except Exception as e:
+            logging.error(f"Error fetching all feedback: {e}", exc_info=True)
+            return jsonify({'error': 'Failed to fetch feedback'}), 500
         finally:
             conn.close()

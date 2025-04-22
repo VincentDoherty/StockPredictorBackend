@@ -1717,3 +1717,23 @@ DEBUG:s3transfer.tasks:IORenameFileTask(transfer_id=0, {'final_filename': 'C:\\U
 DEBUG:s3transfer.tasks:Executing task IORenameFileTask(transfer_id=0, {'final_filename': 'C:\\Users\\vpjd8\\AppData\\Local\\Temp\\tmpx4271vfl'}) with kwargs {'fileobj': <s3transfer.utils.DeferredOpenFile object at 0x000001F80E54B4D0>, 'final_filename': 'C:\\Users\\vpjd8\\AppData\\Local\\Temp\\tmpx4271vfl', 'osutil': <s3transfer.utils.OSUtils object at 0x000001F80FFA7D50>}
 DEBUG:s3transfer.utils:Releasing acquire 0/None
 INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:24:16] "POST /api/stock HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2025 16:13:13] "POST /api/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2025 16:13:28] "[31m[1mGET /api/feedback/all HTTP/1.1[0m" 403 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2025 16:14:20] "[31m[1mGET /api/feedback/all HTTP/1.1[0m" 403 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2025 16:14:35] "[31m[1mGET /api/feedback/all HTTP/1.1[0m" 403 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2025 16:19:43] "[31m[1mGET /api/login HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2025 16:19:48] "POST /api/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2025 16:19:56] "[31m[1mPOST /api/feedback/all HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2025 16:19:59] "GET /api/feedback/all HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2025 16:22:25] "POST /api/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2025 16:22:33] "[31m[1mPOST /api/feedback/all HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [22/Apr/2025 16:22:40] "[31m[1mGET /api/feedback/all HTTP/1.1[0m" 403 -

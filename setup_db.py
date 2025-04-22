@@ -11,7 +11,8 @@ def create_tables():
             username VARCHAR(255) NOT NULL UNIQUE,
             password_hash VARCHAR(255) NOT NULL,
             risk_tolerance VARCHAR(50),
-            investment_preferences TEXT
+            investment_preferences TEXT,
+            is_admin BOOLEAN DEFAULT FALSE
         )
         """,
         """
@@ -67,11 +68,20 @@ def create_tables():
         )
         """,
         """
-        CREATE TABLE IF NOT EXISTS feedback (
-            id SERIAL PRIMARY KEY,
-            user_id INTEGER REFERENCES users(id),
-            feedback TEXT NOT NULL,
-            date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+        CREATE TABLE IF NOT EXISTS feedback_basic (
+        id SERIAL PRIMARY KEY,
+        comment TEXT NOT NULL,
+        submitted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP)
+        """,
+        """
+        CREATE TABLE IF NOT EXISTS  feedback_advanced (
+        id SERIAL PRIMARY KEY,
+        rating INTEGER CHECK (rating >= 1 AND rating <= 5),
+        ease_of_use INTEGER CHECK (ease_of_use BETWEEN 1 AND 5),
+        useful_features TEXT,
+        missing_features TEXT,
+        general_comments TEXT,
+        submitted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         )
         """,
         """
