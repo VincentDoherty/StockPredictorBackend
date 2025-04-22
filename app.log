@@ -1,8 +1,1719 @@
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 23:47:39] "POST /api/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 23:47:41] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 23:47:41] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 23:47:42] "DELETE /api/portfolios/1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 23:47:48] "DELETE /api/portfolios/1 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 23:47:49] "DELETE /api/portfolios/13 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 23:47:49] "DELETE /api/portfolios/15 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 23:47:50] "DELETE /api/portfolios/16 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 23:47:53] "DELETE /api/portfolios/17 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 23:47:53] "DELETE /api/portfolios/18 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 23:47:54] "DELETE /api/portfolios/19 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 23:47:54] "DELETE /api/portfolios/20 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 23:47:55] "DELETE /api/portfolios/21 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 23:47:56] "DELETE /api/portfolios/22 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 23:47:56] "DELETE /api/portfolios/24 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 23:47:57] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 23:47:58] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 23:48:02] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 23:48:02] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 23:48:04] "DELETE /api/portfolios/25 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 23:48:05] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 23:48:05] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 23:48:07] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 23:48:07] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 23:48:37] "[35m[1mPOST /api/portfolios HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 23:48:37] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 23:48:38] "GET /api/portfolios/26 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 23:48:57] "[33mPOST /api/portfolios/undefined/stocks HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 23:49:03] "[33mPOST /api/portfolios/undefined/stocks HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 23:55:16] "[33mPOST /api/portfolios/undefined/stocks HTTP/1.1[0m" 404 -
 INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on http://127.0.0.1:5000
 INFO:werkzeug:[33mPress CTRL+C to quit[0m
-INFO:werkzeug:127.0.0.1 - - [04/Apr/2025 16:36:24] "[35m[1mPOST /api/register HTTP/1.1[0m" 201 -
-INFO:werkzeug:127.0.0.1 - - [04/Apr/2025 16:36:47] "[33mGET /api/status HTTP/1.1[0m" 404 -
-INFO:werkzeug:127.0.0.1 - - [04/Apr/2025 16:36:47] "[33mGET /api/status HTTP/1.1[0m" 404 -
-INFO:werkzeug:127.0.0.1 - - [04/Apr/2025 16:37:00] "[31m[1mPOST /api/login HTTP/1.1[0m" 401 -
-INFO:werkzeug:127.0.0.1 - - [04/Apr/2025 16:37:08] "POST /api/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 23:58:41] "[32mGET /api/portfolios HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 23:58:41] "[32mGET /api/portfolios HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 23:58:41] "[31m[1mGET /api/login?next=/api/portfolios HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 23:58:41] "[31m[1mGET /api/login?next=/api/portfolios HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 23:58:49] "POST /api/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 23:58:51] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 23:58:51] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 23:58:53] "GET /api/portfolios/26 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [15/Apr/2025 23:59:13] "[33mPOST /api/portfolios/undefined/stocks HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 00:03:30] "[33mPOST /api/portfolios/undefined/stocks HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 00:07:56] "[33mPOST /api/portfolios/undefined/stocks HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 00:07:58] "[33mPOST /api/portfolios/undefined/stocks HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 00:08:57] "POST /api/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 00:08:59] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 00:08:59] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 00:09:01] "GET /api/portfolios/26 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 00:09:15] "[33mPOST /api/portfolios/undefined/stocks HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 00:10:57] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 00:10:59] "GET /api/portfolios/26 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 00:22:32] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 00:22:38] "GET /api/portfolios/26 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 00:35:25] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 00:35:26] "GET /api/portfolios/26 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 00:37:03] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 00:37:05] "GET /api/portfolios/26 HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 00:39:54] "POST /api/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 00:39:58] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 00:39:58] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 00:39:59] "GET /api/portfolios/26 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 00:42:24] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 00:42:24] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 00:42:26] "GET /api/portfolios/26 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 00:42:30] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 00:42:30] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 00:42:32] "GET /api/portfolios/26 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 00:47:51] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 00:47:51] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 00:47:52] "GET /api/portfolios/26 HTTP/1.1" 200 -
+DEBUG:yfinance:Using User-Agent: Mozilla/5.0 (X11; Linux i686; rv:135.0) Gecko/20100101 Firefox/135.0
+DEBUG:yfinance:Entering history()
+DEBUG:peewee:('CREATE TABLE IF NOT EXISTS "_kv" ("key" VARCHAR(255) NOT NULL PRIMARY KEY, "value" VARCHAR(255)) WITHOUT ROWID', [])
+DEBUG:peewee:('SELECT "t1"."key", "t1"."value" FROM "_kv" AS "t1" WHERE ("t1"."key" = ?) LIMIT ? OFFSET ?', ['GOOGL', 1, 0])
+DEBUG:yfinance: Entering history()
+DEBUG:yfinance:GOOGL: Yahoo GET parameters: {'period1': '2025-04-05 00:00:00-04:00', 'period2': '2025-04-05 00:00:00-04:00', 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+DEBUG:yfinance:  Entering get()
+DEBUG:yfinance:   Entering _make_request()
+DEBUG:yfinance:url=https://query2.finance.yahoo.com/v8/finance/chart/GOOGL
+DEBUG:yfinance:params=frozendict.frozendict({'period1': 1743825600, 'period2': 1743825600, 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'})
+DEBUG:yfinance:    Entering _get_cookie_and_crumb()
+DEBUG:yfinance:cookie_mode = 'basic'
+DEBUG:yfinance:     Entering _get_cookie_and_crumb_basic()
+DEBUG:peewee:('CREATE TABLE IF NOT EXISTS "_cookieschema" ("strategy" VARCHAR(255) NOT NULL PRIMARY KEY, "fetch_date" DATETIME NOT NULL, "cookie_bytes" BLOB NOT NULL) WITHOUT ROWID', [])
+DEBUG:peewee:('SELECT "t1"."strategy", "t1"."fetch_date", "t1"."cookie_bytes" FROM "_cookieschema" AS "t1" WHERE ("t1"."strategy" = ?) LIMIT ? OFFSET ?', ['basic', 1, 0])
+DEBUG:yfinance:loaded persistent cookie
+DEBUG:yfinance:reusing cookie
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): query1.finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://query1.finance.yahoo.com:443 "GET /v1/test/getcrumb HTTP/1.1" 200 11
+DEBUG:yfinance:crumb = 'QHhb9SlD9Zs'
+DEBUG:yfinance:     Exiting _get_cookie_and_crumb_basic()
+DEBUG:yfinance:    Exiting _get_cookie_and_crumb()
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): query2.finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://query2.finance.yahoo.com:443 "GET /v8/finance/chart/GOOGL?period1=1743825600&period2=1743825600&interval=1d&includePrePost=False&events=div%2Csplits%2CcapitalGains&crumb=QHhb9SlD9Zs HTTP/1.1" 200 1013
+DEBUG:yfinance:response code=200
+DEBUG:yfinance:   Exiting _make_request()
+DEBUG:yfinance:  Exiting get()
+ERROR:yfinance:$GOOGL: possibly delisted; no price data found  (1d 2025-04-05 -> 2025-04-05)
+DEBUG:yfinance: Exiting history()
+DEBUG:yfinance:Exiting history()
+INFO:werkzeug:127.0.0.1 - - [16/Apr/2025 00:48:06] "[31m[1mPOST /api/portfolios/26/stocks HTTP/1.1[0m" 400 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 22:27:02] "POST /api/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 22:27:04] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 22:27:04] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 22:27:05] "GET /api/portfolios/26 HTTP/1.1" 200 -
+DEBUG:yfinance:Using User-Agent: Mozilla/5.0 (X11; Linux i686; rv:135.0) Gecko/20100101 Firefox/135.0
+DEBUG:yfinance:Entering history()
+DEBUG:peewee:('CREATE TABLE IF NOT EXISTS "_kv" ("key" VARCHAR(255) NOT NULL PRIMARY KEY, "value" VARCHAR(255)) WITHOUT ROWID', [])
+DEBUG:peewee:('SELECT "t1"."key", "t1"."value" FROM "_kv" AS "t1" WHERE ("t1"."key" = ?) LIMIT ? OFFSET ?', ['GOOGL', 1, 0])
+DEBUG:yfinance: Entering history()
+DEBUG:yfinance:GOOGL: Yahoo GET parameters: {'period1': '2025-04-11 00:00:00-04:00', 'period2': '2025-04-11 00:00:00-04:00', 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+DEBUG:yfinance:  Entering get()
+DEBUG:yfinance:   Entering _make_request()
+DEBUG:yfinance:url=https://query2.finance.yahoo.com/v8/finance/chart/GOOGL
+DEBUG:yfinance:params=frozendict.frozendict({'period1': 1744344000, 'period2': 1744344000, 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'})
+DEBUG:yfinance:    Entering _get_cookie_and_crumb()
+DEBUG:yfinance:cookie_mode = 'basic'
+DEBUG:yfinance:     Entering _get_cookie_and_crumb_basic()
+DEBUG:peewee:('CREATE TABLE IF NOT EXISTS "_cookieschema" ("strategy" VARCHAR(255) NOT NULL PRIMARY KEY, "fetch_date" DATETIME NOT NULL, "cookie_bytes" BLOB NOT NULL) WITHOUT ROWID', [])
+DEBUG:peewee:('SELECT "t1"."strategy", "t1"."fetch_date", "t1"."cookie_bytes" FROM "_cookieschema" AS "t1" WHERE ("t1"."strategy" = ?) LIMIT ? OFFSET ?', ['basic', 1, 0])
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): fc.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://fc.yahoo.com:443 "GET / HTTP/1.1" 404 4742
+DEBUG:peewee:('DELETE FROM "_cookieschema" WHERE ("_cookieschema"."strategy" = ?)', ['basic'])
+DEBUG:peewee:('BEGIN', None)
+DEBUG:peewee:('INSERT INTO "_cookieschema" ("strategy", "fetch_date", "cookie_bytes") VALUES (?, ?, ?)', ['basic', '2025-04-17T22:27:16.077990', <memory at 0x0000015E82982200>])
+DEBUG:yfinance:fetched basic cookie = <Cookie A3=d=AQABBDRyAWgCELC5m_Csi4rkGjIDcguJUTQFEgEBAQHDAmgLaPZ0rXYB_eMAAA&S=AQAAAg0IZxh9laGsoFwbNGa-tE4 for .yahoo.com/>
+DEBUG:yfinance:reusing cookie
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): query1.finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://query1.finance.yahoo.com:443 "GET /v1/test/getcrumb HTTP/1.1" 200 11
+DEBUG:yfinance:crumb = 'undMDl2oRpo'
+DEBUG:yfinance:     Exiting _get_cookie_and_crumb_basic()
+DEBUG:yfinance:    Exiting _get_cookie_and_crumb()
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): query2.finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://query2.finance.yahoo.com:443 "GET /v8/finance/chart/GOOGL?period1=1744344000&period2=1744344000&interval=1d&includePrePost=False&events=div%2Csplits%2CcapitalGains&crumb=undMDl2oRpo HTTP/1.1" 200 1012
+DEBUG:yfinance:response code=200
+DEBUG:yfinance:   Exiting _make_request()
+DEBUG:yfinance:  Exiting get()
+ERROR:yfinance:$GOOGL: possibly delisted; no price data found  (1d 2025-04-11 -> 2025-04-11)
+DEBUG:yfinance: Exiting history()
+DEBUG:yfinance:Exiting history()
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 22:27:16] "[31m[1mPOST /api/portfolios/26/stocks HTTP/1.1[0m" 400 -
+DEBUG:yfinance:Entering history()
+DEBUG:peewee:('SELECT "t1"."key", "t1"."value" FROM "_kv" AS "t1" WHERE ("t1"."key" = ?) LIMIT ? OFFSET ?', ['GOOGL', 1, 0])
+DEBUG:yfinance: Entering history()
+DEBUG:yfinance:GOOGL: Yahoo GET parameters: {'period1': '2025-04-11 00:00:00-04:00', 'period2': '2025-04-11 00:00:00-04:00', 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+ERROR:yfinance:$GOOGL: possibly delisted; no price data found  (1d 2025-04-11 -> 2025-04-11)
+DEBUG:yfinance: Exiting history()
+DEBUG:yfinance:Exiting history()
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 22:27:29] "[31m[1mPOST /api/portfolios/26/stocks HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 22:35:18] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 22:35:21] "GET /api/portfolios/26 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 22:35:39] "[31m[1mPOST /api/portfolios/26/stocks HTTP/1.1[0m" 400 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 22:36:26] "POST /api/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 22:36:28] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 22:36:28] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 22:36:29] "GET /api/portfolios/26 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 22:36:35] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 22:36:35] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 22:36:36] "GET /api/portfolios/26 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 22:36:46] "[31m[1mPOST /api/portfolios/26/stocks HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 22:37:46] "[31m[1mPOST /api/portfolios/26/stocks HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 22:43:19] "[32mGET /api/portfolios HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 22:43:19] "[31m[1mGET /api/login?next=/api/portfolios HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 22:46:51] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 22:46:55] "GET /api/portfolios/26 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 22:46:58] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 22:46:58] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 22:46:59] "GET /api/portfolios/26 HTTP/1.1" 200 -
+    INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 22:47:11] "[31m[1mPOST /api/portfolios/26/stocks HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 22:49:39] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 22:49:39] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 22:49:40] "GET /api/portfolios/26 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 22:50:25] "POST /api/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 22:50:27] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 22:50:27] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 22:50:28] "GET /api/portfolios/26 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 22:53:52] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 22:53:52] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 22:53:53] "GET /api/portfolios/26 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 22:54:04] "[33mPOST /api/portfolios/undefined/stocks HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:06:41] "[33mGET /api/status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:06:41] "[33mGET /api/status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:06:42] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:06:42] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:06:43] "GET /api/portfolios/26 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:06:52] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:06:52] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:06:53] "GET /api/portfolios/26 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:09:10] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:09:10] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:09:15] "[35m[1mPOST /api/portfolios HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:09:15] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:09:17] "GET /api/portfolios/27 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:09:25] "[33mGET /api/status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:09:25] "[33mGET /api/status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:09:28] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:09:28] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:09:29] "GET /api/portfolios/27 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:17:41] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:17:41] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:17:41] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:17:44] "GET /api/portfolios/27 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:18:05] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:18:05] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:18:06] "GET /api/portfolios/27 HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:20:25] "[32mGET /api/portfolios HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:20:25] "[32mGET /api/portfolios HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:20:25] "[31m[1mGET /api/login?next=/api/portfolios HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:20:25] "[31m[1mGET /api/login?next=/api/portfolios HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:20:27] "[32mGET /api/portfolios HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:20:27] "[32mGET /api/portfolios HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:20:27] "[31m[1mGET /api/login?next=/api/portfolios HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:20:27] "[31m[1mGET /api/login?next=/api/portfolios HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:20:37] "POST /api/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:20:38] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:20:38] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:20:39] "GET /api/portfolios/27 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:20:43] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:20:43] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:20:44] "GET /api/portfolios/26 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:22:07] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:22:07] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:22:09] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:22:09] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:22:11] "GET /api/portfolios/26 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:23:13] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:23:13] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:23:14] "GET /api/portfolios/26 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:23:23] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:23:23] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:23:24] "GET /api/portfolios/26 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:23:33] "[31m[1mPOST /api/portfolios/26/stocks HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:23:59] "[31m[1mPOST /api/portfolios/26/stocks HTTP/1.1[0m" 400 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:25:44] "POST /api/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:25:46] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:25:47] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:25:48] "GET /api/portfolios/26 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:25:58] "[31m[1mPOST /api/portfolios/26/stocks HTTP/1.1[0m" 400 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:41:25] "POST /api/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:41:27] "[31m[1mGET /api/portfolios HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:41:27] "[31m[1mGET /api/portfolios HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:42:58] "[31m[1mGET /api/portfolios HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:42:58] "[31m[1mGET /api/portfolios HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:43:06] "[35m[1mPOST /api/portfolios HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:43:06] "[31m[1mGET /api/portfolios HTTP/1.1[0m" 405 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:45:44] "POST /api/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:45:47] "[31m[1mGET /api/portfolios HTTP/1.1[0m" 415 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:45:47] "[31m[1mGET /api/portfolios HTTP/1.1[0m" 415 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:48:34] "[32mGET /api/portfolios HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:48:34] "[31m[1mGET /api/login?next=/api/portfolios HTTP/1.1[0m" 405 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:49:04] "[32mPOST /api/portfolios HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:49:04] "[31m[1mGET /api/login?next=/api/portfolios HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:49:08] "[32mPOST /api/portfolios HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:49:08] "[31m[1mGET /api/login?next=/api/portfolios HTTP/1.1[0m" 405 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:49:31] "[31m[1mPOST /api/portfolios HTTP/1.1[0m" 415 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:49:52] "[31m[1mGET /api/portfolios HTTP/1.1[0m" 415 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:52:28] "POST /api/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:52:31] "[31m[1mGET /api/portfolios HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:52:31] "[31m[1mGET /api/portfolios HTTP/1.1[0m" 405 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:53:45] "POST /api/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:53:46] "[31m[1mGET /api/portfolios HTTP/1.1[0m" 415 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:53:46] "[31m[1mGET /api/portfolios HTTP/1.1[0m" 415 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:53:56] "[31m[1mGET /api/portfolios HTTP/1.1[0m" 415 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:53:56] "[31m[1mGET /api/portfolios HTTP/1.1[0m" 415 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:54:49] "[32mGET /api/portfolios HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:54:49] "[31m[1mGET /api/login?next=/api/portfolios HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:55:42] "[32mPOST /api/portfolios HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:55:42] "[31m[1mGET /api/login?next=/api/portfolios HTTP/1.1[0m" 405 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:56:27] "[32mPOST /api/portfolios HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:56:27] "[31m[1mGET /api/login?next=/api/portfolios HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:56:30] "[32mGET /api/portfolios HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:56:30] "[31m[1mGET /api/login?next=/api/portfolios HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:57:49] "[32mGET /api/portfolios HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:57:49] "[31m[1mGET /api/login?next=/api/portfolios HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:58:19] "[32mPOST /api/portfolios HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [17/Apr/2025 23:58:19] "[31m[1mGET /api/login?next=/api/portfolios HTTP/1.1[0m" 405 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2025 00:07:56] "[31m[1mPOST /api/register HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2025 00:09:07] "[31m[1mPOST /api/register HTTP/1.1[0m" 415 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2025 00:09:28] "[31m[1mPOST /api/register HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2025 00:09:42] "[35m[1mPOST /api/register HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2025 00:10:12] "POST /api/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2025 00:10:38] "[35m[1mPOST /api/portfolios HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2025 00:11:33] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2025 00:12:28] "[33mGET /api/portfolios/<portfolio_id>/stock HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2025 00:12:35] "[33mGET /api/portfolios/29/stock HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2025 00:12:41] "[33mGET /api/portfolios/stock HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2025 00:13:22] "[33mPOST /api/portfolios/<portfolio_id>/stocks HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2025 00:13:34] "[33mPOST /api/portfolios/<29>/stocks HTTP/1.1[0m" 404 -
+DEBUG:yfinance:Using User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36
+DEBUG:yfinance:Entering history()
+DEBUG:peewee:('CREATE TABLE IF NOT EXISTS "_kv" ("key" VARCHAR(255) NOT NULL PRIMARY KEY, "value" VARCHAR(255)) WITHOUT ROWID', [])
+DEBUG:peewee:('SELECT "t1"."key", "t1"."value" FROM "_kv" AS "t1" WHERE ("t1"."key" = ?) LIMIT ? OFFSET ?', ['AAPL', 1, 0])
+DEBUG:yfinance: Entering history()
+DEBUG:yfinance:AAPL: Yahoo GET parameters: {'range': '1d', 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+DEBUG:yfinance:  Entering get()
+DEBUG:yfinance:   Entering _make_request()
+DEBUG:yfinance:url=https://query2.finance.yahoo.com/v8/finance/chart/AAPL
+DEBUG:yfinance:params={'range': '1d', 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+DEBUG:yfinance:    Entering _get_cookie_and_crumb()
+DEBUG:yfinance:cookie_mode = 'basic'
+DEBUG:yfinance:     Entering _get_cookie_and_crumb_basic()
+DEBUG:peewee:('CREATE TABLE IF NOT EXISTS "_cookieschema" ("strategy" VARCHAR(255) NOT NULL PRIMARY KEY, "fetch_date" DATETIME NOT NULL, "cookie_bytes" BLOB NOT NULL) WITHOUT ROWID', [])
+DEBUG:peewee:('SELECT "t1"."strategy", "t1"."fetch_date", "t1"."cookie_bytes" FROM "_cookieschema" AS "t1" WHERE ("t1"."strategy" = ?) LIMIT ? OFFSET ?', ['basic', 1, 0])
+DEBUG:yfinance:loaded persistent cookie
+DEBUG:yfinance:reusing cookie
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): query1.finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://query1.finance.yahoo.com:443 "GET /v1/test/getcrumb HTTP/1.1" 200 11
+DEBUG:yfinance:crumb = 'undMDl2oRpo'
+DEBUG:yfinance:     Exiting _get_cookie_and_crumb_basic()
+DEBUG:yfinance:    Exiting _get_cookie_and_crumb()
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): query2.finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://query2.finance.yahoo.com:443 "GET /v8/finance/chart/AAPL?range=1d&interval=1d&includePrePost=False&events=div%2Csplits%2CcapitalGains&crumb=undMDl2oRpo HTTP/1.1" 200 1189
+DEBUG:yfinance:response code=200
+DEBUG:yfinance:   Exiting _make_request()
+DEBUG:yfinance:  Exiting get()
+DEBUG:yfinance:AAPL: yfinance received OHLC data: 2025-04-17 20:00:03 only
+DEBUG:yfinance:AAPL: OHLC after cleaning: 2025-04-17 16:00:03-04:00 only
+DEBUG:yfinance:AAPL: OHLC after combining events: 2025-04-17 00:00:00-04:00 only
+DEBUG:yfinance:AAPL: yfinance returning OHLC: 2025-04-17 00:00:00-04:00 only
+DEBUG:yfinance: Exiting history()
+DEBUG:yfinance:Exiting history()
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2025 00:13:40] "[35m[1mPOST /api/portfolios/29/stocks HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2025 00:14:27] "[31m[1mPOST /api/portfolios/29 HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2025 00:14:32] "[31m[1mPOST /api/portfolios/29 HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2025 00:14:38] "GET /api/portfolios/29 HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2025 00:18:46] "[32mGET /api/portfolios/29 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2025 00:18:46] "[31m[1mGET /api/login?next=/api/portfolios/29 HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2025 00:19:13] "[31m[1mGET /api/login HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2025 00:19:19] "POST /api/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2025 00:19:31] "GET /api/portfolios/29 HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [19/Apr/2025 16:22:55] "POST /api/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Apr/2025 16:22:59] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Apr/2025 16:22:59] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Apr/2025 16:23:06] "[33mGET /api/portfolios/undefined?sort_by=profit_loss&order=desc HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Apr/2025 16:24:00] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Apr/2025 16:24:00] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Apr/2025 16:24:57] "[33mGET /api/portfolios/undefined?sort_by=profit_loss&order=desc HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Apr/2025 16:25:29] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Apr/2025 16:25:29] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Apr/2025 16:26:52] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Apr/2025 16:26:52] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Apr/2025 16:27:04] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Apr/2025 16:27:04] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Apr/2025 16:27:18] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Apr/2025 16:27:18] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [19/Apr/2025 16:40:08] "POST /api/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Apr/2025 16:40:10] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Apr/2025 16:40:10] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Apr/2025 16:40:14] "[33mGET /api/portfolios/undefined?sort_by=profit_loss&order=desc HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Apr/2025 16:40:22] "[33mGET /api/portfolios/undefined?sort_by=profit_loss&order=desc HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Apr/2025 16:40:25] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Apr/2025 16:40:26] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Apr/2025 16:46:39] "[33mGET /api/portfolios/ HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Apr/2025 16:46:49] "[31m[1mGET /api/login HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [19/Apr/2025 16:47:27] "POST /api/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Apr/2025 16:47:36] "[31m[1mPOST /api/portfolios HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [19/Apr/2025 16:47:42] "[33mPOST /api/portfolio HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Apr/2025 16:47:48] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Apr/2025 17:11:23] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Apr/2025 17:11:23] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Apr/2025 17:11:28] "POST /api/logout HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Apr/2025 17:11:47] "[31m[1mPOST /api/login HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [19/Apr/2025 17:12:01] "POST /api/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Apr/2025 17:12:03] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Apr/2025 17:12:03] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Apr/2025 17:12:06] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Apr/2025 17:12:06] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Apr/2025 17:12:07] "[33mGET /api/portfolios/undefined?sort_by=profit_loss&order=desc HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [19/Apr/2025 17:15:06] "POST /api/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Apr/2025 17:15:14] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Apr/2025 17:15:24] "POST /api/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Apr/2025 17:15:26] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Apr/2025 17:15:26] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Apr/2025 17:15:28] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Apr/2025 17:15:29] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Apr/2025 17:15:30] "GET /api/portfolios/26?sort_by=profit_loss&order=desc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Apr/2025 17:20:05] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Apr/2025 17:20:05] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Apr/2025 17:20:10] "GET /api/portfolios/26?sort_by=profit_loss&order=desc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Apr/2025 17:20:13] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Apr/2025 17:20:13] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Apr/2025 17:20:14] "GET /api/portfolios/26?sort_by=profit_loss&order=desc HTTP/1.1" 200 -
+DEBUG:yfinance:Using User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36
+DEBUG:yfinance:Entering history()
+DEBUG:peewee:('CREATE TABLE IF NOT EXISTS "_kv" ("key" VARCHAR(255) NOT NULL PRIMARY KEY, "value" VARCHAR(255)) WITHOUT ROWID', [])
+DEBUG:peewee:('SELECT "t1"."key", "t1"."value" FROM "_kv" AS "t1" WHERE ("t1"."key" = ?) LIMIT ? OFFSET ?', ['GOOGL', 1, 0])
+DEBUG:yfinance: Entering history()
+DEBUG:yfinance:GOOGL: Yahoo GET parameters: {'range': '1d', 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+DEBUG:yfinance:  Entering get()
+DEBUG:yfinance:   Entering _make_request()
+DEBUG:yfinance:url=https://query2.finance.yahoo.com/v8/finance/chart/GOOGL
+DEBUG:yfinance:params={'range': '1d', 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+DEBUG:yfinance:    Entering _get_cookie_and_crumb()
+DEBUG:yfinance:cookie_mode = 'basic'
+DEBUG:yfinance:     Entering _get_cookie_and_crumb_basic()
+DEBUG:peewee:('CREATE TABLE IF NOT EXISTS "_cookieschema" ("strategy" VARCHAR(255) NOT NULL PRIMARY KEY, "fetch_date" DATETIME NOT NULL, "cookie_bytes" BLOB NOT NULL) WITHOUT ROWID', [])
+DEBUG:peewee:('SELECT "t1"."strategy", "t1"."fetch_date", "t1"."cookie_bytes" FROM "_cookieschema" AS "t1" WHERE ("t1"."strategy" = ?) LIMIT ? OFFSET ?', ['basic', 1, 0])
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): fc.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://fc.yahoo.com:443 "GET / HTTP/1.1" 404 4744
+DEBUG:peewee:('DELETE FROM "_cookieschema" WHERE ("_cookieschema"."strategy" = ?)', ['basic'])
+DEBUG:peewee:('BEGIN', None)
+DEBUG:peewee:('INSERT INTO "_cookieschema" ("strategy", "fetch_date", "cookie_bytes") VALUES (?, ?, ?)', ['basic', '2025-04-19T17:20:23.231707', <memory at 0x0000025E18CAD9C0>])
+DEBUG:yfinance:fetched basic cookie = <Cookie A3=d=AQABBEfNA2gCEKidcpfTgovA1c5ng75yx9oFEgEBAQEeBWgNaPZ0rXYB_eMCAA&S=AQAAAgdZQU1mrSqm3KpnKCp1dUc for .yahoo.com/>
+DEBUG:yfinance:reusing cookie
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): query1.finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://query1.finance.yahoo.com:443 "GET /v1/test/getcrumb HTTP/1.1" 200 11
+DEBUG:yfinance:crumb = 'AsmxKm.obej'
+DEBUG:yfinance:     Exiting _get_cookie_and_crumb_basic()
+DEBUG:yfinance:    Exiting _get_cookie_and_crumb()
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): query2.finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://query2.finance.yahoo.com:443 "GET /v8/finance/chart/GOOGL?range=1d&interval=1d&includePrePost=False&events=div%2Csplits%2CcapitalGains&crumb=AsmxKm.obej HTTP/1.1" 200 1187
+DEBUG:yfinance:response code=200
+DEBUG:yfinance:   Exiting _make_request()
+DEBUG:yfinance:  Exiting get()
+DEBUG:yfinance:GOOGL: yfinance received OHLC data: 2025-04-17 13:30:00 only
+DEBUG:yfinance:GOOGL: OHLC after cleaning: 2025-04-17 09:30:00-04:00 only
+DEBUG:yfinance:GOOGL: OHLC after combining events: 2025-04-17 00:00:00-04:00 only
+DEBUG:yfinance:GOOGL: yfinance returning OHLC: 2025-04-17 00:00:00-04:00 only
+DEBUG:yfinance: Exiting history()
+DEBUG:yfinance:Exiting history()
+INFO:werkzeug:127.0.0.1 - - [19/Apr/2025 17:20:23] "[35m[1mPOST /api/portfolios/26/stocks HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [19/Apr/2025 17:20:23] "GET /api/portfolios/26?sort_by=profit_loss&order=desc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Apr/2025 17:20:37] "GET /api/portfolios/26?sort_by=profit_loss&order=asc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Apr/2025 17:21:42] "[31m[1mPOST /api/portfolios/26/stocks HTTP/1.1[0m" 400 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [19/Apr/2025 17:23:06] "[31m[1mPOST /api/login HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [19/Apr/2025 17:23:12] "POST /api/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Apr/2025 17:23:15] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Apr/2025 17:23:15] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Apr/2025 17:23:16] "GET /api/portfolios/26?sort_by=profit_loss&order=desc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Apr/2025 17:23:22] "GET /api/portfolios/27?sort_by=profit_loss&order=desc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Apr/2025 17:23:22] "GET /api/portfolios/28?sort_by=profit_loss&order=desc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Apr/2025 17:23:24] "GET /api/portfolios/26?sort_by=profit_loss&order=desc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Apr/2025 17:25:47] "GET /api/portfolios/27?sort_by=profit_loss&order=desc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Apr/2025 17:25:48] "GET /api/portfolios/28?sort_by=profit_loss&order=desc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Apr/2025 17:25:49] "GET /api/portfolios/26?sort_by=profit_loss&order=desc HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 17:57:08] "POST /api/login HTTP/1.1" 200 -
+ERROR:app:Exception on /api/portfolios [GET]
+Traceback (most recent call last):
+  File "C:\Users\vpjd8\PycharmProjects\StockPredictorBackend\.venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vpjd8\PycharmProjects\StockPredictorBackend\.venv\Lib\site-packages\flask\app.py", line 920, in full_dispatch_request
+    return self.finalize_request(rv)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vpjd8\PycharmProjects\StockPredictorBackend\.venv\Lib\site-packages\flask\app.py", line 939, in finalize_request
+    response = self.make_response(rv)
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vpjd8\PycharmProjects\StockPredictorBackend\.venv\Lib\site-packages\flask\app.py", line 1212, in make_response
+    raise TypeError(
+TypeError: The view function for 'portfolios' did not return a valid response. The function either returned None or ended without a return statement.
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 17:57:09] "[35m[1mGET /api/portfolios HTTP/1.1[0m" 500 -
+ERROR:app:Exception on /api/portfolios [GET]
+Traceback (most recent call last):
+  File "C:\Users\vpjd8\PycharmProjects\StockPredictorBackend\.venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vpjd8\PycharmProjects\StockPredictorBackend\.venv\Lib\site-packages\flask\app.py", line 920, in full_dispatch_request
+    return self.finalize_request(rv)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vpjd8\PycharmProjects\StockPredictorBackend\.venv\Lib\site-packages\flask\app.py", line 939, in finalize_request
+    response = self.make_response(rv)
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vpjd8\PycharmProjects\StockPredictorBackend\.venv\Lib\site-packages\flask\app.py", line 1212, in make_response
+    raise TypeError(
+TypeError: The view function for 'portfolios' did not return a valid response. The function either returned None or ended without a return statement.
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 17:57:09] "[35m[1mGET /api/portfolios HTTP/1.1[0m" 500 -
+ERROR:app:Exception on /api/portfolios [POST]
+Traceback (most recent call last):
+  File "C:\Users\vpjd8\PycharmProjects\StockPredictorBackend\.venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vpjd8\PycharmProjects\StockPredictorBackend\.venv\Lib\site-packages\flask\app.py", line 920, in full_dispatch_request
+    return self.finalize_request(rv)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vpjd8\PycharmProjects\StockPredictorBackend\.venv\Lib\site-packages\flask\app.py", line 939, in finalize_request
+    response = self.make_response(rv)
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vpjd8\PycharmProjects\StockPredictorBackend\.venv\Lib\site-packages\flask\app.py", line 1212, in make_response
+    raise TypeError(
+TypeError: The view function for 'portfolios' did not return a valid response. The function either returned None or ended without a return statement.
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 17:57:14] "[35m[1mPOST /api/portfolios HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 17:57:54] "POST /api/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 17:57:56] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 17:57:56] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 17:57:57] "GET /api/portfolios/26?sort_by=profit_loss&order=desc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 17:58:04] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 17:58:04] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 17:58:05] "GET /api/portfolios/27?sort_by=profit_loss&order=desc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 17:58:05] "GET /api/portfolios/28?sort_by=profit_loss&order=desc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 17:58:06] "GET /api/portfolios/30?sort_by=profit_loss&order=desc HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:02:53] "POST /api/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:02:56] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:02:56] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:02:59] "GET /api/portfolios/26?sort_by=profit_loss&order=desc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:03:01] "GET /api/portfolios/28?sort_by=profit_loss&order=desc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:03:02] "GET /api/portfolios/30?sort_by=profit_loss&order=desc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:23:52] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:23:52] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:23:53] "GET /api/portfolios/26?sort_by=profit_loss&order=desc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:23:58] "[33mDELETE /api/portfolios/26/stocks/2 HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:24:12] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:24:12] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:24:38] "POST /api/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:24:39] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:24:39] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:24:40] "GET /api/portfolios/26?sort_by=profit_loss&order=desc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:24:42] "DELETE /api/portfolios/26/stocks/2 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:24:42] "GET /api/portfolios/26?sort_by=profit_loss&order=desc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:24:47] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:24:47] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:24:49] "GET /api/portfolios/26?sort_by=profit_loss&order=desc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:24:50] "DELETE /api/portfolios/26 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:24:50] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:24:53] "GET /api/portfolios/27?sort_by=profit_loss&order=desc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:27:41] "GET /api/portfolios/27?sort_by=profit_loss&order=desc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:27:41] "GET /api/portfolios/28?sort_by=profit_loss&order=desc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:27:42] "GET /api/portfolios/30?sort_by=profit_loss&order=desc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:27:45] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:27:45] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:27:46] "GET /api/portfolios/27?sort_by=profit_loss&order=desc HTTP/1.1" 200 -
+DEBUG:yfinance:Using User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/131.0.2903.86
+DEBUG:yfinance:Entering history()
+DEBUG:peewee:('CREATE TABLE IF NOT EXISTS "_kv" ("key" VARCHAR(255) NOT NULL PRIMARY KEY, "value" VARCHAR(255)) WITHOUT ROWID', [])
+DEBUG:peewee:('SELECT "t1"."key", "t1"."value" FROM "_kv" AS "t1" WHERE ("t1"."key" = ?) LIMIT ? OFFSET ?', ['GOOGL', 1, 0])
+DEBUG:yfinance: Entering history()
+DEBUG:yfinance:GOOGL: Yahoo GET parameters: {'range': '1d', 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+DEBUG:yfinance:  Entering get()
+DEBUG:yfinance:   Entering _make_request()
+DEBUG:yfinance:url=https://query2.finance.yahoo.com/v8/finance/chart/GOOGL
+DEBUG:yfinance:params={'range': '1d', 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+DEBUG:yfinance:    Entering _get_cookie_and_crumb()
+DEBUG:yfinance:cookie_mode = 'basic'
+DEBUG:yfinance:     Entering _get_cookie_and_crumb_basic()
+DEBUG:peewee:('CREATE TABLE IF NOT EXISTS "_cookieschema" ("strategy" VARCHAR(255) NOT NULL PRIMARY KEY, "fetch_date" DATETIME NOT NULL, "cookie_bytes" BLOB NOT NULL) WITHOUT ROWID', [])
+DEBUG:peewee:('SELECT "t1"."strategy", "t1"."fetch_date", "t1"."cookie_bytes" FROM "_cookieschema" AS "t1" WHERE ("t1"."strategy" = ?) LIMIT ? OFFSET ?', ['basic', 1, 0])
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): fc.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://fc.yahoo.com:443 "GET / HTTP/1.1" 404 4742
+DEBUG:peewee:('DELETE FROM "_cookieschema" WHERE ("_cookieschema"."strategy" = ?)', ['basic'])
+DEBUG:peewee:('BEGIN', None)
+DEBUG:peewee:('INSERT INTO "_cookieschema" ("strategy", "fetch_date", "cookie_bytes") VALUES (?, ?, ?)', ['basic', '2025-04-21T18:28:02.988404', <memory at 0x0000018A7A9D9F00>])
+DEBUG:yfinance:fetched basic cookie = <Cookie A3=d=AQABBCOABmgCEJWHmuYcMcPyonktYx2RL5QFEgEBAQHRB2gQaPZ0rXYB_eMCAA&S=AQAAAqhfCM8yHBiKqRKTWX513Lc for .yahoo.com/>
+DEBUG:yfinance:reusing cookie
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): query1.finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://query1.finance.yahoo.com:443 "GET /v1/test/getcrumb HTTP/1.1" 200 11
+DEBUG:yfinance:crumb = 'm6lSbkQfVGD'
+DEBUG:yfinance:     Exiting _get_cookie_and_crumb_basic()
+DEBUG:yfinance:    Exiting _get_cookie_and_crumb()
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): query2.finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://query2.finance.yahoo.com:443 "GET /v8/finance/chart/GOOGL?range=1d&interval=1d&includePrePost=False&events=div%2Csplits%2CcapitalGains&crumb=m6lSbkQfVGD HTTP/1.1" 200 1201
+DEBUG:yfinance:response code=200
+DEBUG:yfinance:   Exiting _make_request()
+DEBUG:yfinance:  Exiting get()
+DEBUG:yfinance:GOOGL: yfinance received OHLC data: 2025-04-21 17:28:02 only
+DEBUG:yfinance:GOOGL: OHLC after cleaning: 2025-04-21 13:28:02-04:00 only
+DEBUG:yfinance:GOOGL: OHLC after combining events: 2025-04-21 00:00:00-04:00 only
+DEBUG:yfinance:GOOGL: yfinance returning OHLC: 2025-04-21 00:00:00-04:00 only
+DEBUG:yfinance: Exiting history()
+DEBUG:yfinance:Exiting history()
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:28:03] "[35m[1mPOST /api/portfolios/27/stocks HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:28:03] "GET /api/portfolios/27?sort_by=profit_loss&order=desc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:28:14] "DELETE /api/portfolios/27/stocks/3 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:28:14] "GET /api/portfolios/27?sort_by=profit_loss&order=desc HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:28:22] "[33mGET /api/status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:28:22] "[33mGET /api/status HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:33:14] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:33:14] "GET /api/portfolios HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 18:33:15] "GET /api/portfolios/27?sort_by=profit_loss&order=desc HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 19:22:23] "POST /api/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 19:22:29] "[31m[1mPOST /api/stock/AAPL/history HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 19:22:39] "[31m[1mPOST /api/stock/AAPL/history HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 19:22:42] "GET /api/stock/AAPL/history HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 20:51:46] "POST /api/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 20:51:51] "OPTIONS /api/stock HTTP/1.1" 200 -
+DEBUG:root:Request payload: {'stock_symbol': 'GOOGL'}
+DEBUG:root:Received stock symbol: GOOGL
+DEBUG:yfinance:Entering download()
+DEBUG:yfinance:Disabling multithreading because DEBUG logging enabled
+DEBUG:yfinance:Using User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36
+DEBUG:yfinance: Entering history()
+DEBUG:peewee:('CREATE TABLE IF NOT EXISTS "_kv" ("key" VARCHAR(255) NOT NULL PRIMARY KEY, "value" VARCHAR(255)) WITHOUT ROWID', [])
+DEBUG:peewee:('SELECT "t1"."key", "t1"."value" FROM "_kv" AS "t1" WHERE ("t1"."key" = ?) LIMIT ? OFFSET ?', ['GOOGL', 1, 0])
+DEBUG:yfinance:  Entering history()
+DEBUG:yfinance:GOOGL: Yahoo GET parameters: {'period1': '2020-01-01 00:00:00-05:00', 'period2': '2025-04-21 00:00:00-04:00', 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+DEBUG:yfinance:   Entering get()
+DEBUG:yfinance:    Entering _make_request()
+DEBUG:yfinance:url=https://query2.finance.yahoo.com/v8/finance/chart/GOOGL
+DEBUG:yfinance:params=frozendict.frozendict({'period1': 1577854800, 'period2': 1745208000, 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'})
+DEBUG:yfinance:     Entering _get_cookie_and_crumb()
+DEBUG:yfinance:cookie_mode = 'basic'
+DEBUG:yfinance:      Entering _get_cookie_and_crumb_basic()
+DEBUG:peewee:('CREATE TABLE IF NOT EXISTS "_cookieschema" ("strategy" VARCHAR(255) NOT NULL PRIMARY KEY, "fetch_date" DATETIME NOT NULL, "cookie_bytes" BLOB NOT NULL) WITHOUT ROWID', [])
+DEBUG:peewee:('SELECT "t1"."strategy", "t1"."fetch_date", "t1"."cookie_bytes" FROM "_cookieschema" AS "t1" WHERE ("t1"."strategy" = ?) LIMIT ? OFFSET ?', ['basic', 1, 0])
+DEBUG:yfinance:loaded persistent cookie
+DEBUG:yfinance:reusing cookie
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): query1.finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://query1.finance.yahoo.com:443 "GET /v1/test/getcrumb HTTP/1.1" 200 11
+DEBUG:yfinance:crumb = 'm6lSbkQfVGD'
+DEBUG:yfinance:      Exiting _get_cookie_and_crumb_basic()
+DEBUG:yfinance:     Exiting _get_cookie_and_crumb()
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): query2.finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://query2.finance.yahoo.com:443 "GET /v8/finance/chart/GOOGL?period1=1577854800&period2=1745208000&interval=1d&includePrePost=False&events=div%2Csplits%2CcapitalGains&crumb=m6lSbkQfVGD HTTP/1.1" 200 None
+DEBUG:yfinance:response code=200
+DEBUG:yfinance:    Exiting _make_request()
+DEBUG:yfinance:   Exiting get()
+DEBUG:yfinance:GOOGL: yfinance received OHLC data: 2020-01-02 14:30:00 -> 2025-04-17 13:30:00
+DEBUG:yfinance:GOOGL: OHLC after cleaning: 2020-01-02 09:30:00-05:00 -> 2025-04-17 09:30:00-04:00
+DEBUG:yfinance:GOOGL: OHLC after combining events: 2020-01-02 00:00:00-05:00 -> 2025-04-17 00:00:00-04:00
+DEBUG:yfinance:GOOGL: yfinance returning OHLC: 2020-01-02 00:00:00-05:00 -> 2025-04-17 00:00:00-04:00
+DEBUG:yfinance:  Exiting history()
+DEBUG:yfinance: Exiting history()
+DEBUG:yfinance:Exiting download()
+ERROR:root:Error in /api/stock endpoint: 'Close'
+Traceback (most recent call last):
+  File "C:\Users\vpjd8\PycharmProjects\StockPredictorBackend\.venv\Lib\site-packages\pandas\core\indexes\base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'Close'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\vpjd8\PycharmProjects\StockPredictorBackend\routes.py", line 80, in stock
+    store_stock_data(stock_symbol, new_data)
+  File "C:\Users\vpjd8\PycharmProjects\StockPredictorBackend\services\db_utils.py", line 51, in store_stock_data
+    (stock_symbol, date, float(row['Close']))
+                               ~~~^^^^^^^^^
+  File "C:\Users\vpjd8\PycharmProjects\StockPredictorBackend\.venv\Lib\site-packages\pandas\core\series.py", line 1121, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vpjd8\PycharmProjects\StockPredictorBackend\.venv\Lib\site-packages\pandas\core\series.py", line 1237, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vpjd8\PycharmProjects\StockPredictorBackend\.venv\Lib\site-packages\pandas\core\indexes\base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'Close'
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 20:51:52] "[35m[1mPOST /api/stock HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 20:52:31] "[31m[1mGET /api/stock HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 20:52:31] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:15:03] "OPTIONS /api/stock HTTP/1.1" 200 -
+DEBUG:root:Request payload: {'stock_symbol': 'GOOGL'}
+DEBUG:root:Received stock symbol: GOOGL
+DEBUG:yfinance:Entering download()
+DEBUG:yfinance:Disabling multithreading because DEBUG logging enabled
+DEBUG:yfinance:Using User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36
+DEBUG:yfinance: Entering history()
+DEBUG:peewee:('CREATE TABLE IF NOT EXISTS "_kv" ("key" VARCHAR(255) NOT NULL PRIMARY KEY, "value" VARCHAR(255)) WITHOUT ROWID', [])
+DEBUG:peewee:('SELECT "t1"."key", "t1"."value" FROM "_kv" AS "t1" WHERE ("t1"."key" = ?) LIMIT ? OFFSET ?', ['GOOGL', 1, 0])
+DEBUG:yfinance:  Entering history()
+DEBUG:yfinance:GOOGL: Yahoo GET parameters: {'period1': '2020-01-01 00:00:00-05:00', 'period2': '2025-04-21 00:00:00-04:00', 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+DEBUG:yfinance:   Entering get()
+DEBUG:yfinance:    Entering _make_request()
+DEBUG:yfinance:url=https://query2.finance.yahoo.com/v8/finance/chart/GOOGL
+DEBUG:yfinance:params=frozendict.frozendict({'period1': 1577854800, 'period2': 1745208000, 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'})
+DEBUG:yfinance:     Entering _get_cookie_and_crumb()
+DEBUG:yfinance:cookie_mode = 'basic'
+DEBUG:yfinance:      Entering _get_cookie_and_crumb_basic()
+DEBUG:peewee:('CREATE TABLE IF NOT EXISTS "_cookieschema" ("strategy" VARCHAR(255) NOT NULL PRIMARY KEY, "fetch_date" DATETIME NOT NULL, "cookie_bytes" BLOB NOT NULL) WITHOUT ROWID', [])
+DEBUG:peewee:('SELECT "t1"."strategy", "t1"."fetch_date", "t1"."cookie_bytes" FROM "_cookieschema" AS "t1" WHERE ("t1"."strategy" = ?) LIMIT ? OFFSET ?', ['basic', 1, 0])
+DEBUG:yfinance:loaded persistent cookie
+DEBUG:yfinance:reusing cookie
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): query1.finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://query1.finance.yahoo.com:443 "GET /v1/test/getcrumb HTTP/1.1" 200 11
+DEBUG:yfinance:crumb = 'm6lSbkQfVGD'
+DEBUG:yfinance:      Exiting _get_cookie_and_crumb_basic()
+DEBUG:yfinance:     Exiting _get_cookie_and_crumb()
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): query2.finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://query2.finance.yahoo.com:443 "GET /v8/finance/chart/GOOGL?period1=1577854800&period2=1745208000&interval=1d&includePrePost=False&events=div%2Csplits%2CcapitalGains&crumb=m6lSbkQfVGD HTTP/1.1" 200 None
+DEBUG:yfinance:response code=200
+DEBUG:yfinance:    Exiting _make_request()
+DEBUG:yfinance:   Exiting get()
+DEBUG:yfinance:GOOGL: yfinance received OHLC data: 2020-01-02 14:30:00 -> 2025-04-17 13:30:00
+DEBUG:yfinance:GOOGL: OHLC after cleaning: 2020-01-02 09:30:00-05:00 -> 2025-04-17 09:30:00-04:00
+DEBUG:yfinance:GOOGL: OHLC after combining events: 2020-01-02 00:00:00-05:00 -> 2025-04-17 00:00:00-04:00
+DEBUG:yfinance:GOOGL: yfinance returning OHLC: 2020-01-02 00:00:00-05:00 -> 2025-04-17 00:00:00-04:00
+DEBUG:yfinance:  Exiting history()
+DEBUG:yfinance: Exiting history()
+DEBUG:yfinance:Exiting download()
+DEBUG:yfinance:Entering download()
+DEBUG:yfinance:Disabling multithreading because DEBUG logging enabled
+DEBUG:yfinance: Entering history()
+DEBUG:peewee:('SELECT "t1"."key", "t1"."value" FROM "_kv" AS "t1" WHERE ("t1"."key" = ?) LIMIT ? OFFSET ?', ['GOOGL', 1, 0])
+DEBUG:yfinance:  Entering history()
+DEBUG:yfinance:GOOGL: Yahoo GET parameters: {'period1': '2025-04-17 00:00:00-04:00', 'period2': '2025-04-21 00:00:00-04:00', 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+DEBUG:yfinance:   Entering get()
+DEBUG:yfinance:    Entering _make_request()
+DEBUG:yfinance:url=https://query2.finance.yahoo.com/v8/finance/chart/GOOGL
+DEBUG:yfinance:params=frozendict.frozendict({'period1': 1744862400, 'period2': 1745208000, 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'})
+DEBUG:yfinance:     Entering _get_cookie_and_crumb()
+DEBUG:yfinance:cookie_mode = 'basic'
+DEBUG:yfinance:      Entering _get_cookie_and_crumb_basic()
+DEBUG:yfinance:reusing cookie
+DEBUG:yfinance:reusing crumb
+DEBUG:yfinance:      Exiting _get_cookie_and_crumb_basic()
+DEBUG:yfinance:     Exiting _get_cookie_and_crumb()
+DEBUG:urllib3.connectionpool:https://query2.finance.yahoo.com:443 "GET /v8/finance/chart/GOOGL?period1=1744862400&period2=1745208000&interval=1d&includePrePost=False&events=div%2Csplits%2CcapitalGains&crumb=m6lSbkQfVGD HTTP/1.1" 200 1185
+DEBUG:yfinance:response code=200
+DEBUG:yfinance:    Exiting _make_request()
+DEBUG:yfinance:   Exiting get()
+DEBUG:yfinance:GOOGL: yfinance received OHLC data: 2025-04-17 13:30:00 only
+DEBUG:yfinance:GOOGL: OHLC after cleaning: 2025-04-17 09:30:00-04:00 only
+DEBUG:yfinance:GOOGL: OHLC after combining events: 2025-04-17 00:00:00-04:00 only
+DEBUG:yfinance:GOOGL: yfinance returning OHLC: 2025-04-17 00:00:00-04:00 only
+DEBUG:yfinance:  Exiting history()
+DEBUG:yfinance: Exiting history()
+DEBUG:yfinance:Exiting download()
+ERROR:root:Error in /api/stock endpoint: 'close'
+Traceback (most recent call last):
+  File "C:\Users\vpjd8\PycharmProjects\StockPredictorBackend\.venv\Lib\site-packages\pandas\core\indexes\base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'close'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\vpjd8\PycharmProjects\StockPredictorBackend\routes.py", line 81, in stock
+    retrain_model(stock_symbol)
+  File "C:\Users\vpjd8\PycharmProjects\StockPredictorBackend\retrain_model.py", line 22, in retrain_model
+    store_stock_data(stock_symbol, new_data)
+  File "C:\Users\vpjd8\PycharmProjects\StockPredictorBackend\services\db_utils.py", line 51, in store_stock_data
+    (stock_symbol, date, float(row['close']))
+                               ~~~^^^^^^^^^
+  File "C:\Users\vpjd8\PycharmProjects\StockPredictorBackend\.venv\Lib\site-packages\pandas\core\series.py", line 1121, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vpjd8\PycharmProjects\StockPredictorBackend\.venv\Lib\site-packages\pandas\core\series.py", line 1237, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vpjd8\PycharmProjects\StockPredictorBackend\.venv\Lib\site-packages\pandas\core\indexes\base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'close'
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:15:04] "[35m[1mPOST /api/stock HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:17:20] "OPTIONS /api/stock HTTP/1.1" 200 -
+DEBUG:root:Request payload: {'stock_symbol': 'GOOGL'}
+DEBUG:root:Received stock symbol: GOOGL
+DEBUG:yfinance:Entering download()
+DEBUG:yfinance:Disabling multithreading because DEBUG logging enabled
+DEBUG:yfinance:Using User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36
+DEBUG:yfinance: Entering history()
+DEBUG:peewee:('CREATE TABLE IF NOT EXISTS "_kv" ("key" VARCHAR(255) NOT NULL PRIMARY KEY, "value" VARCHAR(255)) WITHOUT ROWID', [])
+DEBUG:peewee:('SELECT "t1"."key", "t1"."value" FROM "_kv" AS "t1" WHERE ("t1"."key" = ?) LIMIT ? OFFSET ?', ['GOOGL', 1, 0])
+DEBUG:yfinance:  Entering history()
+DEBUG:yfinance:GOOGL: Yahoo GET parameters: {'period1': '2020-01-01 00:00:00-05:00', 'period2': '2025-04-21 00:00:00-04:00', 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+DEBUG:yfinance:   Entering get()
+DEBUG:yfinance:    Entering _make_request()
+DEBUG:yfinance:url=https://query2.finance.yahoo.com/v8/finance/chart/GOOGL
+DEBUG:yfinance:params=frozendict.frozendict({'period1': 1577854800, 'period2': 1745208000, 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'})
+DEBUG:yfinance:     Entering _get_cookie_and_crumb()
+DEBUG:yfinance:cookie_mode = 'basic'
+DEBUG:yfinance:      Entering _get_cookie_and_crumb_basic()
+DEBUG:peewee:('CREATE TABLE IF NOT EXISTS "_cookieschema" ("strategy" VARCHAR(255) NOT NULL PRIMARY KEY, "fetch_date" DATETIME NOT NULL, "cookie_bytes" BLOB NOT NULL) WITHOUT ROWID', [])
+DEBUG:peewee:('SELECT "t1"."strategy", "t1"."fetch_date", "t1"."cookie_bytes" FROM "_cookieschema" AS "t1" WHERE ("t1"."strategy" = ?) LIMIT ? OFFSET ?', ['basic', 1, 0])
+DEBUG:yfinance:loaded persistent cookie
+DEBUG:yfinance:reusing cookie
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): query1.finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://query1.finance.yahoo.com:443 "GET /v1/test/getcrumb HTTP/1.1" 200 11
+DEBUG:yfinance:crumb = 'm6lSbkQfVGD'
+DEBUG:yfinance:      Exiting _get_cookie_and_crumb_basic()
+DEBUG:yfinance:     Exiting _get_cookie_and_crumb()
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): query2.finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://query2.finance.yahoo.com:443 "GET /v8/finance/chart/GOOGL?period1=1577854800&period2=1745208000&interval=1d&includePrePost=False&events=div%2Csplits%2CcapitalGains&crumb=m6lSbkQfVGD HTTP/1.1" 200 None
+DEBUG:yfinance:response code=200
+DEBUG:yfinance:    Exiting _make_request()
+DEBUG:yfinance:   Exiting get()
+DEBUG:yfinance:GOOGL: yfinance received OHLC data: 2020-01-02 14:30:00 -> 2025-04-17 13:30:00
+DEBUG:yfinance:GOOGL: OHLC after cleaning: 2020-01-02 09:30:00-05:00 -> 2025-04-17 09:30:00-04:00
+DEBUG:yfinance:GOOGL: OHLC after combining events: 2020-01-02 00:00:00-05:00 -> 2025-04-17 00:00:00-04:00
+DEBUG:yfinance:GOOGL: yfinance returning OHLC: 2020-01-02 00:00:00-05:00 -> 2025-04-17 00:00:00-04:00
+DEBUG:yfinance:  Exiting history()
+DEBUG:yfinance: Exiting history()
+DEBUG:yfinance:Exiting download()
+DEBUG:yfinance:Entering download()
+DEBUG:yfinance:Disabling multithreading because DEBUG logging enabled
+DEBUG:yfinance: Entering history()
+DEBUG:peewee:('SELECT "t1"."key", "t1"."value" FROM "_kv" AS "t1" WHERE ("t1"."key" = ?) LIMIT ? OFFSET ?', ['GOOGL', 1, 0])
+DEBUG:yfinance:  Entering history()
+DEBUG:yfinance:GOOGL: Yahoo GET parameters: {'period1': '2025-04-17 00:00:00-04:00', 'period2': '2025-04-21 00:00:00-04:00', 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+DEBUG:yfinance:   Entering get()
+DEBUG:yfinance:    Entering _make_request()
+DEBUG:yfinance:url=https://query2.finance.yahoo.com/v8/finance/chart/GOOGL
+DEBUG:yfinance:params=frozendict.frozendict({'period1': 1744862400, 'period2': 1745208000, 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'})
+DEBUG:yfinance:     Entering _get_cookie_and_crumb()
+DEBUG:yfinance:cookie_mode = 'basic'
+DEBUG:yfinance:      Entering _get_cookie_and_crumb_basic()
+DEBUG:yfinance:reusing cookie
+DEBUG:yfinance:reusing crumb
+DEBUG:yfinance:      Exiting _get_cookie_and_crumb_basic()
+DEBUG:yfinance:     Exiting _get_cookie_and_crumb()
+DEBUG:urllib3.connectionpool:https://query2.finance.yahoo.com:443 "GET /v8/finance/chart/GOOGL?period1=1744862400&period2=1745208000&interval=1d&includePrePost=False&events=div%2Csplits%2CcapitalGains&crumb=m6lSbkQfVGD HTTP/1.1" 200 1185
+DEBUG:yfinance:response code=200
+DEBUG:yfinance:    Exiting _make_request()
+DEBUG:yfinance:   Exiting get()
+DEBUG:yfinance:GOOGL: yfinance received OHLC data: 2025-04-17 13:30:00 only
+DEBUG:yfinance:GOOGL: OHLC after cleaning: 2025-04-17 09:30:00-04:00 only
+DEBUG:yfinance:GOOGL: OHLC after combining events: 2025-04-17 00:00:00-04:00 only
+DEBUG:yfinance:GOOGL: yfinance returning OHLC: 2025-04-17 00:00:00-04:00 only
+DEBUG:yfinance:  Exiting history()
+DEBUG:yfinance: Exiting history()
+DEBUG:yfinance:Exiting download()
+ERROR:root:Error in /api/stock endpoint: 'close'
+Traceback (most recent call last):
+  File "C:\Users\vpjd8\PycharmProjects\StockPredictorBackend\.venv\Lib\site-packages\pandas\core\indexes\base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'close'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\vpjd8\PycharmProjects\StockPredictorBackend\routes.py", line 81, in stock
+    retrain_model(stock_symbol)
+  File "C:\Users\vpjd8\PycharmProjects\StockPredictorBackend\retrain_model.py", line 22, in retrain_model
+    store_stock_data(stock_symbol, new_data)
+  File "C:\Users\vpjd8\PycharmProjects\StockPredictorBackend\services\db_utils.py", line 51, in store_stock_data
+    (stock_symbol, date, float(row['close']))
+                               ~~~^^^^^^^^^
+  File "C:\Users\vpjd8\PycharmProjects\StockPredictorBackend\.venv\Lib\site-packages\pandas\core\series.py", line 1121, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vpjd8\PycharmProjects\StockPredictorBackend\.venv\Lib\site-packages\pandas\core\series.py", line 1237, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vpjd8\PycharmProjects\StockPredictorBackend\.venv\Lib\site-packages\pandas\core\indexes\base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'close'
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:17:21] "[35m[1mPOST /api/stock HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:18:25] "OPTIONS /api/stock HTTP/1.1" 200 -
+DEBUG:root:Request payload: {'stock_symbol': 'GOOGL'}
+DEBUG:root:Received stock symbol: GOOGL
+DEBUG:yfinance:Entering download()
+DEBUG:yfinance:Disabling multithreading because DEBUG logging enabled
+DEBUG:yfinance:Using User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 14_7_4) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3 Safari/605.1.15
+DEBUG:yfinance: Entering history()
+DEBUG:peewee:('CREATE TABLE IF NOT EXISTS "_kv" ("key" VARCHAR(255) NOT NULL PRIMARY KEY, "value" VARCHAR(255)) WITHOUT ROWID', [])
+DEBUG:peewee:('SELECT "t1"."key", "t1"."value" FROM "_kv" AS "t1" WHERE ("t1"."key" = ?) LIMIT ? OFFSET ?', ['GOOGL', 1, 0])
+DEBUG:yfinance:  Entering history()
+DEBUG:yfinance:GOOGL: Yahoo GET parameters: {'period1': '2020-01-01 00:00:00-05:00', 'period2': '2025-04-21 00:00:00-04:00', 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+DEBUG:yfinance:   Entering get()
+DEBUG:yfinance:    Entering _make_request()
+DEBUG:yfinance:url=https://query2.finance.yahoo.com/v8/finance/chart/GOOGL
+DEBUG:yfinance:params=frozendict.frozendict({'period1': 1577854800, 'period2': 1745208000, 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'})
+DEBUG:yfinance:     Entering _get_cookie_and_crumb()
+DEBUG:yfinance:cookie_mode = 'basic'
+DEBUG:yfinance:      Entering _get_cookie_and_crumb_basic()
+DEBUG:peewee:('CREATE TABLE IF NOT EXISTS "_cookieschema" ("strategy" VARCHAR(255) NOT NULL PRIMARY KEY, "fetch_date" DATETIME NOT NULL, "cookie_bytes" BLOB NOT NULL) WITHOUT ROWID', [])
+DEBUG:peewee:('SELECT "t1"."strategy", "t1"."fetch_date", "t1"."cookie_bytes" FROM "_cookieschema" AS "t1" WHERE ("t1"."strategy" = ?) LIMIT ? OFFSET ?', ['basic', 1, 0])
+DEBUG:yfinance:loaded persistent cookie
+DEBUG:yfinance:reusing cookie
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): query1.finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://query1.finance.yahoo.com:443 "GET /v1/test/getcrumb HTTP/1.1" 200 11
+DEBUG:yfinance:crumb = 'm6lSbkQfVGD'
+DEBUG:yfinance:      Exiting _get_cookie_and_crumb_basic()
+DEBUG:yfinance:     Exiting _get_cookie_and_crumb()
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): query2.finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://query2.finance.yahoo.com:443 "GET /v8/finance/chart/GOOGL?period1=1577854800&period2=1745208000&interval=1d&includePrePost=False&events=div%2Csplits%2CcapitalGains&crumb=m6lSbkQfVGD HTTP/1.1" 200 None
+DEBUG:yfinance:response code=200
+DEBUG:yfinance:    Exiting _make_request()
+DEBUG:yfinance:   Exiting get()
+DEBUG:yfinance:GOOGL: yfinance received OHLC data: 2020-01-02 14:30:00 -> 2025-04-17 13:30:00
+DEBUG:yfinance:GOOGL: OHLC after cleaning: 2020-01-02 09:30:00-05:00 -> 2025-04-17 09:30:00-04:00
+DEBUG:yfinance:GOOGL: OHLC after combining events: 2020-01-02 00:00:00-05:00 -> 2025-04-17 00:00:00-04:00
+DEBUG:yfinance:GOOGL: yfinance returning OHLC: 2020-01-02 00:00:00-05:00 -> 2025-04-17 00:00:00-04:00
+DEBUG:yfinance:  Exiting history()
+DEBUG:yfinance: Exiting history()
+DEBUG:yfinance:Exiting download()
+ERROR:root:Error in /api/stock endpoint: 'Close'
+Traceback (most recent call last):
+  File "C:\Users\vpjd8\PycharmProjects\StockPredictorBackend\.venv\Lib\site-packages\pandas\core\indexes\base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'Close'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\vpjd8\PycharmProjects\StockPredictorBackend\routes.py", line 80, in stock
+    store_stock_data(stock_symbol, new_data)
+  File "C:\Users\vpjd8\PycharmProjects\StockPredictorBackend\services\db_utils.py", line 51, in store_stock_data
+    (stock_symbol, date, float(row['Close']))
+                               ~~~^^^^^^^^^
+  File "C:\Users\vpjd8\PycharmProjects\StockPredictorBackend\.venv\Lib\site-packages\pandas\core\series.py", line 1121, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vpjd8\PycharmProjects\StockPredictorBackend\.venv\Lib\site-packages\pandas\core\series.py", line 1237, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vpjd8\PycharmProjects\StockPredictorBackend\.venv\Lib\site-packages\pandas\core\indexes\base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'Close'
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:18:26] "[35m[1mPOST /api/stock HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:19:39] "OPTIONS /api/stock HTTP/1.1" 200 -
+DEBUG:root:Request payload: {'stock_symbol': 'GOOGL'}
+DEBUG:root:Received stock symbol: GOOGL
+DEBUG:yfinance:Entering download()
+DEBUG:yfinance:Disabling multithreading because DEBUG logging enabled
+DEBUG:yfinance:Using User-Agent: Mozilla/5.0 (X11; Linux i686; rv:135.0) Gecko/20100101 Firefox/135.0
+DEBUG:yfinance: Entering history()
+DEBUG:peewee:('CREATE TABLE IF NOT EXISTS "_kv" ("key" VARCHAR(255) NOT NULL PRIMARY KEY, "value" VARCHAR(255)) WITHOUT ROWID', [])
+DEBUG:peewee:('SELECT "t1"."key", "t1"."value" FROM "_kv" AS "t1" WHERE ("t1"."key" = ?) LIMIT ? OFFSET ?', ['GOOGL', 1, 0])
+DEBUG:yfinance:  Entering history()
+DEBUG:yfinance:GOOGL: Yahoo GET parameters: {'period1': '2020-01-01 00:00:00-05:00', 'period2': '2025-04-21 00:00:00-04:00', 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+DEBUG:yfinance:   Entering get()
+DEBUG:yfinance:    Entering _make_request()
+DEBUG:yfinance:url=https://query2.finance.yahoo.com/v8/finance/chart/GOOGL
+DEBUG:yfinance:params=frozendict.frozendict({'period1': 1577854800, 'period2': 1745208000, 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'})
+DEBUG:yfinance:     Entering _get_cookie_and_crumb()
+DEBUG:yfinance:cookie_mode = 'basic'
+DEBUG:yfinance:      Entering _get_cookie_and_crumb_basic()
+DEBUG:peewee:('CREATE TABLE IF NOT EXISTS "_cookieschema" ("strategy" VARCHAR(255) NOT NULL PRIMARY KEY, "fetch_date" DATETIME NOT NULL, "cookie_bytes" BLOB NOT NULL) WITHOUT ROWID', [])
+DEBUG:peewee:('SELECT "t1"."strategy", "t1"."fetch_date", "t1"."cookie_bytes" FROM "_cookieschema" AS "t1" WHERE ("t1"."strategy" = ?) LIMIT ? OFFSET ?', ['basic', 1, 0])
+DEBUG:yfinance:loaded persistent cookie
+DEBUG:yfinance:reusing cookie
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): query1.finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://query1.finance.yahoo.com:443 "GET /v1/test/getcrumb HTTP/1.1" 200 11
+DEBUG:yfinance:crumb = 'm6lSbkQfVGD'
+DEBUG:yfinance:      Exiting _get_cookie_and_crumb_basic()
+DEBUG:yfinance:     Exiting _get_cookie_and_crumb()
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): query2.finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://query2.finance.yahoo.com:443 "GET /v8/finance/chart/GOOGL?period1=1577854800&period2=1745208000&interval=1d&includePrePost=False&events=div%2Csplits%2CcapitalGains&crumb=m6lSbkQfVGD HTTP/1.1" 200 None
+DEBUG:yfinance:response code=200
+DEBUG:yfinance:    Exiting _make_request()
+DEBUG:yfinance:   Exiting get()
+DEBUG:yfinance:GOOGL: yfinance received OHLC data: 2020-01-02 14:30:00 -> 2025-04-17 13:30:00
+DEBUG:yfinance:GOOGL: OHLC after cleaning: 2020-01-02 09:30:00-05:00 -> 2025-04-17 09:30:00-04:00
+DEBUG:yfinance:GOOGL: OHLC after combining events: 2020-01-02 00:00:00-05:00 -> 2025-04-17 00:00:00-04:00
+DEBUG:yfinance:GOOGL: yfinance returning OHLC: 2020-01-02 00:00:00-05:00 -> 2025-04-17 00:00:00-04:00
+DEBUG:yfinance:  Exiting history()
+DEBUG:yfinance: Exiting history()
+DEBUG:yfinance:Exiting download()
+DEBUG:yfinance:Entering download()
+DEBUG:yfinance:Disabling multithreading because DEBUG logging enabled
+DEBUG:yfinance: Entering history()
+DEBUG:peewee:('SELECT "t1"."key", "t1"."value" FROM "_kv" AS "t1" WHERE ("t1"."key" = ?) LIMIT ? OFFSET ?', ['GOOGL', 1, 0])
+DEBUG:yfinance:  Entering history()
+DEBUG:yfinance:GOOGL: Yahoo GET parameters: {'period1': '2025-04-17 00:00:00-04:00', 'period2': '2025-04-21 00:00:00-04:00', 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+DEBUG:yfinance:   Entering get()
+DEBUG:yfinance:    Entering _make_request()
+DEBUG:yfinance:url=https://query2.finance.yahoo.com/v8/finance/chart/GOOGL
+DEBUG:yfinance:params=frozendict.frozendict({'period1': 1744862400, 'period2': 1745208000, 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'})
+DEBUG:yfinance:     Entering _get_cookie_and_crumb()
+DEBUG:yfinance:cookie_mode = 'basic'
+DEBUG:yfinance:      Entering _get_cookie_and_crumb_basic()
+DEBUG:yfinance:reusing cookie
+DEBUG:yfinance:reusing crumb
+DEBUG:yfinance:      Exiting _get_cookie_and_crumb_basic()
+DEBUG:yfinance:     Exiting _get_cookie_and_crumb()
+DEBUG:urllib3.connectionpool:https://query2.finance.yahoo.com:443 "GET /v8/finance/chart/GOOGL?period1=1744862400&period2=1745208000&interval=1d&includePrePost=False&events=div%2Csplits%2CcapitalGains&crumb=m6lSbkQfVGD HTTP/1.1" 200 1185
+DEBUG:yfinance:response code=200
+DEBUG:yfinance:    Exiting _make_request()
+DEBUG:yfinance:   Exiting get()
+DEBUG:yfinance:GOOGL: yfinance received OHLC data: 2025-04-17 13:30:00 only
+DEBUG:yfinance:GOOGL: OHLC after cleaning: 2025-04-17 09:30:00-04:00 only
+DEBUG:yfinance:GOOGL: OHLC after combining events: 2025-04-17 00:00:00-04:00 only
+DEBUG:yfinance:GOOGL: yfinance returning OHLC: 2025-04-17 00:00:00-04:00 only
+DEBUG:yfinance:  Exiting history()
+DEBUG:yfinance: Exiting history()
+DEBUG:yfinance:Exiting download()
+ERROR:root:Error in /api/stock endpoint: 'close'
+Traceback (most recent call last):
+  File "C:\Users\vpjd8\PycharmProjects\StockPredictorBackend\.venv\Lib\site-packages\pandas\core\indexes\base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\\_libs\\hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'close'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\vpjd8\PycharmProjects\StockPredictorBackend\routes.py", line 81, in stock
+    retrain_model(stock_symbol)
+  File "C:\Users\vpjd8\PycharmProjects\StockPredictorBackend\retrain_model.py", line 22, in retrain_model
+    store_stock_data(stock_symbol, new_data)
+  File "C:\Users\vpjd8\PycharmProjects\StockPredictorBackend\services\db_utils.py", line 51, in store_stock_data
+    (stock_symbol, date, float(row['close']))
+                               ~~~^^^^^^^^^
+  File "C:\Users\vpjd8\PycharmProjects\StockPredictorBackend\.venv\Lib\site-packages\pandas\core\series.py", line 1121, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vpjd8\PycharmProjects\StockPredictorBackend\.venv\Lib\site-packages\pandas\core\series.py", line 1237, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vpjd8\PycharmProjects\StockPredictorBackend\.venv\Lib\site-packages\pandas\core\indexes\base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'close'
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:19:39] "[35m[1mPOST /api/stock HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:21:12] "OPTIONS /api/stock HTTP/1.1" 200 -
+DEBUG:root:Request payload: {'stock_symbol': 'GOOGL'}
+DEBUG:root:Received stock symbol: GOOGL
+DEBUG:yfinance:Entering download()
+DEBUG:yfinance:Disabling multithreading because DEBUG logging enabled
+DEBUG:yfinance:Using User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36
+DEBUG:yfinance: Entering history()
+DEBUG:peewee:('CREATE TABLE IF NOT EXISTS "_kv" ("key" VARCHAR(255) NOT NULL PRIMARY KEY, "value" VARCHAR(255)) WITHOUT ROWID', [])
+DEBUG:peewee:('SELECT "t1"."key", "t1"."value" FROM "_kv" AS "t1" WHERE ("t1"."key" = ?) LIMIT ? OFFSET ?', ['GOOGL', 1, 0])
+DEBUG:yfinance:  Entering history()
+DEBUG:yfinance:GOOGL: Yahoo GET parameters: {'period1': '2020-01-01 00:00:00-05:00', 'period2': '2025-04-21 00:00:00-04:00', 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+DEBUG:yfinance:   Entering get()
+DEBUG:yfinance:    Entering _make_request()
+DEBUG:yfinance:url=https://query2.finance.yahoo.com/v8/finance/chart/GOOGL
+DEBUG:yfinance:params=frozendict.frozendict({'period1': 1577854800, 'period2': 1745208000, 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'})
+DEBUG:yfinance:     Entering _get_cookie_and_crumb()
+DEBUG:yfinance:cookie_mode = 'basic'
+DEBUG:yfinance:      Entering _get_cookie_and_crumb_basic()
+DEBUG:peewee:('CREATE TABLE IF NOT EXISTS "_cookieschema" ("strategy" VARCHAR(255) NOT NULL PRIMARY KEY, "fetch_date" DATETIME NOT NULL, "cookie_bytes" BLOB NOT NULL) WITHOUT ROWID', [])
+DEBUG:peewee:('SELECT "t1"."strategy", "t1"."fetch_date", "t1"."cookie_bytes" FROM "_cookieschema" AS "t1" WHERE ("t1"."strategy" = ?) LIMIT ? OFFSET ?', ['basic', 1, 0])
+DEBUG:yfinance:loaded persistent cookie
+DEBUG:yfinance:reusing cookie
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): query1.finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://query1.finance.yahoo.com:443 "GET /v1/test/getcrumb HTTP/1.1" 200 11
+DEBUG:yfinance:crumb = 'm6lSbkQfVGD'
+DEBUG:yfinance:      Exiting _get_cookie_and_crumb_basic()
+DEBUG:yfinance:     Exiting _get_cookie_and_crumb()
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): query2.finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://query2.finance.yahoo.com:443 "GET /v8/finance/chart/GOOGL?period1=1577854800&period2=1745208000&interval=1d&includePrePost=False&events=div%2Csplits%2CcapitalGains&crumb=m6lSbkQfVGD HTTP/1.1" 200 None
+DEBUG:yfinance:response code=200
+DEBUG:yfinance:    Exiting _make_request()
+DEBUG:yfinance:   Exiting get()
+DEBUG:yfinance:GOOGL: yfinance received OHLC data: 2020-01-02 14:30:00 -> 2025-04-17 13:30:00
+DEBUG:yfinance:GOOGL: OHLC after cleaning: 2020-01-02 09:30:00-05:00 -> 2025-04-17 09:30:00-04:00
+DEBUG:yfinance:GOOGL: OHLC after combining events: 2020-01-02 00:00:00-05:00 -> 2025-04-17 00:00:00-04:00
+DEBUG:yfinance:GOOGL: yfinance returning OHLC: 2020-01-02 00:00:00-05:00 -> 2025-04-17 00:00:00-04:00
+DEBUG:yfinance:  Exiting history()
+DEBUG:yfinance: Exiting history()
+DEBUG:yfinance:Exiting download()
+DEBUG:yfinance:Entering download()
+DEBUG:yfinance:Disabling multithreading because DEBUG logging enabled
+DEBUG:yfinance: Entering history()
+DEBUG:peewee:('SELECT "t1"."key", "t1"."value" FROM "_kv" AS "t1" WHERE ("t1"."key" = ?) LIMIT ? OFFSET ?', ['GOOGL', 1, 0])
+DEBUG:yfinance:  Entering history()
+DEBUG:yfinance:GOOGL: Yahoo GET parameters: {'period1': '2025-04-17 00:00:00-04:00', 'period2': '2025-04-21 00:00:00-04:00', 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+DEBUG:yfinance:   Entering get()
+DEBUG:yfinance:    Entering _make_request()
+DEBUG:yfinance:url=https://query2.finance.yahoo.com/v8/finance/chart/GOOGL
+DEBUG:yfinance:params=frozendict.frozendict({'period1': 1744862400, 'period2': 1745208000, 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'})
+DEBUG:yfinance:     Entering _get_cookie_and_crumb()
+DEBUG:yfinance:cookie_mode = 'basic'
+DEBUG:yfinance:      Entering _get_cookie_and_crumb_basic()
+DEBUG:yfinance:reusing cookie
+DEBUG:yfinance:reusing crumb
+DEBUG:yfinance:      Exiting _get_cookie_and_crumb_basic()
+DEBUG:yfinance:     Exiting _get_cookie_and_crumb()
+DEBUG:urllib3.connectionpool:https://query2.finance.yahoo.com:443 "GET /v8/finance/chart/GOOGL?period1=1744862400&period2=1745208000&interval=1d&includePrePost=False&events=div%2Csplits%2CcapitalGains&crumb=m6lSbkQfVGD HTTP/1.1" 200 1185
+DEBUG:yfinance:response code=200
+DEBUG:yfinance:    Exiting _make_request()
+DEBUG:yfinance:   Exiting get()
+DEBUG:yfinance:GOOGL: yfinance received OHLC data: 2025-04-17 13:30:00 only
+DEBUG:yfinance:GOOGL: OHLC after cleaning: 2025-04-17 09:30:00-04:00 only
+DEBUG:yfinance:GOOGL: OHLC after combining events: 2025-04-17 00:00:00-04:00 only
+DEBUG:yfinance:GOOGL: yfinance returning OHLC: 2025-04-17 00:00:00-04:00 only
+DEBUG:yfinance:  Exiting history()
+DEBUG:yfinance: Exiting history()
+DEBUG:yfinance:Exiting download()
+ERROR:root:Error in /api/stock endpoint: "None of [Index(['Close'], dtype='object')] are in the [columns]"
+Traceback (most recent call last):
+  File "C:\Users\vpjd8\PycharmProjects\StockPredictorBackend\routes.py", line 81, in stock
+    retrain_model(stock_symbol)
+  File "C:\Users\vpjd8\PycharmProjects\StockPredictorBackend\retrain_model.py", line 29, in retrain_model
+    data = existing_data[['Close']]
+           ~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\vpjd8\PycharmProjects\StockPredictorBackend\.venv\Lib\site-packages\pandas\core\frame.py", line 4108, in __getitem__
+    indexer = self.columns._get_indexer_strict(key, "columns")[1]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vpjd8\PycharmProjects\StockPredictorBackend\.venv\Lib\site-packages\pandas\core\indexes\base.py", line 6200, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+  File "C:\Users\vpjd8\PycharmProjects\StockPredictorBackend\.venv\Lib\site-packages\pandas\core\indexes\base.py", line 6249, in _raise_if_missing
+    raise KeyError(f"None of [{key}] are in the [{axis_name}]")
+KeyError: "None of [Index(['Close'], dtype='object')] are in the [columns]"
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:21:12] "[35m[1mPOST /api/stock HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:22:29] "OPTIONS /api/stock HTTP/1.1" 200 -
+DEBUG:root:Request payload: {'stock_symbol': 'GOOGL'}
+DEBUG:root:Received stock symbol: GOOGL
+DEBUG:yfinance:Entering download()
+DEBUG:yfinance:Disabling multithreading because DEBUG logging enabled
+DEBUG:yfinance:Using User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 14_7_4) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3 Safari/605.1.15
+DEBUG:yfinance: Entering history()
+DEBUG:peewee:('CREATE TABLE IF NOT EXISTS "_kv" ("key" VARCHAR(255) NOT NULL PRIMARY KEY, "value" VARCHAR(255)) WITHOUT ROWID', [])
+DEBUG:peewee:('SELECT "t1"."key", "t1"."value" FROM "_kv" AS "t1" WHERE ("t1"."key" = ?) LIMIT ? OFFSET ?', ['GOOGL', 1, 0])
+DEBUG:yfinance:  Entering history()
+DEBUG:yfinance:GOOGL: Yahoo GET parameters: {'period1': '2020-01-01 00:00:00-05:00', 'period2': '2025-04-21 00:00:00-04:00', 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+DEBUG:yfinance:   Entering get()
+DEBUG:yfinance:    Entering _make_request()
+DEBUG:yfinance:url=https://query2.finance.yahoo.com/v8/finance/chart/GOOGL
+DEBUG:yfinance:params=frozendict.frozendict({'period1': 1577854800, 'period2': 1745208000, 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'})
+DEBUG:yfinance:     Entering _get_cookie_and_crumb()
+DEBUG:yfinance:cookie_mode = 'basic'
+DEBUG:yfinance:      Entering _get_cookie_and_crumb_basic()
+DEBUG:peewee:('CREATE TABLE IF NOT EXISTS "_cookieschema" ("strategy" VARCHAR(255) NOT NULL PRIMARY KEY, "fetch_date" DATETIME NOT NULL, "cookie_bytes" BLOB NOT NULL) WITHOUT ROWID', [])
+DEBUG:peewee:('SELECT "t1"."strategy", "t1"."fetch_date", "t1"."cookie_bytes" FROM "_cookieschema" AS "t1" WHERE ("t1"."strategy" = ?) LIMIT ? OFFSET ?', ['basic', 1, 0])
+DEBUG:yfinance:loaded persistent cookie
+DEBUG:yfinance:reusing cookie
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): query1.finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://query1.finance.yahoo.com:443 "GET /v1/test/getcrumb HTTP/1.1" 200 11
+DEBUG:yfinance:crumb = 'm6lSbkQfVGD'
+DEBUG:yfinance:      Exiting _get_cookie_and_crumb_basic()
+DEBUG:yfinance:     Exiting _get_cookie_and_crumb()
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): query2.finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://query2.finance.yahoo.com:443 "GET /v8/finance/chart/GOOGL?period1=1577854800&period2=1745208000&interval=1d&includePrePost=False&events=div%2Csplits%2CcapitalGains&crumb=m6lSbkQfVGD HTTP/1.1" 200 None
+DEBUG:yfinance:response code=200
+DEBUG:yfinance:    Exiting _make_request()
+DEBUG:yfinance:   Exiting get()
+DEBUG:yfinance:GOOGL: yfinance received OHLC data: 2020-01-02 14:30:00 -> 2025-04-17 13:30:00
+DEBUG:yfinance:GOOGL: OHLC after cleaning: 2020-01-02 09:30:00-05:00 -> 2025-04-17 09:30:00-04:00
+DEBUG:yfinance:GOOGL: OHLC after combining events: 2020-01-02 00:00:00-05:00 -> 2025-04-17 00:00:00-04:00
+DEBUG:yfinance:GOOGL: yfinance returning OHLC: 2020-01-02 00:00:00-05:00 -> 2025-04-17 00:00:00-04:00
+DEBUG:yfinance:  Exiting history()
+DEBUG:yfinance: Exiting history()
+DEBUG:yfinance:Exiting download()
+DEBUG:yfinance:Entering download()
+DEBUG:yfinance:Disabling multithreading because DEBUG logging enabled
+DEBUG:yfinance: Entering history()
+DEBUG:peewee:('SELECT "t1"."key", "t1"."value" FROM "_kv" AS "t1" WHERE ("t1"."key" = ?) LIMIT ? OFFSET ?', ['GOOGL', 1, 0])
+DEBUG:yfinance:  Entering history()
+DEBUG:yfinance:GOOGL: Yahoo GET parameters: {'period1': '2025-04-17 00:00:00-04:00', 'period2': '2025-04-21 00:00:00-04:00', 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+DEBUG:yfinance:   Entering get()
+DEBUG:yfinance:    Entering _make_request()
+DEBUG:yfinance:url=https://query2.finance.yahoo.com/v8/finance/chart/GOOGL
+DEBUG:yfinance:params=frozendict.frozendict({'period1': 1744862400, 'period2': 1745208000, 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'})
+DEBUG:yfinance:     Entering _get_cookie_and_crumb()
+DEBUG:yfinance:cookie_mode = 'basic'
+DEBUG:yfinance:      Entering _get_cookie_and_crumb_basic()
+DEBUG:yfinance:reusing cookie
+DEBUG:yfinance:reusing crumb
+DEBUG:yfinance:      Exiting _get_cookie_and_crumb_basic()
+DEBUG:yfinance:     Exiting _get_cookie_and_crumb()
+DEBUG:urllib3.connectionpool:https://query2.finance.yahoo.com:443 "GET /v8/finance/chart/GOOGL?period1=1744862400&period2=1745208000&interval=1d&includePrePost=False&events=div%2Csplits%2CcapitalGains&crumb=m6lSbkQfVGD HTTP/1.1" 200 1185
+DEBUG:yfinance:response code=200
+DEBUG:yfinance:    Exiting _make_request()
+DEBUG:yfinance:   Exiting get()
+DEBUG:yfinance:GOOGL: yfinance received OHLC data: 2025-04-17 13:30:00 only
+DEBUG:yfinance:GOOGL: OHLC after cleaning: 2025-04-17 09:30:00-04:00 only
+DEBUG:yfinance:GOOGL: OHLC after combining events: 2025-04-17 00:00:00-04:00 only
+DEBUG:yfinance:GOOGL: yfinance returning OHLC: 2025-04-17 00:00:00-04:00 only
+DEBUG:yfinance:  Exiting history()
+DEBUG:yfinance: Exiting history()
+DEBUG:yfinance:Exiting download()
+DEBUG:h5py._conv:Creating converter from 5 to 3
+DEBUG:boto3.s3.transfer:Opting out of CRT Transfer Manager. Preferred client: auto, CRT available: False, Instance Optimized: False.
+DEBUG:boto3.s3.transfer:Using default client. pid: 3192, thread: 19292
+DEBUG:s3transfer.utils:Acquiring 0
+DEBUG:s3transfer.tasks:UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000001F80FD340D0>}) about to wait for the following futures []
+DEBUG:s3transfer.tasks:UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000001F80FD340D0>}) done waiting for dependent futures
+DEBUG:s3transfer.tasks:Executing task UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000001F80FD340D0>}) with kwargs {'client': <botocore.client.S3 object at 0x000001F853D48210>, 'config': <boto3.s3.transfer.TransferConfig object at 0x000001F80FFB7D90>, 'osutil': <s3transfer.utils.OSUtils object at 0x000001F807C4B190>, 'request_executor': <s3transfer.futures.BoundedExecutor object at 0x000001F80FD80750>, 'transfer_future': <s3transfer.futures.TransferFuture object at 0x000001F80FD340D0>}
+DEBUG:s3transfer.futures:Submitting task PutObjectTask(transfer_id=0, {'bucket': 'stock-prediction-models-fyp', 'key': 'models/GOOGL.pkl', 'extra_args': {'ChecksumAlgorithm': 'CRC32'}}) to executor <s3transfer.futures.BoundedExecutor object at 0x000001F80FD80750> for transfer request: 0.
+DEBUG:s3transfer.utils:Acquiring 0
+DEBUG:s3transfer.tasks:PutObjectTask(transfer_id=0, {'bucket': 'stock-prediction-models-fyp', 'key': 'models/GOOGL.pkl', 'extra_args': {'ChecksumAlgorithm': 'CRC32'}}) about to wait for the following futures []
+DEBUG:s3transfer.utils:Releasing acquire 0/None
+DEBUG:s3transfer.tasks:PutObjectTask(transfer_id=0, {'bucket': 'stock-prediction-models-fyp', 'key': 'models/GOOGL.pkl', 'extra_args': {'ChecksumAlgorithm': 'CRC32'}}) done waiting for dependent futures
+DEBUG:s3transfer.tasks:Executing task PutObjectTask(transfer_id=0, {'bucket': 'stock-prediction-models-fyp', 'key': 'models/GOOGL.pkl', 'extra_args': {'ChecksumAlgorithm': 'CRC32'}}) with kwargs {'client': <botocore.client.S3 object at 0x000001F853D48210>, 'fileobj': <s3transfer.utils.ReadFileChunk object at 0x000001F80FDAAA50>, 'bucket': 'stock-prediction-models-fyp', 'key': 'models/GOOGL.pkl', 'extra_args': {'ChecksumAlgorithm': 'CRC32'}}
+DEBUG:botocore.hooks:Event before-parameter-build.s3.PutObject: calling handler <function validate_ascii_metadata at 0x000001F85450B060>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.PutObject: calling handler <function sse_md5 at 0x000001F85450A340>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.PutObject: calling handler <function convert_body_to_file_like_object at 0x000001F85450BA60>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.PutObject: calling handler <function validate_bucket_name at 0x000001F85450A2A0>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.PutObject: calling handler <function remove_bucket_from_url_paths_from_model at 0x000001F854534540>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.PutObject: calling handler <bound method S3RegionRedirectorv2.annotate_request_context of <botocore.utils.S3RegionRedirectorv2 object at 0x000001F8551A6BD0>>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.PutObject: calling handler <bound method ClientCreator._inject_s3_input_parameters of <botocore.client.ClientCreator object at 0x000001F854DE3650>>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.PutObject: calling handler <function generate_idempotent_uuid at 0x000001F85450A0C0>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.PutObject: calling handler <function _handle_request_validation_mode_member at 0x000001F854534CC0>
+DEBUG:botocore.hooks:Event before-endpoint-resolution.s3: calling handler <function customize_endpoint_resolver_builtins at 0x000001F854534720>
+DEBUG:botocore.hooks:Event before-endpoint-resolution.s3: calling handler <bound method S3RegionRedirectorv2.redirect_from_cache of <botocore.utils.S3RegionRedirectorv2 object at 0x000001F8551A6BD0>>
+DEBUG:botocore.regions:Calling endpoint provider with parameters: {'Bucket': 'stock-prediction-models-fyp', 'Region': 'eu-north-1', 'UseFIPS': False, 'UseDualStack': False, 'ForcePathStyle': False, 'Accelerate': False, 'UseGlobalEndpoint': False, 'Key': 'models/GOOGL.pkl', 'DisableMultiRegionAccessPoints': False, 'UseArnRegion': True}
+DEBUG:botocore.regions:Endpoint provider result: https://stock-prediction-models-fyp.s3.eu-north-1.amazonaws.com
+DEBUG:botocore.regions:Selecting from endpoint provider's list of auth schemes: "sigv4". User selected auth scheme is: "None"
+DEBUG:botocore.regions:Selected auth type "v4" as "v4" with signing context params: {'region': 'eu-north-1', 'signing_name': 's3', 'disableDoubleEncoding': True}
+DEBUG:botocore.hooks:Event before-call.s3.PutObject: calling handler <function add_expect_header at 0x000001F85450A660>
+DEBUG:botocore.handlers:Adding expect 100 continue header to request.
+DEBUG:botocore.hooks:Event before-call.s3.PutObject: calling handler <bound method S3ExpressIdentityResolver.apply_signing_cache_key of <botocore.utils.S3ExpressIdentityResolver object at 0x000001F8551AEF10>>
+DEBUG:botocore.hooks:Event before-call.s3.PutObject: calling handler <function add_recursion_detection_header at 0x000001F854508FE0>
+DEBUG:botocore.hooks:Event before-call.s3.PutObject: calling handler <function add_query_compatibility_header at 0x000001F854534C20>
+DEBUG:botocore.hooks:Event before-call.s3.PutObject: calling handler <function inject_api_version_header_if_needed at 0x000001F85450BBA0>
+DEBUG:botocore.endpoint:Making request for OperationModel(name=PutObject) with params: {'url_path': '/models/GOOGL.pkl', 'query_string': {}, 'method': 'PUT', 'headers': {'x-amz-sdk-checksum-algorithm': 'CRC32', 'User-Agent': 'Boto3/1.37.33 md/Botocore#1.37.33 ua/2.1 os/windows#10 md/arch#amd64 lang/python#3.11.9 md/pyimpl#CPython m/G cfg/retry-mode#legacy Botocore/1.37.33', 'Expect': '100-continue', 'Transfer-Encoding': 'chunked', 'Content-Encoding': 'aws-chunked', 'X-Amz-Trailer': 'x-amz-checksum-crc32', 'X-Amz-Decoded-Content-Length': '2503371'}, 'body': <botocore.httpchecksum.AwsChunkedWrapper object at 0x000001F80ED2DE50>, 'auth_path': '/stock-prediction-models-fyp/models/GOOGL.pkl', 'url': 'https://stock-prediction-models-fyp.s3.eu-north-1.amazonaws.com/models/GOOGL.pkl', 'context': {'client_region': 'eu-north-1', 'client_config': <botocore.config.Config object at 0x000001F853ECD090>, 'has_streaming_input': True, 'auth_type': 'v4', 'unsigned_payload': None, 's3_redirect': {'redirected': False, 'bucket': 'stock-prediction-models-fyp', 'params': {'Bucket': 'stock-prediction-models-fyp', 'Key': 'models/GOOGL.pkl', 'Body': <s3transfer.utils.ReadFileChunk object at 0x000001F80FDAAA50>, 'ChecksumAlgorithm': 'CRC32'}}, 'input_params': {'Bucket': 'stock-prediction-models-fyp', 'Key': 'models/GOOGL.pkl'}, 'signing': {'region': 'eu-north-1', 'signing_name': 's3', 'disableDoubleEncoding': True}, 'endpoint_properties': {'authSchemes': [{'disableDoubleEncoding': True, 'name': 'sigv4', 'signingName': 's3', 'signingRegion': 'eu-north-1'}]}, 'checksum': {'request_algorithm': {'algorithm': 'crc32', 'in': 'trailer', 'name': 'x-amz-checksum-crc32'}}}}
+DEBUG:botocore.hooks:Event request-created.s3.PutObject: calling handler <function signal_not_transferring at 0x000001F8551145E0>
+DEBUG:botocore.hooks:Event request-created.s3.PutObject: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x000001F85518DF90>>
+DEBUG:botocore.hooks:Event choose-signer.s3.PutObject: calling handler <function set_operation_specific_signer at 0x000001F854509EE0>
+DEBUG:botocore.hooks:Event before-sign.s3.PutObject: calling handler <function remove_arn_from_signing_path at 0x000001F854534680>
+DEBUG:botocore.hooks:Event before-sign.s3.PutObject: calling handler <function _set_extra_headers_for_unsigned_request at 0x000001F854534D60>
+DEBUG:botocore.hooks:Event before-sign.s3.PutObject: calling handler <bound method S3ExpressIdentityResolver.resolve_s3express_identity of <botocore.utils.S3ExpressIdentityResolver object at 0x000001F8551AEF10>>
+DEBUG:botocore.auth:Calculating signature using v4 auth.
+DEBUG:botocore.auth:CanonicalRequest:
+PUT
+/models/GOOGL.pkl
+
+content-encoding:aws-chunked
+host:stock-prediction-models-fyp.s3.eu-north-1.amazonaws.com
+x-amz-content-sha256:STREAMING-UNSIGNED-PAYLOAD-TRAILER
+x-amz-date:20250421T202413Z
+x-amz-decoded-content-length:2503371
+x-amz-sdk-checksum-algorithm:CRC32
+x-amz-trailer:x-amz-checksum-crc32
+
+content-encoding;host;x-amz-content-sha256;x-amz-date;x-amz-decoded-content-length;x-amz-sdk-checksum-algorithm;x-amz-trailer
+STREAMING-UNSIGNED-PAYLOAD-TRAILER
+DEBUG:botocore.auth:StringToSign:
+AWS4-HMAC-SHA256
+20250421T202413Z
+20250421/eu-north-1/s3/aws4_request
+31619d6316e7670ede946f39013ede69729dbec0c33801c2463344877dd72e52
+DEBUG:botocore.auth:Signature:
+569908d067292709794af9d101930a876cf6a87fe346dc5365f79b7c04eb7d1c
+DEBUG:botocore.hooks:Event request-created.s3.PutObject: calling handler <bound method UserAgentString.rebuild_and_replace_user_agent_handler of <botocore.useragent.UserAgentString object at 0x000001F855033810>>
+DEBUG:botocore.hooks:Event request-created.s3.PutObject: calling handler <function signal_transferring at 0x000001F855114860>
+DEBUG:botocore.hooks:Event request-created.s3.PutObject: calling handler <function add_retry_headers at 0x000001F8545344A0>
+DEBUG:botocore.endpoint:Sending http request: <AWSPreparedRequest stream_output=False, method=PUT, url=https://stock-prediction-models-fyp.s3.eu-north-1.amazonaws.com/models/GOOGL.pkl, headers={'x-amz-sdk-checksum-algorithm': b'CRC32', 'User-Agent': b'Boto3/1.37.33 md/Botocore#1.37.33 ua/2.1 os/windows#10 md/arch#amd64 lang/python#3.11.9 md/pyimpl#CPython m/G cfg/retry-mode#legacy Botocore/1.37.33', 'Expect': b'100-continue', 'Transfer-Encoding': b'chunked', 'Content-Encoding': b'aws-chunked', 'X-Amz-Trailer': b'x-amz-checksum-crc32', 'X-Amz-Decoded-Content-Length': b'2503371', 'X-Amz-Date': b'20250421T202413Z', 'X-Amz-Content-SHA256': b'STREAMING-UNSIGNED-PAYLOAD-TRAILER', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAZQ3DRSO6NAD6HT2M/20250421/eu-north-1/s3/aws4_request, SignedHeaders=content-encoding;host;x-amz-content-sha256;x-amz-date;x-amz-decoded-content-length;x-amz-sdk-checksum-algorithm;x-amz-trailer, Signature=569908d067292709794af9d101930a876cf6a87fe346dc5365f79b7c04eb7d1c', 'amz-sdk-invocation-id': b'f55f9a0d-63a6-48b0-afdb-232cb013b036', 'amz-sdk-request': b'attempt=1'}>
+DEBUG:botocore.httpsession:Certificate path: C:\Users\vpjd8\PycharmProjects\StockPredictorBackend\.venv\Lib\site-packages\certifi\cacert.pem
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): stock-prediction-models-fyp.s3.eu-north-1.amazonaws.com:443
+DEBUG:botocore.awsrequest:Waiting for 100 Continue response.
+DEBUG:botocore.awsrequest:100 Continue response seen, now sending request body.
+DEBUG:urllib3.connectionpool:https://stock-prediction-models-fyp.s3.eu-north-1.amazonaws.com:443 "PUT /models/GOOGL.pkl HTTP/1.1" 200 0
+DEBUG:botocore.hooks:Event before-parse.s3.PutObject: calling handler <function _handle_200_error at 0x000001F854534A40>
+DEBUG:botocore.hooks:Event before-parse.s3.PutObject: calling handler <function handle_expires_header at 0x000001F854534860>
+DEBUG:botocore.parsers:Response headers: {'x-amz-id-2': 'SOlNocH8i14Cn4BVrtxZvqLX8uLgJISNjB3IwAJs4gbALD8fPyIc4wlJKTI/yc3hlhKNSJPJgkXjWXhfDTWBhTME339lLvbt09hrmrem1Qw=', 'x-amz-request-id': '9W06ESVKWZ9HHJDM', 'Date': 'Mon, 21 Apr 2025 20:24:15 GMT', 'x-amz-version-id': 'Va7loCaRBrMpxXaonEYZlNPZcCdieYxf', 'x-amz-server-side-encryption': 'AES256', 'ETag': '"0c1b59e9e417f30ab2dce3cb3138cce3"', 'x-amz-checksum-crc32': 'KtyQ+g==', 'x-amz-checksum-type': 'FULL_OBJECT', 'Content-Length': '0', 'Server': 'AmazonS3'}
+DEBUG:botocore.parsers:Response body:
+b''
+DEBUG:botocore.hooks:Event needs-retry.s3.PutObject: calling handler <function _update_status_code at 0x000001F854534B80>
+DEBUG:botocore.hooks:Event needs-retry.s3.PutObject: calling handler <botocore.retryhandler.RetryHandler object at 0x000001F8551AEBD0>
+DEBUG:botocore.retryhandler:No retry needed.
+DEBUG:botocore.hooks:Event needs-retry.s3.PutObject: calling handler <bound method S3RegionRedirectorv2.redirect_from_error of <botocore.utils.S3RegionRedirectorv2 object at 0x000001F8551A6BD0>>
+DEBUG:s3transfer.utils:Releasing acquire 0/None
+DEBUG:boto3.s3.transfer:Opting out of CRT Transfer Manager. Preferred client: auto, CRT available: False, Instance Optimized: False.
+DEBUG:boto3.s3.transfer:Using default client. pid: 3192, thread: 19292
+DEBUG:s3transfer.utils:Acquiring 0
+DEBUG:s3transfer.tasks:UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000001F80FFD88D0>}) about to wait for the following futures []
+DEBUG:s3transfer.tasks:UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000001F80FFD88D0>}) done waiting for dependent futures
+DEBUG:s3transfer.tasks:Executing task UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000001F80FFD88D0>}) with kwargs {'client': <botocore.client.S3 object at 0x000001F853D48210>, 'config': <boto3.s3.transfer.TransferConfig object at 0x000001F8042DB4D0>, 'osutil': <s3transfer.utils.OSUtils object at 0x000001F80D153050>, 'request_executor': <s3transfer.futures.BoundedExecutor object at 0x000001F80FF37D10>, 'transfer_future': <s3transfer.futures.TransferFuture object at 0x000001F80FFD88D0>}
+DEBUG:s3transfer.futures:Submitting task PutObjectTask(transfer_id=0, {'bucket': 'stock-prediction-models-fyp', 'key': 'scalers/GOOGL.pkl', 'extra_args': {'ChecksumAlgorithm': 'CRC32'}}) to executor <s3transfer.futures.BoundedExecutor object at 0x000001F80FF37D10> for transfer request: 0.
+DEBUG:s3transfer.utils:Acquiring 0
+DEBUG:s3transfer.tasks:PutObjectTask(transfer_id=0, {'bucket': 'stock-prediction-models-fyp', 'key': 'scalers/GOOGL.pkl', 'extra_args': {'ChecksumAlgorithm': 'CRC32'}}) about to wait for the following futures []
+DEBUG:s3transfer.utils:Releasing acquire 0/None
+DEBUG:s3transfer.tasks:PutObjectTask(transfer_id=0, {'bucket': 'stock-prediction-models-fyp', 'key': 'scalers/GOOGL.pkl', 'extra_args': {'ChecksumAlgorithm': 'CRC32'}}) done waiting for dependent futures
+DEBUG:s3transfer.tasks:Executing task PutObjectTask(transfer_id=0, {'bucket': 'stock-prediction-models-fyp', 'key': 'scalers/GOOGL.pkl', 'extra_args': {'ChecksumAlgorithm': 'CRC32'}}) with kwargs {'client': <botocore.client.S3 object at 0x000001F853D48210>, 'fileobj': <s3transfer.utils.ReadFileChunk object at 0x000001F80D0A0050>, 'bucket': 'stock-prediction-models-fyp', 'key': 'scalers/GOOGL.pkl', 'extra_args': {'ChecksumAlgorithm': 'CRC32'}}
+DEBUG:botocore.hooks:Event before-parameter-build.s3.PutObject: calling handler <function validate_ascii_metadata at 0x000001F85450B060>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.PutObject: calling handler <function sse_md5 at 0x000001F85450A340>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.PutObject: calling handler <function convert_body_to_file_like_object at 0x000001F85450BA60>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.PutObject: calling handler <function validate_bucket_name at 0x000001F85450A2A0>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.PutObject: calling handler <function remove_bucket_from_url_paths_from_model at 0x000001F854534540>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.PutObject: calling handler <bound method S3RegionRedirectorv2.annotate_request_context of <botocore.utils.S3RegionRedirectorv2 object at 0x000001F8551A6BD0>>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.PutObject: calling handler <bound method ClientCreator._inject_s3_input_parameters of <botocore.client.ClientCreator object at 0x000001F854DE3650>>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.PutObject: calling handler <function generate_idempotent_uuid at 0x000001F85450A0C0>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.PutObject: calling handler <function _handle_request_validation_mode_member at 0x000001F854534CC0>
+DEBUG:botocore.hooks:Event before-endpoint-resolution.s3: calling handler <function customize_endpoint_resolver_builtins at 0x000001F854534720>
+DEBUG:botocore.hooks:Event before-endpoint-resolution.s3: calling handler <bound method S3RegionRedirectorv2.redirect_from_cache of <botocore.utils.S3RegionRedirectorv2 object at 0x000001F8551A6BD0>>
+DEBUG:botocore.regions:Calling endpoint provider with parameters: {'Bucket': 'stock-prediction-models-fyp', 'Region': 'eu-north-1', 'UseFIPS': False, 'UseDualStack': False, 'ForcePathStyle': False, 'Accelerate': False, 'UseGlobalEndpoint': False, 'Key': 'scalers/GOOGL.pkl', 'DisableMultiRegionAccessPoints': False, 'UseArnRegion': True}
+DEBUG:botocore.regions:Endpoint provider result: https://stock-prediction-models-fyp.s3.eu-north-1.amazonaws.com
+DEBUG:botocore.regions:Selecting from endpoint provider's list of auth schemes: "sigv4". User selected auth scheme is: "None"
+DEBUG:botocore.regions:Selected auth type "v4" as "v4" with signing context params: {'region': 'eu-north-1', 'signing_name': 's3', 'disableDoubleEncoding': True}
+DEBUG:botocore.hooks:Event before-call.s3.PutObject: calling handler <function add_expect_header at 0x000001F85450A660>
+DEBUG:botocore.handlers:Adding expect 100 continue header to request.
+DEBUG:botocore.hooks:Event before-call.s3.PutObject: calling handler <bound method S3ExpressIdentityResolver.apply_signing_cache_key of <botocore.utils.S3ExpressIdentityResolver object at 0x000001F8551AEF10>>
+DEBUG:botocore.hooks:Event before-call.s3.PutObject: calling handler <function add_recursion_detection_header at 0x000001F854508FE0>
+DEBUG:botocore.hooks:Event before-call.s3.PutObject: calling handler <function add_query_compatibility_header at 0x000001F854534C20>
+DEBUG:botocore.hooks:Event before-call.s3.PutObject: calling handler <function inject_api_version_header_if_needed at 0x000001F85450BBA0>
+DEBUG:botocore.endpoint:Making request for OperationModel(name=PutObject) with params: {'url_path': '/scalers/GOOGL.pkl', 'query_string': {}, 'method': 'PUT', 'headers': {'x-amz-sdk-checksum-algorithm': 'CRC32', 'User-Agent': 'Boto3/1.37.33 md/Botocore#1.37.33 ua/2.1 os/windows#10 md/arch#amd64 lang/python#3.11.9 md/pyimpl#CPython m/G cfg/retry-mode#legacy Botocore/1.37.33', 'Expect': '100-continue', 'Transfer-Encoding': 'chunked', 'Content-Encoding': 'aws-chunked', 'X-Amz-Trailer': 'x-amz-checksum-crc32', 'X-Amz-Decoded-Content-Length': '616'}, 'body': <botocore.httpchecksum.AwsChunkedWrapper object at 0x000001F80C85DC90>, 'auth_path': '/stock-prediction-models-fyp/scalers/GOOGL.pkl', 'url': 'https://stock-prediction-models-fyp.s3.eu-north-1.amazonaws.com/scalers/GOOGL.pkl', 'context': {'client_region': 'eu-north-1', 'client_config': <botocore.config.Config object at 0x000001F853ECD090>, 'has_streaming_input': True, 'auth_type': 'v4', 'unsigned_payload': None, 's3_redirect': {'redirected': False, 'bucket': 'stock-prediction-models-fyp', 'params': {'Bucket': 'stock-prediction-models-fyp', 'Key': 'scalers/GOOGL.pkl', 'Body': <s3transfer.utils.ReadFileChunk object at 0x000001F80D0A0050>, 'ChecksumAlgorithm': 'CRC32'}}, 'input_params': {'Bucket': 'stock-prediction-models-fyp', 'Key': 'scalers/GOOGL.pkl'}, 'signing': {'region': 'eu-north-1', 'signing_name': 's3', 'disableDoubleEncoding': True}, 'endpoint_properties': {'authSchemes': [{'disableDoubleEncoding': True, 'name': 'sigv4', 'signingName': 's3', 'signingRegion': 'eu-north-1'}]}, 'checksum': {'request_algorithm': {'algorithm': 'crc32', 'in': 'trailer', 'name': 'x-amz-checksum-crc32'}}}}
+DEBUG:botocore.hooks:Event request-created.s3.PutObject: calling handler <function signal_not_transferring at 0x000001F8551145E0>
+DEBUG:botocore.hooks:Event request-created.s3.PutObject: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x000001F85518DF90>>
+DEBUG:botocore.hooks:Event choose-signer.s3.PutObject: calling handler <function set_operation_specific_signer at 0x000001F854509EE0>
+DEBUG:botocore.hooks:Event before-sign.s3.PutObject: calling handler <function remove_arn_from_signing_path at 0x000001F854534680>
+DEBUG:botocore.hooks:Event before-sign.s3.PutObject: calling handler <function _set_extra_headers_for_unsigned_request at 0x000001F854534D60>
+DEBUG:botocore.hooks:Event before-sign.s3.PutObject: calling handler <bound method S3ExpressIdentityResolver.resolve_s3express_identity of <botocore.utils.S3ExpressIdentityResolver object at 0x000001F8551AEF10>>
+DEBUG:botocore.auth:Calculating signature using v4 auth.
+DEBUG:botocore.auth:CanonicalRequest:
+PUT
+/scalers/GOOGL.pkl
+
+content-encoding:aws-chunked
+host:stock-prediction-models-fyp.s3.eu-north-1.amazonaws.com
+x-amz-content-sha256:STREAMING-UNSIGNED-PAYLOAD-TRAILER
+x-amz-date:20250421T202415Z
+x-amz-decoded-content-length:616
+x-amz-sdk-checksum-algorithm:CRC32
+x-amz-trailer:x-amz-checksum-crc32
+
+content-encoding;host;x-amz-content-sha256;x-amz-date;x-amz-decoded-content-length;x-amz-sdk-checksum-algorithm;x-amz-trailer
+STREAMING-UNSIGNED-PAYLOAD-TRAILER
+DEBUG:botocore.auth:StringToSign:
+AWS4-HMAC-SHA256
+20250421T202415Z
+20250421/eu-north-1/s3/aws4_request
+fc333094003529880cfe3d085d94d6e6dc32a03debae0be62b3a247c2fef812b
+DEBUG:botocore.auth:Signature:
+8b1ef7781fd04ceb1e3e4ec0d021eae1fa6f0b40ac57e1eadab96ebb141a3fe5
+DEBUG:botocore.hooks:Event request-created.s3.PutObject: calling handler <bound method UserAgentString.rebuild_and_replace_user_agent_handler of <botocore.useragent.UserAgentString object at 0x000001F855033810>>
+DEBUG:botocore.hooks:Event request-created.s3.PutObject: calling handler <function signal_transferring at 0x000001F855114860>
+DEBUG:botocore.hooks:Event request-created.s3.PutObject: calling handler <function add_retry_headers at 0x000001F8545344A0>
+DEBUG:botocore.endpoint:Sending http request: <AWSPreparedRequest stream_output=False, method=PUT, url=https://stock-prediction-models-fyp.s3.eu-north-1.amazonaws.com/scalers/GOOGL.pkl, headers={'x-amz-sdk-checksum-algorithm': b'CRC32', 'User-Agent': b'Boto3/1.37.33 md/Botocore#1.37.33 ua/2.1 os/windows#10 md/arch#amd64 lang/python#3.11.9 md/pyimpl#CPython m/G cfg/retry-mode#legacy Botocore/1.37.33', 'Expect': b'100-continue', 'Transfer-Encoding': b'chunked', 'Content-Encoding': b'aws-chunked', 'X-Amz-Trailer': b'x-amz-checksum-crc32', 'X-Amz-Decoded-Content-Length': b'616', 'X-Amz-Date': b'20250421T202415Z', 'X-Amz-Content-SHA256': b'STREAMING-UNSIGNED-PAYLOAD-TRAILER', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAZQ3DRSO6NAD6HT2M/20250421/eu-north-1/s3/aws4_request, SignedHeaders=content-encoding;host;x-amz-content-sha256;x-amz-date;x-amz-decoded-content-length;x-amz-sdk-checksum-algorithm;x-amz-trailer, Signature=8b1ef7781fd04ceb1e3e4ec0d021eae1fa6f0b40ac57e1eadab96ebb141a3fe5', 'amz-sdk-invocation-id': b'391261c9-061b-4b77-9c1e-ec1a55f26705', 'amz-sdk-request': b'attempt=1'}>
+DEBUG:botocore.httpsession:Certificate path: C:\Users\vpjd8\PycharmProjects\StockPredictorBackend\.venv\Lib\site-packages\certifi\cacert.pem
+DEBUG:botocore.awsrequest:Waiting for 100 Continue response.
+DEBUG:botocore.awsrequest:100 Continue response seen, now sending request body.
+DEBUG:urllib3.connectionpool:https://stock-prediction-models-fyp.s3.eu-north-1.amazonaws.com:443 "PUT /scalers/GOOGL.pkl HTTP/1.1" 200 0
+DEBUG:botocore.hooks:Event before-parse.s3.PutObject: calling handler <function _handle_200_error at 0x000001F854534A40>
+DEBUG:botocore.hooks:Event before-parse.s3.PutObject: calling handler <function handle_expires_header at 0x000001F854534860>
+DEBUG:botocore.parsers:Response headers: {'x-amz-id-2': 'euCpsEojEv6+KWcHr/XQKMScf78iDl8mssTMQNuVlD2jFRQHfjPXYI6DbyIFjE1scSvcXphNiM1rVkICMYf3/OH4wndr1I/C7SLYSbNDa8Y=', 'x-amz-request-id': '62ABZXJEVDFECT8A', 'Date': 'Mon, 21 Apr 2025 20:24:16 GMT', 'x-amz-version-id': 'gxbbKLerYJji_wN4uftcL.lnIhaI8oZ9', 'x-amz-server-side-encryption': 'AES256', 'ETag': '"1b29b741c5c9e646195804f9aa918693"', 'x-amz-checksum-crc32': 'prWJDQ==', 'x-amz-checksum-type': 'FULL_OBJECT', 'Content-Length': '0', 'Server': 'AmazonS3'}
+DEBUG:botocore.parsers:Response body:
+b''
+DEBUG:botocore.hooks:Event needs-retry.s3.PutObject: calling handler <function _update_status_code at 0x000001F854534B80>
+DEBUG:botocore.hooks:Event needs-retry.s3.PutObject: calling handler <botocore.retryhandler.RetryHandler object at 0x000001F8551AEBD0>
+DEBUG:botocore.retryhandler:No retry needed.
+DEBUG:botocore.hooks:Event needs-retry.s3.PutObject: calling handler <bound method S3RegionRedirectorv2.redirect_from_error of <botocore.utils.S3RegionRedirectorv2 object at 0x000001F8551A6BD0>>
+DEBUG:s3transfer.utils:Releasing acquire 0/None
+DEBUG:boto3.s3.transfer:Opting out of CRT Transfer Manager. Preferred client: auto, CRT available: False, Instance Optimized: False.
+DEBUG:boto3.s3.transfer:Using default client. pid: 3192, thread: 19292
+DEBUG:s3transfer.utils:Acquiring 0
+DEBUG:s3transfer.tasks:DownloadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000001F811007E50>}) about to wait for the following futures []
+DEBUG:s3transfer.tasks:DownloadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000001F811007E50>}) done waiting for dependent futures
+DEBUG:s3transfer.tasks:Executing task DownloadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000001F811007E50>}) with kwargs {'client': <botocore.client.S3 object at 0x000001F853D48210>, 'config': <boto3.s3.transfer.TransferConfig object at 0x000001F80EA5CE10>, 'osutil': <s3transfer.utils.OSUtils object at 0x000001F80FE39E90>, 'request_executor': <s3transfer.futures.BoundedExecutor object at 0x000001F80FD10E50>, 'transfer_future': <s3transfer.futures.TransferFuture object at 0x000001F811007E50>, 'io_executor': <s3transfer.futures.BoundedExecutor object at 0x000001F80EC5C5D0>}
+DEBUG:botocore.hooks:Event before-parameter-build.s3.HeadObject: calling handler <function sse_md5 at 0x000001F85450A340>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.HeadObject: calling handler <function validate_bucket_name at 0x000001F85450A2A0>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.HeadObject: calling handler <function remove_bucket_from_url_paths_from_model at 0x000001F854534540>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.HeadObject: calling handler <bound method S3RegionRedirectorv2.annotate_request_context of <botocore.utils.S3RegionRedirectorv2 object at 0x000001F8551A6BD0>>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.HeadObject: calling handler <bound method ClientCreator._inject_s3_input_parameters of <botocore.client.ClientCreator object at 0x000001F854DE3650>>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.HeadObject: calling handler <function generate_idempotent_uuid at 0x000001F85450A0C0>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.HeadObject: calling handler <function _handle_request_validation_mode_member at 0x000001F854534CC0>
+DEBUG:botocore.hooks:Event before-endpoint-resolution.s3: calling handler <function customize_endpoint_resolver_builtins at 0x000001F854534720>
+DEBUG:botocore.hooks:Event before-endpoint-resolution.s3: calling handler <bound method S3RegionRedirectorv2.redirect_from_cache of <botocore.utils.S3RegionRedirectorv2 object at 0x000001F8551A6BD0>>
+DEBUG:botocore.regions:Calling endpoint provider with parameters: {'Bucket': 'stock-prediction-models-fyp', 'Region': 'eu-north-1', 'UseFIPS': False, 'UseDualStack': False, 'ForcePathStyle': False, 'Accelerate': False, 'UseGlobalEndpoint': False, 'Key': 'models/GOOGL.pkl', 'DisableMultiRegionAccessPoints': False, 'UseArnRegion': True}
+DEBUG:botocore.regions:Endpoint provider result: https://stock-prediction-models-fyp.s3.eu-north-1.amazonaws.com
+DEBUG:botocore.regions:Selecting from endpoint provider's list of auth schemes: "sigv4". User selected auth scheme is: "None"
+DEBUG:botocore.regions:Selected auth type "v4" as "v4" with signing context params: {'region': 'eu-north-1', 'signing_name': 's3', 'disableDoubleEncoding': True}
+DEBUG:botocore.hooks:Event before-call.s3.HeadObject: calling handler <function add_expect_header at 0x000001F85450A660>
+DEBUG:botocore.hooks:Event before-call.s3.HeadObject: calling handler <bound method S3ExpressIdentityResolver.apply_signing_cache_key of <botocore.utils.S3ExpressIdentityResolver object at 0x000001F8551AEF10>>
+DEBUG:botocore.hooks:Event before-call.s3.HeadObject: calling handler <function add_recursion_detection_header at 0x000001F854508FE0>
+DEBUG:botocore.hooks:Event before-call.s3.HeadObject: calling handler <function add_query_compatibility_header at 0x000001F854534C20>
+DEBUG:botocore.hooks:Event before-call.s3.HeadObject: calling handler <function inject_api_version_header_if_needed at 0x000001F85450BBA0>
+DEBUG:botocore.endpoint:Making request for OperationModel(name=HeadObject) with params: {'url_path': '/models/GOOGL.pkl', 'query_string': {}, 'method': 'HEAD', 'headers': {'User-Agent': 'Boto3/1.37.33 md/Botocore#1.37.33 ua/2.1 os/windows#10 md/arch#amd64 lang/python#3.11.9 md/pyimpl#CPython m/G cfg/retry-mode#legacy Botocore/1.37.33'}, 'body': b'', 'auth_path': '/stock-prediction-models-fyp/models/GOOGL.pkl', 'url': 'https://stock-prediction-models-fyp.s3.eu-north-1.amazonaws.com/models/GOOGL.pkl', 'context': {'client_region': 'eu-north-1', 'client_config': <botocore.config.Config object at 0x000001F853ECD090>, 'has_streaming_input': False, 'auth_type': 'v4', 'unsigned_payload': None, 's3_redirect': {'redirected': False, 'bucket': 'stock-prediction-models-fyp', 'params': {'Bucket': 'stock-prediction-models-fyp', 'Key': 'models/GOOGL.pkl'}}, 'input_params': {'Bucket': 'stock-prediction-models-fyp', 'Key': 'models/GOOGL.pkl'}, 'signing': {'region': 'eu-north-1', 'signing_name': 's3', 'disableDoubleEncoding': True}, 'endpoint_properties': {'authSchemes': [{'disableDoubleEncoding': True, 'name': 'sigv4', 'signingName': 's3', 'signingRegion': 'eu-north-1'}]}}}
+DEBUG:botocore.hooks:Event request-created.s3.HeadObject: calling handler <function signal_not_transferring at 0x000001F8551145E0>
+DEBUG:botocore.hooks:Event request-created.s3.HeadObject: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x000001F85518DF90>>
+DEBUG:botocore.hooks:Event choose-signer.s3.HeadObject: calling handler <function set_operation_specific_signer at 0x000001F854509EE0>
+DEBUG:botocore.hooks:Event before-sign.s3.HeadObject: calling handler <function remove_arn_from_signing_path at 0x000001F854534680>
+DEBUG:botocore.hooks:Event before-sign.s3.HeadObject: calling handler <function _set_extra_headers_for_unsigned_request at 0x000001F854534D60>
+DEBUG:botocore.hooks:Event before-sign.s3.HeadObject: calling handler <bound method S3ExpressIdentityResolver.resolve_s3express_identity of <botocore.utils.S3ExpressIdentityResolver object at 0x000001F8551AEF10>>
+DEBUG:botocore.auth:Calculating signature using v4 auth.
+DEBUG:botocore.auth:CanonicalRequest:
+HEAD
+/models/GOOGL.pkl
+
+host:stock-prediction-models-fyp.s3.eu-north-1.amazonaws.com
+x-amz-content-sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+x-amz-date:20250421T202415Z
+
+host;x-amz-content-sha256;x-amz-date
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+DEBUG:botocore.auth:StringToSign:
+AWS4-HMAC-SHA256
+20250421T202415Z
+20250421/eu-north-1/s3/aws4_request
+8b3906c05d78a356fb65a6976356d60f30457dd280302c0818c1d00308fd5994
+DEBUG:botocore.auth:Signature:
+29b8b3b4d6b1a8beb97ff1e99a81d76748a194d438094c6b4d958111243f3693
+DEBUG:botocore.hooks:Event request-created.s3.HeadObject: calling handler <bound method UserAgentString.rebuild_and_replace_user_agent_handler of <botocore.useragent.UserAgentString object at 0x000001F855033810>>
+DEBUG:botocore.hooks:Event request-created.s3.HeadObject: calling handler <function signal_transferring at 0x000001F855114860>
+DEBUG:botocore.hooks:Event request-created.s3.HeadObject: calling handler <function add_retry_headers at 0x000001F8545344A0>
+DEBUG:botocore.endpoint:Sending http request: <AWSPreparedRequest stream_output=False, method=HEAD, url=https://stock-prediction-models-fyp.s3.eu-north-1.amazonaws.com/models/GOOGL.pkl, headers={'User-Agent': b'Boto3/1.37.33 md/Botocore#1.37.33 ua/2.1 os/windows#10 md/arch#amd64 lang/python#3.11.9 md/pyimpl#CPython m/G cfg/retry-mode#legacy Botocore/1.37.33', 'X-Amz-Date': b'20250421T202415Z', 'X-Amz-Content-SHA256': b'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAZQ3DRSO6NAD6HT2M/20250421/eu-north-1/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=29b8b3b4d6b1a8beb97ff1e99a81d76748a194d438094c6b4d958111243f3693', 'amz-sdk-invocation-id': b'efdbc52b-185e-4db4-af84-924d560ff85e', 'amz-sdk-request': b'attempt=1'}>
+DEBUG:botocore.httpsession:Certificate path: C:\Users\vpjd8\PycharmProjects\StockPredictorBackend\.venv\Lib\site-packages\certifi\cacert.pem
+DEBUG:urllib3.connectionpool:https://stock-prediction-models-fyp.s3.eu-north-1.amazonaws.com:443 "HEAD /models/GOOGL.pkl HTTP/1.1" 200 0
+DEBUG:botocore.hooks:Event before-parse.s3.HeadObject: calling handler <function _handle_200_error at 0x000001F854534A40>
+DEBUG:botocore.hooks:Event before-parse.s3.HeadObject: calling handler <function handle_expires_header at 0x000001F854534860>
+DEBUG:botocore.parsers:Response headers: {'x-amz-id-2': 'hcKc/vnh0snXCFv2lfzKloRDuxmtDFbJd1++JosR4A6JAC/NkM4c2ZIm78k94wJn9qOAacTVCYePLh04FQdxkym1d/uNQyGa7Ogrx9TKki0=', 'x-amz-request-id': '62A81G6Y9CFRFJEA', 'Date': 'Mon, 21 Apr 2025 20:24:16 GMT', 'Last-Modified': 'Mon, 21 Apr 2025 20:24:15 GMT', 'ETag': '"0c1b59e9e417f30ab2dce3cb3138cce3"', 'x-amz-server-side-encryption': 'AES256', 'x-amz-version-id': 'Va7loCaRBrMpxXaonEYZlNPZcCdieYxf', 'Accept-Ranges': 'bytes', 'Content-Type': 'binary/octet-stream', 'Content-Length': '2503371', 'Server': 'AmazonS3'}
+DEBUG:botocore.parsers:Response body:
+b''
+DEBUG:botocore.hooks:Event needs-retry.s3.HeadObject: calling handler <function _update_status_code at 0x000001F854534B80>
+DEBUG:botocore.hooks:Event needs-retry.s3.HeadObject: calling handler <botocore.retryhandler.RetryHandler object at 0x000001F8551AEBD0>
+DEBUG:botocore.retryhandler:No retry needed.
+DEBUG:botocore.hooks:Event needs-retry.s3.HeadObject: calling handler <bound method S3RegionRedirectorv2.redirect_from_error of <botocore.utils.S3RegionRedirectorv2 object at 0x000001F8551A6BD0>>
+DEBUG:s3transfer.futures:Submitting task ImmediatelyWriteIOGetObjectTask(transfer_id=0, {'bucket': 'stock-prediction-models-fyp', 'key': 'models/GOOGL.pkl', 'extra_args': {}}) to executor <s3transfer.futures.BoundedExecutor object at 0x000001F80FD10E50> for transfer request: 0.
+DEBUG:s3transfer.utils:Acquiring 0
+DEBUG:s3transfer.tasks:ImmediatelyWriteIOGetObjectTask(transfer_id=0, {'bucket': 'stock-prediction-models-fyp', 'key': 'models/GOOGL.pkl', 'extra_args': {}}) about to wait for the following futures []
+DEBUG:s3transfer.utils:Releasing acquire 0/None
+DEBUG:s3transfer.tasks:ImmediatelyWriteIOGetObjectTask(transfer_id=0, {'bucket': 'stock-prediction-models-fyp', 'key': 'models/GOOGL.pkl', 'extra_args': {}}) done waiting for dependent futures
+DEBUG:s3transfer.tasks:Executing task ImmediatelyWriteIOGetObjectTask(transfer_id=0, {'bucket': 'stock-prediction-models-fyp', 'key': 'models/GOOGL.pkl', 'extra_args': {}}) with kwargs {'client': <botocore.client.S3 object at 0x000001F853D48210>, 'bucket': 'stock-prediction-models-fyp', 'key': 'models/GOOGL.pkl', 'fileobj': <s3transfer.utils.DeferredOpenFile object at 0x000001F80EBD9590>, 'extra_args': {}, 'callbacks': [], 'max_attempts': 5, 'download_output_manager': <s3transfer.download.DownloadFilenameOutputManager object at 0x000001F80C755D50>, 'io_chunksize': 262144, 'bandwidth_limiter': None}
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <function sse_md5 at 0x000001F85450A340>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <function validate_bucket_name at 0x000001F85450A2A0>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <function remove_bucket_from_url_paths_from_model at 0x000001F854534540>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <bound method S3RegionRedirectorv2.annotate_request_context of <botocore.utils.S3RegionRedirectorv2 object at 0x000001F8551A6BD0>>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <bound method ClientCreator._inject_s3_input_parameters of <botocore.client.ClientCreator object at 0x000001F854DE3650>>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <function generate_idempotent_uuid at 0x000001F85450A0C0>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <function _handle_request_validation_mode_member at 0x000001F854534CC0>
+DEBUG:botocore.hooks:Event before-endpoint-resolution.s3: calling handler <function customize_endpoint_resolver_builtins at 0x000001F854534720>
+DEBUG:botocore.hooks:Event before-endpoint-resolution.s3: calling handler <bound method S3RegionRedirectorv2.redirect_from_cache of <botocore.utils.S3RegionRedirectorv2 object at 0x000001F8551A6BD0>>
+DEBUG:botocore.regions:Calling endpoint provider with parameters: {'Bucket': 'stock-prediction-models-fyp', 'Region': 'eu-north-1', 'UseFIPS': False, 'UseDualStack': False, 'ForcePathStyle': False, 'Accelerate': False, 'UseGlobalEndpoint': False, 'Key': 'models/GOOGL.pkl', 'DisableMultiRegionAccessPoints': False, 'UseArnRegion': True}
+DEBUG:botocore.regions:Endpoint provider result: https://stock-prediction-models-fyp.s3.eu-north-1.amazonaws.com
+DEBUG:botocore.regions:Selecting from endpoint provider's list of auth schemes: "sigv4". User selected auth scheme is: "None"
+DEBUG:botocore.regions:Selected auth type "v4" as "v4" with signing context params: {'region': 'eu-north-1', 'signing_name': 's3', 'disableDoubleEncoding': True}
+DEBUG:botocore.hooks:Event before-call.s3.GetObject: calling handler <function add_expect_header at 0x000001F85450A660>
+DEBUG:botocore.hooks:Event before-call.s3.GetObject: calling handler <bound method S3ExpressIdentityResolver.apply_signing_cache_key of <botocore.utils.S3ExpressIdentityResolver object at 0x000001F8551AEF10>>
+DEBUG:botocore.hooks:Event before-call.s3.GetObject: calling handler <function add_recursion_detection_header at 0x000001F854508FE0>
+DEBUG:botocore.hooks:Event before-call.s3.GetObject: calling handler <function add_query_compatibility_header at 0x000001F854534C20>
+DEBUG:botocore.hooks:Event before-call.s3.GetObject: calling handler <function inject_api_version_header_if_needed at 0x000001F85450BBA0>
+DEBUG:botocore.endpoint:Making request for OperationModel(name=GetObject) with params: {'url_path': '/models/GOOGL.pkl', 'query_string': {}, 'method': 'GET', 'headers': {'x-amz-checksum-mode': 'ENABLED', 'User-Agent': 'Boto3/1.37.33 md/Botocore#1.37.33 ua/2.1 os/windows#10 md/arch#amd64 lang/python#3.11.9 md/pyimpl#CPython m/G cfg/retry-mode#legacy Botocore/1.37.33'}, 'body': b'', 'auth_path': '/stock-prediction-models-fyp/models/GOOGL.pkl', 'url': 'https://stock-prediction-models-fyp.s3.eu-north-1.amazonaws.com/models/GOOGL.pkl', 'context': {'client_region': 'eu-north-1', 'client_config': <botocore.config.Config object at 0x000001F853ECD090>, 'has_streaming_input': False, 'auth_type': 'v4', 'unsigned_payload': None, 's3_redirect': {'redirected': False, 'bucket': 'stock-prediction-models-fyp', 'params': {'Bucket': 'stock-prediction-models-fyp', 'Key': 'models/GOOGL.pkl', 'ChecksumMode': 'ENABLED'}}, 'input_params': {'Bucket': 'stock-prediction-models-fyp', 'Key': 'models/GOOGL.pkl'}, 'signing': {'region': 'eu-north-1', 'signing_name': 's3', 'disableDoubleEncoding': True}, 'endpoint_properties': {'authSchemes': [{'disableDoubleEncoding': True, 'name': 'sigv4', 'signingName': 's3', 'signingRegion': 'eu-north-1'}]}, 'checksum': {'response_algorithms': ['crc32', 'sha1', 'sha256']}}}
+DEBUG:botocore.hooks:Event request-created.s3.GetObject: calling handler <function signal_not_transferring at 0x000001F8551145E0>
+DEBUG:botocore.hooks:Event request-created.s3.GetObject: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x000001F85518DF90>>
+DEBUG:botocore.hooks:Event choose-signer.s3.GetObject: calling handler <function set_operation_specific_signer at 0x000001F854509EE0>
+DEBUG:botocore.hooks:Event before-sign.s3.GetObject: calling handler <function remove_arn_from_signing_path at 0x000001F854534680>
+DEBUG:botocore.hooks:Event before-sign.s3.GetObject: calling handler <function _set_extra_headers_for_unsigned_request at 0x000001F854534D60>
+DEBUG:botocore.hooks:Event before-sign.s3.GetObject: calling handler <bound method S3ExpressIdentityResolver.resolve_s3express_identity of <botocore.utils.S3ExpressIdentityResolver object at 0x000001F8551AEF10>>
+DEBUG:botocore.auth:Calculating signature using v4 auth.
+DEBUG:botocore.auth:CanonicalRequest:
+GET
+/models/GOOGL.pkl
+
+host:stock-prediction-models-fyp.s3.eu-north-1.amazonaws.com
+x-amz-checksum-mode:ENABLED
+x-amz-content-sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+x-amz-date:20250421T202415Z
+
+host;x-amz-checksum-mode;x-amz-content-sha256;x-amz-date
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+DEBUG:botocore.auth:StringToSign:
+AWS4-HMAC-SHA256
+20250421T202415Z
+20250421/eu-north-1/s3/aws4_request
+cec14f5f56f46b38163c3b8459e15878cfb49413678265cf2497b243ef62bb18
+DEBUG:botocore.auth:Signature:
+2bcfe672a435437bcc9ff1952df1fa3f900f20f186d93a7cff951dbf06e16a8b
+DEBUG:botocore.hooks:Event request-created.s3.GetObject: calling handler <bound method UserAgentString.rebuild_and_replace_user_agent_handler of <botocore.useragent.UserAgentString object at 0x000001F855033810>>
+DEBUG:botocore.hooks:Event request-created.s3.GetObject: calling handler <function signal_transferring at 0x000001F855114860>
+DEBUG:botocore.hooks:Event request-created.s3.GetObject: calling handler <function add_retry_headers at 0x000001F8545344A0>
+DEBUG:botocore.endpoint:Sending http request: <AWSPreparedRequest stream_output=True, method=GET, url=https://stock-prediction-models-fyp.s3.eu-north-1.amazonaws.com/models/GOOGL.pkl, headers={'x-amz-checksum-mode': b'ENABLED', 'User-Agent': b'Boto3/1.37.33 md/Botocore#1.37.33 ua/2.1 os/windows#10 md/arch#amd64 lang/python#3.11.9 md/pyimpl#CPython m/G cfg/retry-mode#legacy Botocore/1.37.33', 'X-Amz-Date': b'20250421T202415Z', 'X-Amz-Content-SHA256': b'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAZQ3DRSO6NAD6HT2M/20250421/eu-north-1/s3/aws4_request, SignedHeaders=host;x-amz-checksum-mode;x-amz-content-sha256;x-amz-date, Signature=2bcfe672a435437bcc9ff1952df1fa3f900f20f186d93a7cff951dbf06e16a8b', 'amz-sdk-invocation-id': b'498d6f4d-4a34-427e-91dc-83a14264ee2f', 'amz-sdk-request': b'attempt=1'}>
+DEBUG:botocore.httpsession:Certificate path: C:\Users\vpjd8\PycharmProjects\StockPredictorBackend\.venv\Lib\site-packages\certifi\cacert.pem
+DEBUG:urllib3.connectionpool:https://stock-prediction-models-fyp.s3.eu-north-1.amazonaws.com:443 "GET /models/GOOGL.pkl HTTP/1.1" 200 2503371
+DEBUG:botocore.hooks:Event before-parse.s3.GetObject: calling handler <function _handle_200_error at 0x000001F854534A40>
+DEBUG:botocore.hooks:Event before-parse.s3.GetObject: calling handler <function handle_expires_header at 0x000001F854534860>
+DEBUG:botocore.parsers:Response headers: {'x-amz-id-2': '0AnHJvysQN0Xqr+K4hQfOB+QImyksQCWbEjbqJxc+BkLUJm9Q5QK53/u03dx2ApmaYnHSJWFKdxEEpzeNaugEqQLN8Ui3bNHmzmv/0GhxRw=', 'x-amz-request-id': '62A4GGE4KCFTJ2AC', 'Date': 'Mon, 21 Apr 2025 20:24:16 GMT', 'Last-Modified': 'Mon, 21 Apr 2025 20:24:15 GMT', 'ETag': '"0c1b59e9e417f30ab2dce3cb3138cce3"', 'x-amz-checksum-crc32': 'KtyQ+g==', 'x-amz-checksum-type': 'FULL_OBJECT', 'x-amz-server-side-encryption': 'AES256', 'x-amz-version-id': 'Va7loCaRBrMpxXaonEYZlNPZcCdieYxf', 'Accept-Ranges': 'bytes', 'Content-Type': 'binary/octet-stream', 'Content-Length': '2503371', 'Server': 'AmazonS3'}
+DEBUG:botocore.parsers:Response body:
+<botocore.httpchecksum.StreamingChecksumBody object at 0x000001F811010460>
+DEBUG:botocore.hooks:Event needs-retry.s3.GetObject: calling handler <function _update_status_code at 0x000001F854534B80>
+DEBUG:botocore.hooks:Event needs-retry.s3.GetObject: calling handler <botocore.retryhandler.RetryHandler object at 0x000001F8551AEBD0>
+DEBUG:botocore.retryhandler:No retry needed.
+DEBUG:botocore.hooks:Event needs-retry.s3.GetObject: calling handler <bound method S3RegionRedirectorv2.redirect_from_error of <botocore.utils.S3RegionRedirectorv2 object at 0x000001F8551A6BD0>>
+DEBUG:s3transfer.tasks:IOWriteTask(transfer_id=0, {'offset': 0}) about to wait for the following futures []
+DEBUG:s3transfer.tasks:IOWriteTask(transfer_id=0, {'offset': 0}) done waiting for dependent futures
+DEBUG:s3transfer.tasks:Executing task IOWriteTask(transfer_id=0, {'offset': 0}) with kwargs {'fileobj': <s3transfer.utils.DeferredOpenFile object at 0x000001F80EBD9590>, 'offset': 0}
+DEBUG:s3transfer.tasks:IOWriteTask(transfer_id=0, {'offset': 262144}) about to wait for the following futures []
+DEBUG:s3transfer.tasks:IOWriteTask(transfer_id=0, {'offset': 262144}) done waiting for dependent futures
+DEBUG:s3transfer.tasks:Executing task IOWriteTask(transfer_id=0, {'offset': 262144}) with kwargs {'fileobj': <s3transfer.utils.DeferredOpenFile object at 0x000001F80EBD9590>, 'offset': 262144}
+DEBUG:s3transfer.tasks:IOWriteTask(transfer_id=0, {'offset': 524288}) about to wait for the following futures []
+DEBUG:s3transfer.tasks:IOWriteTask(transfer_id=0, {'offset': 524288}) done waiting for dependent futures
+DEBUG:s3transfer.tasks:Executing task IOWriteTask(transfer_id=0, {'offset': 524288}) with kwargs {'fileobj': <s3transfer.utils.DeferredOpenFile object at 0x000001F80EBD9590>, 'offset': 524288}
+DEBUG:s3transfer.tasks:IOWriteTask(transfer_id=0, {'offset': 786432}) about to wait for the following futures []
+DEBUG:s3transfer.tasks:IOWriteTask(transfer_id=0, {'offset': 786432}) done waiting for dependent futures
+DEBUG:s3transfer.tasks:Executing task IOWriteTask(transfer_id=0, {'offset': 786432}) with kwargs {'fileobj': <s3transfer.utils.DeferredOpenFile object at 0x000001F80EBD9590>, 'offset': 786432}
+DEBUG:s3transfer.tasks:IOWriteTask(transfer_id=0, {'offset': 1048576}) about to wait for the following futures []
+DEBUG:s3transfer.tasks:IOWriteTask(transfer_id=0, {'offset': 1048576}) done waiting for dependent futures
+DEBUG:s3transfer.tasks:Executing task IOWriteTask(transfer_id=0, {'offset': 1048576}) with kwargs {'fileobj': <s3transfer.utils.DeferredOpenFile object at 0x000001F80EBD9590>, 'offset': 1048576}
+DEBUG:s3transfer.tasks:IOWriteTask(transfer_id=0, {'offset': 1310720}) about to wait for the following futures []
+DEBUG:s3transfer.tasks:IOWriteTask(transfer_id=0, {'offset': 1310720}) done waiting for dependent futures
+DEBUG:s3transfer.tasks:Executing task IOWriteTask(transfer_id=0, {'offset': 1310720}) with kwargs {'fileobj': <s3transfer.utils.DeferredOpenFile object at 0x000001F80EBD9590>, 'offset': 1310720}
+DEBUG:s3transfer.tasks:IOWriteTask(transfer_id=0, {'offset': 1572864}) about to wait for the following futures []
+DEBUG:s3transfer.tasks:IOWriteTask(transfer_id=0, {'offset': 1572864}) done waiting for dependent futures
+DEBUG:s3transfer.tasks:Executing task IOWriteTask(transfer_id=0, {'offset': 1572864}) with kwargs {'fileobj': <s3transfer.utils.DeferredOpenFile object at 0x000001F80EBD9590>, 'offset': 1572864}
+DEBUG:s3transfer.tasks:IOWriteTask(transfer_id=0, {'offset': 1835008}) about to wait for the following futures []
+DEBUG:s3transfer.tasks:IOWriteTask(transfer_id=0, {'offset': 1835008}) done waiting for dependent futures
+DEBUG:s3transfer.tasks:Executing task IOWriteTask(transfer_id=0, {'offset': 1835008}) with kwargs {'fileobj': <s3transfer.utils.DeferredOpenFile object at 0x000001F80EBD9590>, 'offset': 1835008}
+DEBUG:s3transfer.tasks:IOWriteTask(transfer_id=0, {'offset': 2097152}) about to wait for the following futures []
+DEBUG:s3transfer.tasks:IOWriteTask(transfer_id=0, {'offset': 2097152}) done waiting for dependent futures
+DEBUG:s3transfer.tasks:Executing task IOWriteTask(transfer_id=0, {'offset': 2097152}) with kwargs {'fileobj': <s3transfer.utils.DeferredOpenFile object at 0x000001F80EBD9590>, 'offset': 2097152}
+DEBUG:s3transfer.tasks:IOWriteTask(transfer_id=0, {'offset': 2359296}) about to wait for the following futures []
+DEBUG:s3transfer.tasks:IOWriteTask(transfer_id=0, {'offset': 2359296}) done waiting for dependent futures
+DEBUG:s3transfer.tasks:Executing task IOWriteTask(transfer_id=0, {'offset': 2359296}) with kwargs {'fileobj': <s3transfer.utils.DeferredOpenFile object at 0x000001F80EBD9590>, 'offset': 2359296}
+DEBUG:s3transfer.tasks:IORenameFileTask(transfer_id=0, {'final_filename': 'C:\\Users\\vpjd8\\AppData\\Local\\Temp\\tmpnjm7d9p2'}) about to wait for the following futures []
+DEBUG:s3transfer.tasks:IORenameFileTask(transfer_id=0, {'final_filename': 'C:\\Users\\vpjd8\\AppData\\Local\\Temp\\tmpnjm7d9p2'}) done waiting for dependent futures
+DEBUG:s3transfer.tasks:Executing task IORenameFileTask(transfer_id=0, {'final_filename': 'C:\\Users\\vpjd8\\AppData\\Local\\Temp\\tmpnjm7d9p2'}) with kwargs {'fileobj': <s3transfer.utils.DeferredOpenFile object at 0x000001F80EBD9590>, 'final_filename': 'C:\\Users\\vpjd8\\AppData\\Local\\Temp\\tmpnjm7d9p2', 'osutil': <s3transfer.utils.OSUtils object at 0x000001F80FE39E90>}
+DEBUG:s3transfer.utils:Releasing acquire 0/None
+DEBUG:boto3.s3.transfer:Opting out of CRT Transfer Manager. Preferred client: auto, CRT available: False, Instance Optimized: False.
+DEBUG:boto3.s3.transfer:Using default client. pid: 3192, thread: 19292
+DEBUG:s3transfer.utils:Acquiring 0
+DEBUG:s3transfer.tasks:DownloadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000001F80D422650>}) about to wait for the following futures []
+DEBUG:s3transfer.tasks:DownloadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000001F80D422650>}) done waiting for dependent futures
+DEBUG:s3transfer.tasks:Executing task DownloadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000001F80D422650>}) with kwargs {'client': <botocore.client.S3 object at 0x000001F853D48210>, 'config': <boto3.s3.transfer.TransferConfig object at 0x000001F80EBE0CD0>, 'osutil': <s3transfer.utils.OSUtils object at 0x000001F80FFA7D50>, 'request_executor': <s3transfer.futures.BoundedExecutor object at 0x000001F80C7704D0>, 'transfer_future': <s3transfer.futures.TransferFuture object at 0x000001F80D422650>, 'io_executor': <s3transfer.futures.BoundedExecutor object at 0x000001F8110DCD10>}
+DEBUG:botocore.hooks:Event before-parameter-build.s3.HeadObject: calling handler <function sse_md5 at 0x000001F85450A340>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.HeadObject: calling handler <function validate_bucket_name at 0x000001F85450A2A0>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.HeadObject: calling handler <function remove_bucket_from_url_paths_from_model at 0x000001F854534540>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.HeadObject: calling handler <bound method S3RegionRedirectorv2.annotate_request_context of <botocore.utils.S3RegionRedirectorv2 object at 0x000001F8551A6BD0>>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.HeadObject: calling handler <bound method ClientCreator._inject_s3_input_parameters of <botocore.client.ClientCreator object at 0x000001F854DE3650>>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.HeadObject: calling handler <function generate_idempotent_uuid at 0x000001F85450A0C0>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.HeadObject: calling handler <function _handle_request_validation_mode_member at 0x000001F854534CC0>
+DEBUG:botocore.hooks:Event before-endpoint-resolution.s3: calling handler <function customize_endpoint_resolver_builtins at 0x000001F854534720>
+DEBUG:botocore.hooks:Event before-endpoint-resolution.s3: calling handler <bound method S3RegionRedirectorv2.redirect_from_cache of <botocore.utils.S3RegionRedirectorv2 object at 0x000001F8551A6BD0>>
+DEBUG:botocore.regions:Calling endpoint provider with parameters: {'Bucket': 'stock-prediction-models-fyp', 'Region': 'eu-north-1', 'UseFIPS': False, 'UseDualStack': False, 'ForcePathStyle': False, 'Accelerate': False, 'UseGlobalEndpoint': False, 'Key': 'scalers/GOOGL.pkl', 'DisableMultiRegionAccessPoints': False, 'UseArnRegion': True}
+DEBUG:botocore.regions:Endpoint provider result: https://stock-prediction-models-fyp.s3.eu-north-1.amazonaws.com
+DEBUG:botocore.regions:Selecting from endpoint provider's list of auth schemes: "sigv4". User selected auth scheme is: "None"
+DEBUG:botocore.regions:Selected auth type "v4" as "v4" with signing context params: {'region': 'eu-north-1', 'signing_name': 's3', 'disableDoubleEncoding': True}
+DEBUG:botocore.hooks:Event before-call.s3.HeadObject: calling handler <function add_expect_header at 0x000001F85450A660>
+DEBUG:botocore.hooks:Event before-call.s3.HeadObject: calling handler <bound method S3ExpressIdentityResolver.apply_signing_cache_key of <botocore.utils.S3ExpressIdentityResolver object at 0x000001F8551AEF10>>
+DEBUG:botocore.hooks:Event before-call.s3.HeadObject: calling handler <function add_recursion_detection_header at 0x000001F854508FE0>
+DEBUG:botocore.hooks:Event before-call.s3.HeadObject: calling handler <function add_query_compatibility_header at 0x000001F854534C20>
+DEBUG:botocore.hooks:Event before-call.s3.HeadObject: calling handler <function inject_api_version_header_if_needed at 0x000001F85450BBA0>
+DEBUG:botocore.endpoint:Making request for OperationModel(name=HeadObject) with params: {'url_path': '/scalers/GOOGL.pkl', 'query_string': {}, 'method': 'HEAD', 'headers': {'User-Agent': 'Boto3/1.37.33 md/Botocore#1.37.33 ua/2.1 os/windows#10 md/arch#amd64 lang/python#3.11.9 md/pyimpl#CPython m/G cfg/retry-mode#legacy Botocore/1.37.33'}, 'body': b'', 'auth_path': '/stock-prediction-models-fyp/scalers/GOOGL.pkl', 'url': 'https://stock-prediction-models-fyp.s3.eu-north-1.amazonaws.com/scalers/GOOGL.pkl', 'context': {'client_region': 'eu-north-1', 'client_config': <botocore.config.Config object at 0x000001F853ECD090>, 'has_streaming_input': False, 'auth_type': 'v4', 'unsigned_payload': None, 's3_redirect': {'redirected': False, 'bucket': 'stock-prediction-models-fyp', 'params': {'Bucket': 'stock-prediction-models-fyp', 'Key': 'scalers/GOOGL.pkl'}}, 'input_params': {'Bucket': 'stock-prediction-models-fyp', 'Key': 'scalers/GOOGL.pkl'}, 'signing': {'region': 'eu-north-1', 'signing_name': 's3', 'disableDoubleEncoding': True}, 'endpoint_properties': {'authSchemes': [{'disableDoubleEncoding': True, 'name': 'sigv4', 'signingName': 's3', 'signingRegion': 'eu-north-1'}]}}}
+DEBUG:botocore.hooks:Event request-created.s3.HeadObject: calling handler <function signal_not_transferring at 0x000001F8551145E0>
+DEBUG:botocore.hooks:Event request-created.s3.HeadObject: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x000001F85518DF90>>
+DEBUG:botocore.hooks:Event choose-signer.s3.HeadObject: calling handler <function set_operation_specific_signer at 0x000001F854509EE0>
+DEBUG:botocore.hooks:Event before-sign.s3.HeadObject: calling handler <function remove_arn_from_signing_path at 0x000001F854534680>
+DEBUG:botocore.hooks:Event before-sign.s3.HeadObject: calling handler <function _set_extra_headers_for_unsigned_request at 0x000001F854534D60>
+DEBUG:botocore.hooks:Event before-sign.s3.HeadObject: calling handler <bound method S3ExpressIdentityResolver.resolve_s3express_identity of <botocore.utils.S3ExpressIdentityResolver object at 0x000001F8551AEF10>>
+DEBUG:botocore.auth:Calculating signature using v4 auth.
+DEBUG:botocore.auth:CanonicalRequest:
+HEAD
+/scalers/GOOGL.pkl
+
+host:stock-prediction-models-fyp.s3.eu-north-1.amazonaws.com
+x-amz-content-sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+x-amz-date:20250421T202416Z
+
+host;x-amz-content-sha256;x-amz-date
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+DEBUG:botocore.auth:StringToSign:
+AWS4-HMAC-SHA256
+20250421T202416Z
+20250421/eu-north-1/s3/aws4_request
+364564862b50d75598829358cd4fced631d6a53250d40621ebc1e098e22192e9
+DEBUG:botocore.auth:Signature:
+fa95634fff93ed06756421dfd2fac668ede43aa10e73cc1d5d56012bd2bbeba6
+DEBUG:botocore.hooks:Event request-created.s3.HeadObject: calling handler <bound method UserAgentString.rebuild_and_replace_user_agent_handler of <botocore.useragent.UserAgentString object at 0x000001F855033810>>
+DEBUG:botocore.hooks:Event request-created.s3.HeadObject: calling handler <function signal_transferring at 0x000001F855114860>
+DEBUG:botocore.hooks:Event request-created.s3.HeadObject: calling handler <function add_retry_headers at 0x000001F8545344A0>
+DEBUG:botocore.endpoint:Sending http request: <AWSPreparedRequest stream_output=False, method=HEAD, url=https://stock-prediction-models-fyp.s3.eu-north-1.amazonaws.com/scalers/GOOGL.pkl, headers={'User-Agent': b'Boto3/1.37.33 md/Botocore#1.37.33 ua/2.1 os/windows#10 md/arch#amd64 lang/python#3.11.9 md/pyimpl#CPython m/G cfg/retry-mode#legacy Botocore/1.37.33', 'X-Amz-Date': b'20250421T202416Z', 'X-Amz-Content-SHA256': b'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAZQ3DRSO6NAD6HT2M/20250421/eu-north-1/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=fa95634fff93ed06756421dfd2fac668ede43aa10e73cc1d5d56012bd2bbeba6', 'amz-sdk-invocation-id': b'5ad05718-81fb-4684-b3c5-69d35a14ea08', 'amz-sdk-request': b'attempt=1'}>
+DEBUG:botocore.httpsession:Certificate path: C:\Users\vpjd8\PycharmProjects\StockPredictorBackend\.venv\Lib\site-packages\certifi\cacert.pem
+DEBUG:urllib3.connectionpool:https://stock-prediction-models-fyp.s3.eu-north-1.amazonaws.com:443 "HEAD /scalers/GOOGL.pkl HTTP/1.1" 200 0
+DEBUG:botocore.hooks:Event before-parse.s3.HeadObject: calling handler <function _handle_200_error at 0x000001F854534A40>
+DEBUG:botocore.hooks:Event before-parse.s3.HeadObject: calling handler <function handle_expires_header at 0x000001F854534860>
+DEBUG:botocore.parsers:Response headers: {'x-amz-id-2': '6qTA4fjXa/rZ6+4Kjq8vswgg8AUBRPA5OZ0+6Q3ByJy4RwobLBK26LrsZ9rcchYjQFpX6ZXe8j/c3cz6eYvEdGXUdwSJ7HotaQVO6lR8SW4=', 'x-amz-request-id': 'FYGE18K0WN8XTSSM', 'Date': 'Mon, 21 Apr 2025 20:24:17 GMT', 'Last-Modified': 'Mon, 21 Apr 2025 20:24:16 GMT', 'ETag': '"1b29b741c5c9e646195804f9aa918693"', 'x-amz-server-side-encryption': 'AES256', 'x-amz-version-id': 'gxbbKLerYJji_wN4uftcL.lnIhaI8oZ9', 'Accept-Ranges': 'bytes', 'Content-Type': 'binary/octet-stream', 'Content-Length': '616', 'Server': 'AmazonS3'}
+DEBUG:botocore.parsers:Response body:
+b''
+DEBUG:botocore.hooks:Event needs-retry.s3.HeadObject: calling handler <function _update_status_code at 0x000001F854534B80>
+DEBUG:botocore.hooks:Event needs-retry.s3.HeadObject: calling handler <botocore.retryhandler.RetryHandler object at 0x000001F8551AEBD0>
+DEBUG:botocore.retryhandler:No retry needed.
+DEBUG:botocore.hooks:Event needs-retry.s3.HeadObject: calling handler <bound method S3RegionRedirectorv2.redirect_from_error of <botocore.utils.S3RegionRedirectorv2 object at 0x000001F8551A6BD0>>
+DEBUG:s3transfer.futures:Submitting task ImmediatelyWriteIOGetObjectTask(transfer_id=0, {'bucket': 'stock-prediction-models-fyp', 'key': 'scalers/GOOGL.pkl', 'extra_args': {}}) to executor <s3transfer.futures.BoundedExecutor object at 0x000001F80C7704D0> for transfer request: 0.
+DEBUG:s3transfer.utils:Acquiring 0
+DEBUG:s3transfer.tasks:ImmediatelyWriteIOGetObjectTask(transfer_id=0, {'bucket': 'stock-prediction-models-fyp', 'key': 'scalers/GOOGL.pkl', 'extra_args': {}}) about to wait for the following futures []
+DEBUG:s3transfer.utils:Releasing acquire 0/None
+DEBUG:s3transfer.tasks:ImmediatelyWriteIOGetObjectTask(transfer_id=0, {'bucket': 'stock-prediction-models-fyp', 'key': 'scalers/GOOGL.pkl', 'extra_args': {}}) done waiting for dependent futures
+DEBUG:s3transfer.tasks:Executing task ImmediatelyWriteIOGetObjectTask(transfer_id=0, {'bucket': 'stock-prediction-models-fyp', 'key': 'scalers/GOOGL.pkl', 'extra_args': {}}) with kwargs {'client': <botocore.client.S3 object at 0x000001F853D48210>, 'bucket': 'stock-prediction-models-fyp', 'key': 'scalers/GOOGL.pkl', 'fileobj': <s3transfer.utils.DeferredOpenFile object at 0x000001F80E54B4D0>, 'extra_args': {}, 'callbacks': [], 'max_attempts': 5, 'download_output_manager': <s3transfer.download.DownloadFilenameOutputManager object at 0x000001F80C772210>, 'io_chunksize': 262144, 'bandwidth_limiter': None}
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <function sse_md5 at 0x000001F85450A340>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <function validate_bucket_name at 0x000001F85450A2A0>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <function remove_bucket_from_url_paths_from_model at 0x000001F854534540>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <bound method S3RegionRedirectorv2.annotate_request_context of <botocore.utils.S3RegionRedirectorv2 object at 0x000001F8551A6BD0>>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <bound method ClientCreator._inject_s3_input_parameters of <botocore.client.ClientCreator object at 0x000001F854DE3650>>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <function generate_idempotent_uuid at 0x000001F85450A0C0>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <function _handle_request_validation_mode_member at 0x000001F854534CC0>
+DEBUG:botocore.hooks:Event before-endpoint-resolution.s3: calling handler <function customize_endpoint_resolver_builtins at 0x000001F854534720>
+DEBUG:botocore.hooks:Event before-endpoint-resolution.s3: calling handler <bound method S3RegionRedirectorv2.redirect_from_cache of <botocore.utils.S3RegionRedirectorv2 object at 0x000001F8551A6BD0>>
+DEBUG:botocore.regions:Calling endpoint provider with parameters: {'Bucket': 'stock-prediction-models-fyp', 'Region': 'eu-north-1', 'UseFIPS': False, 'UseDualStack': False, 'ForcePathStyle': False, 'Accelerate': False, 'UseGlobalEndpoint': False, 'Key': 'scalers/GOOGL.pkl', 'DisableMultiRegionAccessPoints': False, 'UseArnRegion': True}
+DEBUG:botocore.regions:Endpoint provider result: https://stock-prediction-models-fyp.s3.eu-north-1.amazonaws.com
+DEBUG:botocore.regions:Selecting from endpoint provider's list of auth schemes: "sigv4". User selected auth scheme is: "None"
+DEBUG:botocore.regions:Selected auth type "v4" as "v4" with signing context params: {'region': 'eu-north-1', 'signing_name': 's3', 'disableDoubleEncoding': True}
+DEBUG:botocore.hooks:Event before-call.s3.GetObject: calling handler <function add_expect_header at 0x000001F85450A660>
+DEBUG:botocore.hooks:Event before-call.s3.GetObject: calling handler <bound method S3ExpressIdentityResolver.apply_signing_cache_key of <botocore.utils.S3ExpressIdentityResolver object at 0x000001F8551AEF10>>
+DEBUG:botocore.hooks:Event before-call.s3.GetObject: calling handler <function add_recursion_detection_header at 0x000001F854508FE0>
+DEBUG:botocore.hooks:Event before-call.s3.GetObject: calling handler <function add_query_compatibility_header at 0x000001F854534C20>
+DEBUG:botocore.hooks:Event before-call.s3.GetObject: calling handler <function inject_api_version_header_if_needed at 0x000001F85450BBA0>
+DEBUG:botocore.endpoint:Making request for OperationModel(name=GetObject) with params: {'url_path': '/scalers/GOOGL.pkl', 'query_string': {}, 'method': 'GET', 'headers': {'x-amz-checksum-mode': 'ENABLED', 'User-Agent': 'Boto3/1.37.33 md/Botocore#1.37.33 ua/2.1 os/windows#10 md/arch#amd64 lang/python#3.11.9 md/pyimpl#CPython m/G cfg/retry-mode#legacy Botocore/1.37.33'}, 'body': b'', 'auth_path': '/stock-prediction-models-fyp/scalers/GOOGL.pkl', 'url': 'https://stock-prediction-models-fyp.s3.eu-north-1.amazonaws.com/scalers/GOOGL.pkl', 'context': {'client_region': 'eu-north-1', 'client_config': <botocore.config.Config object at 0x000001F853ECD090>, 'has_streaming_input': False, 'auth_type': 'v4', 'unsigned_payload': None, 's3_redirect': {'redirected': False, 'bucket': 'stock-prediction-models-fyp', 'params': {'Bucket': 'stock-prediction-models-fyp', 'Key': 'scalers/GOOGL.pkl', 'ChecksumMode': 'ENABLED'}}, 'input_params': {'Bucket': 'stock-prediction-models-fyp', 'Key': 'scalers/GOOGL.pkl'}, 'signing': {'region': 'eu-north-1', 'signing_name': 's3', 'disableDoubleEncoding': True}, 'endpoint_properties': {'authSchemes': [{'disableDoubleEncoding': True, 'name': 'sigv4', 'signingName': 's3', 'signingRegion': 'eu-north-1'}]}, 'checksum': {'response_algorithms': ['crc32', 'sha1', 'sha256']}}}
+DEBUG:botocore.hooks:Event request-created.s3.GetObject: calling handler <function signal_not_transferring at 0x000001F8551145E0>
+DEBUG:botocore.hooks:Event request-created.s3.GetObject: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x000001F85518DF90>>
+DEBUG:botocore.hooks:Event choose-signer.s3.GetObject: calling handler <function set_operation_specific_signer at 0x000001F854509EE0>
+DEBUG:botocore.hooks:Event before-sign.s3.GetObject: calling handler <function remove_arn_from_signing_path at 0x000001F854534680>
+DEBUG:botocore.hooks:Event before-sign.s3.GetObject: calling handler <function _set_extra_headers_for_unsigned_request at 0x000001F854534D60>
+DEBUG:botocore.hooks:Event before-sign.s3.GetObject: calling handler <bound method S3ExpressIdentityResolver.resolve_s3express_identity of <botocore.utils.S3ExpressIdentityResolver object at 0x000001F8551AEF10>>
+DEBUG:botocore.auth:Calculating signature using v4 auth.
+DEBUG:botocore.auth:CanonicalRequest:
+GET
+/scalers/GOOGL.pkl
+
+host:stock-prediction-models-fyp.s3.eu-north-1.amazonaws.com
+x-amz-checksum-mode:ENABLED
+x-amz-content-sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+x-amz-date:20250421T202416Z
+
+host;x-amz-checksum-mode;x-amz-content-sha256;x-amz-date
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+DEBUG:botocore.auth:StringToSign:
+AWS4-HMAC-SHA256
+20250421T202416Z
+20250421/eu-north-1/s3/aws4_request
+cf6e5622b7ddf878913375e06f9d5dca3f58f8565a13733e9fca176b2b3f3453
+DEBUG:botocore.auth:Signature:
+a6c16e26cde7c205b5534b148d6f10a004a685c7ba95f490da29a0495a738041
+DEBUG:botocore.hooks:Event request-created.s3.GetObject: calling handler <bound method UserAgentString.rebuild_and_replace_user_agent_handler of <botocore.useragent.UserAgentString object at 0x000001F855033810>>
+DEBUG:botocore.hooks:Event request-created.s3.GetObject: calling handler <function signal_transferring at 0x000001F855114860>
+DEBUG:botocore.hooks:Event request-created.s3.GetObject: calling handler <function add_retry_headers at 0x000001F8545344A0>
+DEBUG:botocore.endpoint:Sending http request: <AWSPreparedRequest stream_output=True, method=GET, url=https://stock-prediction-models-fyp.s3.eu-north-1.amazonaws.com/scalers/GOOGL.pkl, headers={'x-amz-checksum-mode': b'ENABLED', 'User-Agent': b'Boto3/1.37.33 md/Botocore#1.37.33 ua/2.1 os/windows#10 md/arch#amd64 lang/python#3.11.9 md/pyimpl#CPython m/G cfg/retry-mode#legacy Botocore/1.37.33', 'X-Amz-Date': b'20250421T202416Z', 'X-Amz-Content-SHA256': b'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAZQ3DRSO6NAD6HT2M/20250421/eu-north-1/s3/aws4_request, SignedHeaders=host;x-amz-checksum-mode;x-amz-content-sha256;x-amz-date, Signature=a6c16e26cde7c205b5534b148d6f10a004a685c7ba95f490da29a0495a738041', 'amz-sdk-invocation-id': b'22798267-c6b4-4129-bf70-ead03ebb8409', 'amz-sdk-request': b'attempt=1'}>
+DEBUG:botocore.httpsession:Certificate path: C:\Users\vpjd8\PycharmProjects\StockPredictorBackend\.venv\Lib\site-packages\certifi\cacert.pem
+DEBUG:urllib3.connectionpool:https://stock-prediction-models-fyp.s3.eu-north-1.amazonaws.com:443 "GET /scalers/GOOGL.pkl HTTP/1.1" 200 616
+DEBUG:botocore.hooks:Event before-parse.s3.GetObject: calling handler <function _handle_200_error at 0x000001F854534A40>
+DEBUG:botocore.hooks:Event before-parse.s3.GetObject: calling handler <function handle_expires_header at 0x000001F854534860>
+DEBUG:botocore.parsers:Response headers: {'x-amz-id-2': 'YhnsMapZb16/FvUdMxwGaWAutB9XcSR8wFDWkqySfEmZ3Fd/atmXXl1P+mzQx/FAJ+WhBh5rhIGnVVcC4MzZWcpXtDmi2h8NTmqQ4KCuz4s=', 'x-amz-request-id': 'FYGDF1DJHJBSNNPY', 'Date': 'Mon, 21 Apr 2025 20:24:17 GMT', 'Last-Modified': 'Mon, 21 Apr 2025 20:24:16 GMT', 'ETag': '"1b29b741c5c9e646195804f9aa918693"', 'x-amz-checksum-crc32': 'prWJDQ==', 'x-amz-checksum-type': 'FULL_OBJECT', 'x-amz-server-side-encryption': 'AES256', 'x-amz-version-id': 'gxbbKLerYJji_wN4uftcL.lnIhaI8oZ9', 'Accept-Ranges': 'bytes', 'Content-Type': 'binary/octet-stream', 'Content-Length': '616', 'Server': 'AmazonS3'}
+DEBUG:botocore.parsers:Response body:
+<botocore.httpchecksum.StreamingChecksumBody object at 0x000001F8110CF220>
+DEBUG:botocore.hooks:Event needs-retry.s3.GetObject: calling handler <function _update_status_code at 0x000001F854534B80>
+DEBUG:botocore.hooks:Event needs-retry.s3.GetObject: calling handler <botocore.retryhandler.RetryHandler object at 0x000001F8551AEBD0>
+DEBUG:botocore.retryhandler:No retry needed.
+DEBUG:botocore.hooks:Event needs-retry.s3.GetObject: calling handler <bound method S3RegionRedirectorv2.redirect_from_error of <botocore.utils.S3RegionRedirectorv2 object at 0x000001F8551A6BD0>>
+DEBUG:s3transfer.tasks:IOWriteTask(transfer_id=0, {'offset': 0}) about to wait for the following futures []
+DEBUG:s3transfer.tasks:IOWriteTask(transfer_id=0, {'offset': 0}) done waiting for dependent futures
+DEBUG:s3transfer.tasks:Executing task IOWriteTask(transfer_id=0, {'offset': 0}) with kwargs {'fileobj': <s3transfer.utils.DeferredOpenFile object at 0x000001F80E54B4D0>, 'offset': 0}
+DEBUG:s3transfer.tasks:IORenameFileTask(transfer_id=0, {'final_filename': 'C:\\Users\\vpjd8\\AppData\\Local\\Temp\\tmpx4271vfl'}) about to wait for the following futures []
+DEBUG:s3transfer.tasks:IORenameFileTask(transfer_id=0, {'final_filename': 'C:\\Users\\vpjd8\\AppData\\Local\\Temp\\tmpx4271vfl'}) done waiting for dependent futures
+DEBUG:s3transfer.tasks:Executing task IORenameFileTask(transfer_id=0, {'final_filename': 'C:\\Users\\vpjd8\\AppData\\Local\\Temp\\tmpx4271vfl'}) with kwargs {'fileobj': <s3transfer.utils.DeferredOpenFile object at 0x000001F80E54B4D0>, 'final_filename': 'C:\\Users\\vpjd8\\AppData\\Local\\Temp\\tmpx4271vfl', 'osutil': <s3transfer.utils.OSUtils object at 0x000001F80FFA7D50>}
+DEBUG:s3transfer.utils:Releasing acquire 0/None
+INFO:werkzeug:127.0.0.1 - - [21/Apr/2025 21:24:16] "POST /api/stock HTTP/1.1" 200 -

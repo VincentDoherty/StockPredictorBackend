@@ -3,33 +3,36 @@ import yfinance as yf
 from datetime import datetime
 import numpy as np
 import pandas as pd
-import pickle
 from sklearn.preprocessing import MinMaxScaler
+import tensorflow as tf
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import LSTM, Dropout, Dense
-import tensorflow as tf
-from db_utils import get_stock_data, get_db_connection, save_model_to_db, load_model_from_db
+from services.db_utils import get_stock_data, save_model_and_scaler, load_model_from_db, store_stock_data
 
 
 def retrain_model(stock_symbol):
     existing_data = get_stock_data(stock_symbol)
-    logging.debug(f"Existing data columns: {existing_data.columns}")
     last_date = existing_data.index[-1] if not existing_data.empty else '2020-01-01'
     new_data = yf.download(stock_symbol, start=last_date, end=datetime.now().strftime('%Y-%m-%d'), auto_adjust=False)
-    logging.debug(f"New data columns: {new_data.columns}")
 
     if not new_data.empty:
-        new_data.columns = new_data.columns.get_level_values(0)  # Flatten the MultiIndex
+        new_data.columns = new_data.columns.get_level_values(0)
         new_data = new_data[['Close']]
+        new_data.columns = ['close']  # FIX: normalize column BEFORE storing
         existing_data = pd.concat([existing_data, new_data])
+        store_stock_data(stock_symbol, new_data)
 
     if existing_data.empty:
-        return
+        logging.warning(f"No data available for stock symbol: {stock_symbol}")
+        return False
 
-    logging.debug(f"Final existing data columns: {existing_data.columns}")
-    data = existing_data[['Close']]
+    data = existing_data[['close']]
     scaler = MinMaxScaler(feature_range=(0, 1))
     scaled_data = scaler.fit_transform(data)
+
+    if len(scaled_data) < 395:
+        logging.warning(f"Not enough data to train the model for stock symbol: {stock_symbol}")
+        return False
 
     train_data = []
     target_data = []
@@ -40,7 +43,7 @@ def retrain_model(stock_symbol):
 
     train_data = np.reshape(train_data, (train_data.shape[0], train_data.shape[1], 1))
 
-    model, last_updated = load_model_from_db(stock_symbol)
+    model, _, last_updated = load_model_from_db(stock_symbol)
     if model is None or (datetime.now() - last_updated).days > 7:
         model = Sequential()
         model.add(LSTM(units=100, return_sequences=True, input_shape=(train_data.shape[1], 1)))
@@ -49,9 +52,16 @@ def retrain_model(stock_symbol):
         model.add(Dropout(0.3))
         model.add(LSTM(units=100))
         model.add(Dropout(0.3))
+        model.add(Dense(units=30))
+
+        model.compile(optimizer='adam', loss='mean_squared_error', metrics=['mae'])
+
         early_stopping = tf.keras.callbacks.EarlyStopping(monitor='loss', patience=10)
-        model.fit(train_data, target_data, epochs=10, batch_size=32, callbacks=[early_stopping])
+        history = model.fit(train_data, target_data, epochs=10, batch_size=32, callbacks=[early_stopping], verbose=0)
 
-        save_model_to_db(stock_symbol, model)
+        final_loss = float(history.history['loss'][-1]) if 'loss' in history.history else None
 
+        save_model_and_scaler(stock_symbol, model, scaler, final_loss)
+        return True
 
+    return False

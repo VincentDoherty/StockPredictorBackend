@@ -1,69 +1,78 @@
-import unittest
-from werkzeug.security import generate_password_hash
-from app import app
-from db_utils import get_db_connection
+import pytest
+from flask import json
+from app import app as flask_app
+from services.db_utils import get_db_connection
 
-class AuthTestCase(unittest.TestCase):
-    def setUp(self):
-        self.app = app.test_client()
-        self.app.testing = True
+@pytest.fixture
+def client():
+    flask_app.config['TESTING'] = True
+    with flask_app.test_client() as client:
+        yield client
 
-        # Create a test user in the database
-        self.username = 'testuser'
-        self.password = 'testpassword'
-        self.create_test_user()
+def test_register_new_user(client):
+    response = client.post('/api/register', json={
+        'username': 'testuser1',
+        'password': 'securepass'
+    })
+    assert response.status_code == 201
+    assert 'User registered successfully' in response.get_json()['message']
 
-    def tearDown(self):
-        # Remove the test user from the database
-        self.delete_test_user()
+def test_register_duplicate_user(client):
+    client.post('/api/register', json={
+        'username': 'testuser2',
+        'password': 'securepass'
+    })
+    response = client.post('/api/register', json={
+        'username': 'testuser2',
+        'password': 'anotherpass'
+    })
+    assert response.status_code == 500
 
-    def create_test_user(self):
-        password_hash = generate_password_hash(self.password)
-        conn = get_db_connection()
-        cursor = conn.cursor()
-        cursor.execute(
-            "INSERT INTO users (username, password_hash) VALUES (%s, %s) ON CONFLICT (username) DO NOTHING",
-            (self.username, password_hash)
-        )
-        conn.commit()
-        cursor.close()
-        conn.close()
+def test_login_valid_user(client):
+    client.post('/api/register', json={
+        'username': 'testuser3',
+        'password': 'securepass'
+    })
+    response = client.post('/api/login', json={
+        'username': 'testuser3',
+        'password': 'securepass'
+    })
+    assert response.status_code == 200
+    assert 'Login successful' in response.get_json()['message']
 
-    def delete_test_user(self, username=None):
-        conn = get_db_connection()
-        cursor = conn.cursor()
-        cursor.execute("DELETE FROM users WHERE username = %s", (username or self.username,))
-        conn.commit()
-        cursor.close()
-        conn.close()
+def test_login_invalid_user(client):
+    response = client.post('/api/login', json={
+        'username': 'nonexistent',
+        'password': 'wrongpass'
+    })
+    assert response.status_code == 401
 
-    def test_register(self):
-        response = self.app.post('/api/register', json={
-            'username': 'newuser',
-            'password': 'newpassword'
-        })
-        self.assertEqual(response.status_code, 201)
-        self.assertIn('User registered successfully', response.get_data(as_text=True))
-        self.delete_test_user(username='newuser')
+def test_session_cookie_persists(client):
+    client.post('/api/register', json={
+        'username': 'testuser4',
+        'password': 'securepass'
+    })
+    login_resp = client.post('/api/login', json={
+        'username': 'testuser4',
+        'password': 'securepass'
+    })
+    assert login_resp.status_code == 200
+    with client.session_transaction() as sess:
+        assert '_user_id' in sess
 
-    def test_login(self):
-        response = self.app.post('/api/login', json={
-            'username': self.username,
-            'password': self.password
-        })
-        self.assertEqual(response.status_code, 200)
-        self.assertIn('Login successful', response.get_data(as_text=True))
+def test_logout(client):
+    client.post('/api/register', json={
+        'username': 'testuser5',
+        'password': 'securepass'
+    })
+    client.post('/api/login', json={
+        'username': 'testuser5',
+        'password': 'securepass'
+    })
+    response = client.post('/api/logout')
+    assert response.status_code == 200
+    assert 'Logged out successfully' in response.get_json()['message']
 
-    def test_logout(self):
-        # First, log in the user
-        self.app.post('/api/login', json={
-            'username': self.username,
-            'password': self.password
-        })
-        # Then, log out the user
-        response = self.app.post('/api/logout')
-        self.assertEqual(response.status_code, 200)
-        self.assertIn('Logged out successfully', response.get_data(as_text=True))
-
-if __name__ == '__main__':
-    unittest.main()
+def test_protected_route_requires_login(client):
+    response = client.get('/api/portfolios')  # Example protected route
+    assert response.status_code in [302, 401]

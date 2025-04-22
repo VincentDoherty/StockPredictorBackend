@@ -1,5 +1,8 @@
-import psycopg2
+import os
 
+import psycopg2
+from dotenv import load_dotenv
+load_dotenv()
 def create_tables():
     commands = [
         """
@@ -12,12 +15,22 @@ def create_tables():
         )
         """,
         """
-        CREATE TABLE IF NOT EXISTS portfolios (
+        CREATE TABLE IF NOT EXISTS portfolio_stocks (
             id SERIAL PRIMARY KEY,
-            user_id INTEGER REFERENCES users(id),
-            name VARCHAR(255) NOT NULL
+            portfolio_id INTEGER REFERENCES portfolios(id),
+            stock_symbol VARCHAR(10) NOT NULL,
+            shares FLOAT NOT NULL DEFAULT 1.0,
+            purchase_price NUMERIC,
+            purchase_date DATE NOT NULL DEFAULT CURRENT_DATE
         )
         """,
+        """
+        CREATE TABLE if not exists portfolios (
+        id SERIAL PRIMARY KEY,
+        user_id INTEGER REFERENCES users(id),
+        name VARCHAR(255) NOT NULL
+        );
+        """
         """
         CREATE TABLE IF NOT EXISTS transactions (
             id SERIAL PRIMARY KEY,
@@ -64,20 +77,39 @@ def create_tables():
         """
         CREATE TABLE IF NOT EXISTS stock_models (
             stock_symbol VARCHAR(10) PRIMARY KEY,
-            model BYTEA NOT NULL,
-            last_updated TIMESTAMP NOT NULL
+            model_url TEXT NOT NULL,
+            last_updated TIMESTAMP NOT NULL,
+            scaler_url TEXT,
+            model_version INTEGER DEFAULT 1,
+            training_loss FLOAT
+
         )
+        """,
         """
+        CREATE TABLE IF NOT EXISTS user_risk_profiles (
+        user_id INTEGER PRIMARY KEY REFERENCES users(id),
+        risk_score INTEGER NOT NULL
+        )
+        """,
+        """
+        CREATE TABLE IF NOT EXISTS user_goals (
+        id SERIAL PRIMARY KEY,
+        user_id INTEGER REFERENCES users(id),
+        name TEXT NOT NULL,
+        target_amount FLOAT NOT NULL,
+        target_date DATE NOT NULL,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        ); """
     ]
 
     conn = None
     try:
         conn = psycopg2.connect(
-            dbname='investmentdb',
-            user='postgres',
-            password='vdonkeY800',
-            host='localhost',
-            port='5432'
+            dbname=os.getenv('DB_NAME'),
+            user=os.getenv('DB_USER'),
+            password=os.getenv('DB_PASSWORD'),
+            host=os.getenv('DB_HOST'),
+            port=os.getenv('DB_PORT')
         )
         cursor = conn.cursor()
         for command in commands:
