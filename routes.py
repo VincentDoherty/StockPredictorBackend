@@ -478,7 +478,7 @@ def portfolio_routes(app):
             with conn.cursor() as cursor:
                 cursor.execute(
                     """
-                    SELECT ps.id, ps.stock_symbol, ps.purchase_price, sd.close
+                    SELECT ps.id, ps.stock_symbol, ps.purchase_price, ps.purchase_date, sd.close
                     FROM portfolio_stocks ps
                              LEFT JOIN (SELECT stock_symbol, close
                                         FROM stock_data
@@ -497,7 +497,7 @@ def portfolio_routes(app):
 
             portfolio = []
             for stock in stocks:
-                stock_id, stock_symbol, purchase_price, current_price = stock
+                stock_id, stock_symbol, purchase_price, purchase_date, current_price = stock
                 if current_price is None:
                     current_price = purchase_price
                 profit_loss = current_price - purchase_price
@@ -505,6 +505,7 @@ def portfolio_routes(app):
                     'id': stock_id,
                     'stock_symbol': stock_symbol,
                     'purchase_price': f"{purchase_price:.2f}",
+                    'purchase_date': purchase_date.strftime('%Y-%m-%d'),
                     'current_price': f"{current_price:.2f}",
                     'profit_loss': f"{profit_loss:.2f}"
                 })
