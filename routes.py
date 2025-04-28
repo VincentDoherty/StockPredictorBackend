@@ -1,27 +1,16 @@
-from functools import wraps
-
+import logging
+from datetime import datetime, timedelta
+from decimal import Decimal
+import numpy as np
+import pandas as pd
+import yfinance as yf
 from flask import request, jsonify
 from flask_login import login_user, login_required, logout_user, current_user
 from werkzeug.security import generate_password_hash
-from user_db import get_user_by_id, get_user_by_username, create_user
-import logging
-import yfinance as yf
-from datetime import datetime
-import numpy as np
-import pandas as pd
-from scipy.optimize import minimize
-from sklearn.preprocessing import MinMaxScaler
 from retrain_model import retrain_model, load_model_from_db
 from services.db_utils import get_stock_data, store_predictions, store_stock_data, get_db_connection
-
-#
-def admin_required(f):
-    @wraps(f)
-    def decorated_function(*args, **kwargs):
-        if not current_user.is_authenticated or not getattr(current_user, 'is_admin', False):
-            return jsonify({'error': 'Admin access required'}), 403
-        return f(*args, **kwargs)
-    return decorated_function
+from user_db import get_user_by_id, get_user_by_username, create_user
+from Decorators.ownership import require_ownership
 
 def register_routes(app, login_manager):
 
@@ -64,6 +53,13 @@ def register_routes(app, login_manager):
     def logout():
         logout_user()
         return jsonify({'message': 'Logged out successfully'}), 200
+
+    @app.route('/api/check-session')
+    def check_session():
+        if current_user.is_authenticated:
+            return jsonify({'authenticated': True}), 200
+        else:
+            return jsonify({'authenticated': False}), 200
 
 
 def stock_routes(app):
@@ -131,7 +127,7 @@ def stock_routes(app):
 
             logging.error(f"Error in /api/stock endpoint: {e}", exc_info=True)
 
-            if app.config.get("TESTING", False):  # 👈 this allows test to see the traceback
+            if app.config.get("TESTING", False):  #  this allows test to see the traceback
 
                 return jsonify({
 
@@ -252,152 +248,7 @@ def stock_routes(app):
         finally:
             conn.close()
 
-    @app.route('/api/portfolio/<int:portfolio_id>/metrics', methods=['GET'])
-    @login_required
-    def get_portfolio_metrics(portfolio_id):
-        conn = get_db_connection()
-        try:
-            with conn.cursor() as cursor:
-                cursor.execute(
-                    """
-                    SELECT stock_symbol, shares, purchase_date, purchase_price
-                    FROM portfolio_stocks
-                    WHERE portfolio_id = %s
-                    """,
-                    (portfolio_id,)
-                )
-                stocks = cursor.fetchall()
-                if not stocks:
-                    return jsonify({'error': 'Portfolio is empty'}), 404
 
-                price_map = {}
-                for symbol, shares, purchase_date, _ in stocks:
-                    cursor.execute(
-                        """
-                        SELECT date, close
-                        FROM stock_data
-                        WHERE stock_symbol = %s
-                          AND date >= %s
-                        ORDER BY date ASC
-                        """,
-                        (symbol, purchase_date)
-                    )
-                    for date, close in cursor.fetchall():
-                        if date not in price_map:
-                            price_map[date] = 0
-                        price_map[date] += close * shares
-
-            # Build time series
-            sorted_dates = sorted(price_map)
-            values = [price_map[date] for date in sorted_dates]
-
-            # Compute daily returns
-            returns = pd.Series(values).pct_change().dropna()
-            if returns.empty:
-                return jsonify({'error': 'Not enough data for metrics'}), 400
-
-            avg_daily_return = returns.mean()
-            volatility = returns.std()
-            sharpe_ratio = (avg_daily_return / volatility) * np.sqrt(252)
-            total_return = (values[-1] - values[0]) / values[0]
-
-            metrics = {
-                'total_return': round(total_return * 100, 2),
-                'avg_daily_return': round(avg_daily_return * 100, 4),
-                'volatility': round(volatility * 100, 4),
-                'sharpe_ratio': round(sharpe_ratio, 2)
-            }
-
-            return jsonify(metrics), 200
-
-        except Exception as e:
-            logging.error(f"Error computing metrics: {e}", exc_info=True)
-            return jsonify({'error': 'Failed to compute metrics'}), 500
-        finally:
-            conn.close()
-
-
-    @app.route('/api/portfolios/<int:portfolio_id>/rebalance', methods=['POST'])
-    @login_required
-    def rebalance_portfolio(portfolio_id):
-        conn = get_db_connection()
-        try:
-            # 1. Load all holdings
-            with conn.cursor() as cursor:
-                cursor.execute(
-                    "SELECT stock_symbol, shares, purchase_date FROM portfolio_stocks WHERE portfolio_id = %s",
-                    (portfolio_id,)
-                )
-                rows = cursor.fetchall()
-
-            if not rows:
-                return jsonify({'error': 'Portfolio is empty'}), 404
-
-            symbols = [row[0] for row in rows]
-            shares = {row[0]: row[1] for row in rows}
-            start_date = min(row[2] for row in rows)
-
-            # 2. Fetch price history
-            price_map = {}
-            with conn.cursor() as cursor:
-                for sym in symbols:
-                    cursor.execute(
-                        """
-                        SELECT date, close
-                        FROM stock_data
-                        WHERE stock_symbol = %s
-                          AND date >= %s
-                        ORDER BY date ASC
-                        """,
-                        (sym, start_date)
-                    )
-                    df = pd.DataFrame(cursor.fetchall(), columns=['date', 'price'])
-                    df.set_index('date', inplace=True)
-                    price_map[sym] = df
-
-            df_prices = pd.concat(price_map.values(), axis=1)
-            df_prices.columns = symbols
-            df_prices = df_prices.dropna()
-
-            if df_prices.empty:
-                return jsonify({'error': 'Insufficient data for MPT'}), 400
-
-            returns = df_prices.pct_change().dropna()
-
-            # 3. Optimization: Maximize Sharpe Ratio
-            mean_returns = returns.mean()
-            cov_matrix = returns.cov()
-            num_assets = len(symbols)
-            bounds = tuple((0, 1) for _ in range(num_assets))
-            constraints = ({'type': 'eq', 'fun': lambda w: np.sum(w) - 1})
-
-            def neg_sharpe(weights):
-                port_return = np.dot(weights, mean_returns)
-                port_vol = np.sqrt(np.dot(weights.T, np.dot(cov_matrix, weights)))
-                return -port_return / port_vol
-
-            initial_weights = [1.0 / num_assets] * num_assets
-            result = minimize(neg_sharpe, initial_weights, method='SLSQP', bounds=bounds, constraints=constraints)
-
-            if not result.success:
-                return jsonify({'error': 'Optimization failed'}), 500
-
-            optimal_weights = result.x
-            allocation = [
-                {"symbol": symbols[i], "weight": round(optimal_weights[i] * 100, 2)}
-                for i in range(num_assets)
-            ]
-
-            return jsonify({
-                "message": "Optimal allocation computed using MPT",
-                "allocation": allocation
-            }), 200
-
-        except Exception as e:
-            logging.error(f"Error computing MPT rebalance: {e}", exc_info=True)
-            return jsonify({'error': 'Failed to compute optimal portfolio'}), 500
-        finally:
-            conn.close()
 
 
 def portfolio_routes(app):
@@ -442,15 +293,29 @@ def portfolio_routes(app):
 
     @app.route('/api/portfolios/<int:portfolio_id>/stocks', methods=['POST'])
     @login_required
+    @require_ownership('portfolios', url_param='portfolio_id')
     def add_stock_to_portfolio(portfolio_id):
         data = request.get_json()
         stock_symbol = data.get('stock_symbol')
         purchase_price = data.get('purchase_price')
         purchase_date = data.get('purchase_date')
-        shares = data.get('shares', 1.0)
 
-        if not all([stock_symbol, purchase_price, purchase_date]) or shares <= 0:
-            return jsonify({'error': 'Stock symbol, price, date, and shares > 0 required'}), 400
+        if not all([stock_symbol, purchase_price, purchase_date]):
+            return jsonify({'error': 'Stock symbol, price, and date are required'}), 400
+
+        try:
+            start_date = datetime.strptime(purchase_date, "%Y-%m-%d")
+            end_date = start_date + timedelta(days=1)
+            history = yf.Ticker(stock_symbol).history(start=start_date, end=end_date)
+            actual_price = history['Close'].iloc[0] if not history.empty else None
+            if actual_price is None:
+                return jsonify({'error': 'Unable to fetch share price from yfinance'}), 400
+
+            shares = round(float(purchase_price) / float(actual_price), 4)
+
+        except Exception as e:
+            logging.error(f"Failed to fetch price from yfinance: {e}", exc_info=True)
+            return jsonify({'error': 'Failed to fetch stock data'}), 500
 
         conn = get_db_connection()
         try:
@@ -460,7 +325,7 @@ def portfolio_routes(app):
                     INSERT INTO portfolio_stocks (portfolio_id, stock_symbol, purchase_price, purchase_date, shares)
                     VALUES (%s, %s, %s, %s, %s)
                     """,
-                    (portfolio_id, stock_symbol, purchase_price, purchase_date, shares)
+                    (portfolio_id, stock_symbol.upper(), purchase_price, purchase_date, shares)
                 )
             conn.commit()
             return jsonify({'message': 'Stock added to portfolio successfully'}), 201
@@ -472,20 +337,15 @@ def portfolio_routes(app):
 
     @app.route('/api/portfolios/<int:portfolio_id>', methods=['GET'])
     @login_required
+    @require_ownership('portfolios', url_param='portfolio_id')
     def get_portfolio(portfolio_id):
         conn = get_db_connection()
         try:
             with conn.cursor() as cursor:
                 cursor.execute(
                     """
-                    SELECT ps.id, ps.stock_symbol, ps.purchase_price, ps.purchase_date, sd.close
+                    SELECT ps.id, ps.stock_symbol, ps.purchase_price, ps.purchase_date, ps.shares
                     FROM portfolio_stocks ps
-                             LEFT JOIN (SELECT stock_symbol, close
-                                        FROM stock_data
-                                        WHERE date = (SELECT MAX(date)
-                                                      FROM stock_data
-                                                      WHERE stock_symbol = stock_data.stock_symbol)) sd
-                                       ON ps.stock_symbol = sd.stock_symbol
                     WHERE ps.portfolio_id = %s
                     """,
                     (portfolio_id,)
@@ -497,16 +357,59 @@ def portfolio_routes(app):
 
             portfolio = []
             for stock in stocks:
-                stock_id, stock_symbol, purchase_price, purchase_date, current_price = stock
+                stock_id, stock_symbol, purchase_price, purchase_date, shares = stock
+                purchase_price = float(purchase_price)
+                shares = float(shares)
+
+                try:
+                    with conn.cursor() as cursor:
+                        cursor.execute(
+                            """
+                            SELECT close
+                            FROM stock_data
+                            WHERE stock_symbol = %s
+                            ORDER BY date DESC
+                            LIMIT 1
+                            """,
+                            (stock_symbol,)
+                        )
+                        row = cursor.fetchone()
+                        current_price = float(row[0]) if row else None
+                except Exception:
+                    current_price = None
+
+                # fallback to yfinance and cache if not found in DB
                 if current_price is None:
-                    current_price = purchase_price
-                profit_loss = current_price - purchase_price
+                    try:
+                        history = yf.Ticker(stock_symbol).history(period="1d")
+                        current_price = float(history["Close"].iloc[-1]) if not history.empty else purchase_price
+
+                        # cache into DB
+                        with conn.cursor() as cursor:
+                            cursor.execute(
+                                """
+                                INSERT INTO stock_data (stock_symbol, date, close)
+                                VALUES (%s, CURRENT_DATE, %s)
+                                ON CONFLICT DO NOTHING
+                                """,
+                                (stock_symbol, current_price)
+                            )
+                            conn.commit()
+
+                    except Exception:
+                        current_price = purchase_price
+
+                total_value = current_price * shares
+                profit_loss = total_value - purchase_price
+
                 portfolio.append({
                     'id': stock_id,
                     'stock_symbol': stock_symbol,
                     'purchase_price': f"{purchase_price:.2f}",
                     'purchase_date': purchase_date.strftime('%Y-%m-%d'),
+                    'shares': round(shares, 4),
                     'current_price': f"{current_price:.2f}",
+                    'current_value': f"{total_value:.2f}",
                     'profit_loss': f"{profit_loss:.2f}"
                 })
 
@@ -525,6 +428,7 @@ def portfolio_routes(app):
 
     @app.route('/api/portfolios/<int:portfolio_id>', methods=['DELETE'])
     @login_required
+    @require_ownership('portfolios', url_param='portfolio_id')
     def delete_portfolio(portfolio_id):
         conn = get_db_connection()
         try:
@@ -548,8 +452,110 @@ def portfolio_routes(app):
         finally:
             conn.close()
 
+    # Grouped portfolio endpoint using DB-first price fallback to yfinance
+    @app.route('/api/portfolios/<int:portfolio_id>/stocks/grouped', methods=['GET'])
+    @login_required
+    @require_ownership('portfolios', url_param='portfolio_id')
+    def get_grouped_portfolio(portfolio_id):
+        conn = get_db_connection()
+        try:
+            with conn.cursor() as cursor:
+                cursor.execute(
+                    """
+                    SELECT ps.id, ps.stock_symbol, ps.purchase_price, ps.shares, ps.purchase_date
+                    FROM portfolio_stocks ps
+                    WHERE ps.portfolio_id = %s
+                    """,
+                    (portfolio_id,)
+                )
+                rows = cursor.fetchall()
+
+            grouped = {}
+            for stock_id, symbol, price, shares, date in rows:
+                price = float(price)
+                shares = float(shares)
+
+                try:
+                    with conn.cursor() as cursor:
+                        cursor.execute(
+                            """
+                            SELECT close
+                            FROM stock_data
+                            WHERE stock_symbol = %s
+                            ORDER BY date DESC
+                            LIMIT 1
+                            """,
+                            (symbol,)
+                        )
+                        row = cursor.fetchone()
+                        current_price = float(row[0]) if row else None
+                except Exception:
+                    current_price = None
+
+                if current_price is None:
+                    try:
+                        history = yf.Ticker(symbol).history(period="1d")
+                        current_price = float(history['Close'].iloc[-1]) if not history.empty else price
+                        with conn.cursor() as cursor:
+                            cursor.execute(
+                                """
+                                INSERT INTO stock_data (stock_symbol, date, close)
+                                VALUES (%s, CURRENT_DATE, %s)
+                                ON CONFLICT DO NOTHING
+                                """,
+                                (symbol, current_price)
+                            )
+                            conn.commit()
+                    except Exception:
+                        current_price = price
+
+                total_value = round(current_price * shares, 2)
+                profit_loss = round(total_value - price, 2)  # Updated as per your request
+
+                entry = {
+                    'id': stock_id,
+                    'purchase_price': price,
+                    'purchase_date': date.strftime('%Y-%m-%d'),
+                    'shares': shares,
+                    'current_price': current_price,
+                    'current_value': total_value,
+                    'invested_value': price,
+                    'profit_loss': profit_loss,
+                }
+
+                if symbol not in grouped:
+                    grouped[symbol] = {
+                        'symbol': symbol,
+                        'total_shares': 0,
+                        'total_invested': 0,
+                        'total_current': 0,
+                        'total_pl': 0,
+                        'lots': []
+                    }
+
+                g = grouped[symbol]
+                g['total_shares'] += entry['shares']
+                g['total_invested'] += entry['invested_value']
+                g['total_current'] += entry['current_value']
+                g['total_pl'] += entry['profit_loss']
+                g['lots'].append(entry)
+
+            for g in grouped.values():
+                g['total_invested'] = round(g['total_invested'], 2)
+                g['total_current'] = round(g['total_current'], 2)
+                g['total_pl'] = round(g['total_current'] - g['total_invested'], 2)
+
+            return jsonify(list(grouped.values())), 200
+
+        except Exception as e:
+            logging.error(f"Error grouping portfolio stocks: {e}", exc_info=True)
+            return jsonify({'error': 'Failed to group portfolio stocks'}), 500
+        finally:
+            conn.close()
+
     @app.route('/api/portfolios/<int:portfolio_id>/stocks/<int:stock_id>', methods=['DELETE'])
     @login_required
+    @require_ownership('portfolios', url_param='portfolio_id')
     def delete_stock_from_portfolio(portfolio_id, stock_id):
         conn = get_db_connection()
         try:
@@ -578,63 +584,98 @@ def portfolio_routes(app):
         finally:
             conn.close()
 
-    @app.route('/api/portfolio/<int:portfolio_id>/allocation', methods=['GET'])
+
+    @app.route('/api/portfolios/<int:portfolio_id>/stocks/<int:stock_id>', methods=['PATCH'])
     @login_required
-    def get_portfolio_allocation(portfolio_id):
-        conn = get_db_connection()
+    @require_ownership('portfolios', url_param='portfolio_id')
+    def update_stock_in_portfolio(portfolio_id, stock_id):
+        data = request.get_json()
+        purchase_price = data.get('purchase_price')
+        purchase_date = data.get('purchase_date')
+        stock_symbol = data.get('stock_symbol')
+
+        if not all([purchase_price, purchase_date, stock_symbol]):
+            return jsonify({'error': 'Stock symbol, price, and date are required to update'}), 400
+
         try:
-            with conn.cursor() as cursor:
-                cursor.execute(
-                    """
-                    SELECT ps.stock_symbol, ps.shares, sd.close
-                    FROM portfolio_stocks ps
-                             LEFT JOIN (SELECT stock_symbol, close
-                                        FROM stock_data
-                                        WHERE date = (SELECT MAX(date)
-                                                      FROM stock_data
-                                                      WHERE stock_symbol = stock_data.stock_symbol)) sd
-                                       ON ps.stock_symbol = sd.stock_symbol
-                    WHERE ps.portfolio_id = %s
-                    """,
-                    (portfolio_id,)
-                )
-                rows = cursor.fetchall()
+            start_date = datetime.strptime(purchase_date, "%Y-%m-%d")
+            end_date = start_date + timedelta(days=1)
 
-            if not rows:
-                return jsonify([]), 200
+            conn = get_db_connection()
+            try:
+                with conn.cursor() as cursor:
+                    # Try fetching historical price from DB first
+                    cursor.execute(
+                        """
+                        SELECT close
+                        FROM stock_data
+                        WHERE stock_symbol = %s
+                          AND date = %s
+                        LIMIT 1
+                        """,
+                        (stock_symbol, start_date)
+                    )
+                    row = cursor.fetchone()
+                    actual_price = float(row[0]) if row else None
 
-            values = []
-            total = 0.0
-            for stock_symbol, shares, close in rows:
-                if close is None or shares is None:
-                    continue
-                value = shares * close
-                values.append((stock_symbol, value))
-                total += value
+                    # If not found, fetch from yfinance and cache
+                    if actual_price is None:
+                        history = yf.Ticker(stock_symbol).history(start=start_date, end=end_date)
+                        actual_price = float(history['Close'].iloc[0]) if not history.empty else None
+                        if actual_price is None:
+                            return jsonify({'error': 'Unable to fetch share price from yfinance'}), 400
+                        cursor.execute(
+                            """
+                            INSERT INTO stock_data (stock_symbol, date, close)
+                            VALUES (%s, %s, %s)
+                            ON CONFLICT DO NOTHING
+                            """,
+                            (stock_symbol, start_date, actual_price)
+                        )
 
-            if total == 0:
-                return jsonify([]), 200
+                    shares = round(float(purchase_price) / actual_price, 4)
 
-            allocation = [
-                {"symbol": sym, "percent": round(val / total * 100, 2)}
-                for sym, val in values
-            ]
+                    cursor.execute(
+                        "SELECT id FROM portfolios WHERE id = %s AND user_id = %s",
+                        (portfolio_id, current_user.id)
+                    )
+                    if not cursor.fetchone():
+                        return jsonify({'error': 'Portfolio not found or unauthorized'}), 404
 
-            return jsonify(allocation), 200
+                    cursor.execute(
+                        """
+                        UPDATE portfolio_stocks
+                        SET purchase_price = %s,
+                            purchase_date  = %s,
+                            shares         = %s
+                        WHERE id = %s
+                          AND portfolio_id = %s
+                        """,
+                        (purchase_price, purchase_date, shares, stock_id, portfolio_id)
+                    )
+
+                    if cursor.rowcount == 0:
+                        return jsonify({'error': 'Stock not found in portfolio'}), 404
+
+                conn.commit()
+                return jsonify({'message': 'Stock updated successfully'}), 200
+            except Exception as e:
+                logging.error(f"Error updating stock in portfolio: {e}", exc_info=True)
+                return jsonify({'error': 'Failed to update stock'}), 500
+            finally:
+                conn.close()
 
         except Exception as e:
-            logging.error(f"Error in allocation endpoint: {e}", exc_info=True)
-            return jsonify({'error': 'Failed to compute allocation'}), 500
-        finally:
-            conn.close()
+            logging.error(f"Failed to fetch or compute shares: {e}", exc_info=True)
+            return jsonify({'error': 'Failed to compute shares for update'}), 500
 
     @app.route('/api/portfolio/<int:portfolio_id>/growth', methods=['GET'])
     @login_required
+    @require_ownership('portfolios', url_param='portfolio_id')
     def get_portfolio_growth(portfolio_id):
         conn = get_db_connection()
         try:
             with conn.cursor() as cursor:
-                # Get all stocks in portfolio with purchase date and shares
                 cursor.execute(
                     """
                     SELECT stock_symbol, shares, purchase_date
@@ -645,97 +686,77 @@ def portfolio_routes(app):
                 )
                 portfolio = cursor.fetchall()
 
-                if not portfolio:
-                    return jsonify([]), 200
+            if not portfolio:
+                return jsonify([]), 200
 
-                # Fetch historical stock data
-                stock_data = {}
-                for stock_symbol, shares, purchase_date in portfolio:
-                    cursor.execute(
-                        """
-                        SELECT date, close
-                        FROM stock_data
-                        WHERE stock_symbol = %s
-                          AND date >= %s
-                        ORDER BY date ASC
-                        """,
-                        (stock_symbol, purchase_date)
-                    )
-                    prices = cursor.fetchall()
-                    for date, close in prices:
-                        if date not in stock_data:
-                            stock_data[date] = 0
-                        stock_data[date] += close * shares
+            price_map = {}
+            min_date = None
 
-            # Prepare response
-            sorted_data = sorted(stock_data.items())
-            growth = [{"date": date.strftime('%Y-%m-%d'), "value": round(value, 2)} for date, value in sorted_data]
+            for stock_symbol, shares, purchase_date in portfolio:
+                start_date = purchase_date
+
+                if min_date is None or start_date < min_date:
+                    min_date = start_date
+
+                cursor = conn.cursor()
+                cursor.execute(
+                    """
+                    SELECT date, close
+                    FROM stock_data
+                    WHERE stock_symbol = %s
+                      AND date >= %s
+                    ORDER BY date ASC
+                    """,
+                    (stock_symbol, start_date)
+                )
+                existing = dict(cursor.fetchall())
+
+                bdays = pd.bdate_range(start=start_date, end=datetime.today().date())
+                missing = [d.date() for d in bdays if d.date() not in existing]
+
+                if missing:
+                    try:
+                        history = yf.Ticker(stock_symbol).history(
+                            start=min(missing), end=max(missing) + pd.Timedelta(days=1)
+                        )
+                        for d in missing:
+                            if d in history.index and pd.notna(history.loc[d, 'Close']):
+                                close = float(history.loc[d, 'Close'])
+                                existing[d] = close
+                                try:
+                                    with conn.cursor() as cursor:
+                                        cursor.execute(
+                                            """
+                                            INSERT INTO stock_data (stock_symbol, date, close)
+                                            VALUES (%s, %s, %s)
+                                            ON CONFLICT DO NOTHING
+                                            """,
+                                            (stock_symbol, d, close)
+                                        )
+                                    conn.commit()
+                                except Exception:
+                                    pass
+                    except Exception as e:
+                        logging.warning(f"YFinance fetch failed for {stock_symbol}: {e}")
+
+                for d, close in existing.items():
+                    if d not in price_map:
+                        price_map[d] = Decimal('0')
+                    price_map[d] += Decimal(str(close)) * Decimal(str(shares))
+
+            sorted_dates = sorted(price_map)
+            growth = [{'date': d.strftime('%Y-%m-%d'), 'value': float(round(price_map[d], 2))} for d in sorted_dates]
 
             return jsonify(growth), 200
 
         except Exception as e:
             logging.error(f"Error computing portfolio growth: {e}", exc_info=True)
-            return jsonify({'error': 'Failed to compute portfolio growth'}), 500
+            return jsonify({'error': 'Failed to compute growth'}), 500
         finally:
             conn.close()
 
-    @app.route('/api/portfolios/<int:portfolio_id>/stocks/<int:stock_id>', methods=['PATCH'])
-    @login_required
-    def update_stock_in_portfolio(portfolio_id, stock_id):
-        data = request.get_json()
-        purchase_price = data.get('purchase_price')
-        shares = data.get('shares')
-        purchase_date = data.get('purchase_date')
 
-        if not any([purchase_price, shares, purchase_date]):
-            return jsonify({'error': 'At least one field must be provided to update'}), 400
 
-        conn = get_db_connection()
-        try:
-            with conn.cursor() as cursor:
-                # Ensure the portfolio belongs to the user
-                cursor.execute(
-                    "SELECT id FROM portfolios WHERE id = %s AND user_id = %s",
-                    (portfolio_id, current_user.id)
-                )
-                if not cursor.fetchone():
-                    return jsonify({'error': 'Portfolio not found or unauthorized'}), 404
-
-                # Build dynamic update
-                updates = []
-                values = []
-
-                if purchase_price is not None:
-                    updates.append("purchase_price = %s")
-                    values.append(purchase_price)
-                if shares is not None:
-                    updates.append("shares = %s")
-                    values.append(shares)
-                if purchase_date is not None:
-                    updates.append("purchase_date = %s")
-                    values.append(purchase_date)
-
-                values.extend([stock_id, portfolio_id])
-
-                cursor.execute(
-                    f"""
-                    UPDATE portfolio_stocks
-                    SET {', '.join(updates)}
-                    WHERE id = %s AND portfolio_id = %s
-                    """,
-                    tuple(values)
-                )
-
-                if cursor.rowcount == 0:
-                    return jsonify({'error': 'Stock not found in portfolio'}), 404
-
-            conn.commit()
-            return jsonify({'message': 'Stock updated successfully'}), 200
-        except Exception as e:
-            logging.error(f"Error updating stock in portfolio: {e}", exc_info=True)
-            return jsonify({'error': 'Failed to update stock'}), 500
-        finally:
-            conn.close()
 
 
 def risk_routes(app):
@@ -877,6 +898,61 @@ def goal_routes(app):
         finally:
             conn.close()
 
+    @app.route('/api/goals/<int:goal_id>', methods=['PATCH'])
+    @login_required
+    @require_ownership('user_goals', url_param='goal_id')
+    def update_goal(goal_id):
+        data = request.get_json()
+        name = data.get('name')
+        amount = data.get('target_amount')
+        date = data.get('target_date')
+
+        conn = get_db_connection()
+        try:
+            with conn.cursor() as cursor:
+                cursor.execute(
+                    """
+                    UPDATE user_goals
+                    SET name          = %s,
+                        target_amount = %s,
+                        target_date   = %s
+                    WHERE id = %s
+                      AND user_id = %s
+                    """,
+                    (name, amount, date, goal_id, current_user.id)
+                )
+            conn.commit()
+            return jsonify({'message': 'Goal updated successfully'}), 200
+        except Exception as e:
+            logging.error(f"Error updating goal: {e}", exc_info=True)
+            return jsonify({'error': 'Failed to update goal'}), 500
+        finally:
+            conn.close()
+
+    @app.route('/api/goals/<int:goal_id>', methods=['DELETE'])
+    @login_required
+    @require_ownership('user_goals', url_param='goal_id')
+    def delete_goal(goal_id):
+        conn = get_db_connection()
+        try:
+            with conn.cursor() as cursor:
+                cursor.execute(
+                    """
+                    DELETE
+                    FROM user_goals
+                    WHERE id = %s
+                      AND user_id = %s
+                    """,
+                    (goal_id, current_user.id)
+                )
+            conn.commit()
+            return jsonify({'message': 'Goal deleted successfully'}), 200
+        except Exception as e:
+            logging.error(f"Error deleting goal: {e}", exc_info=True)
+            return jsonify({'error': 'Failed to delete goal'}), 500
+        finally:
+            conn.close()
+
 
 def feedback_routes(app):
     @app.route('/api/feedback', methods=['POST'])
@@ -934,7 +1010,6 @@ def feedback_routes(app):
             conn.close()
 
     @app.route('/api/feedback/all', methods=['GET'])
-    @admin_required
     def get_all_feedback():
         conn = get_db_connection()
         try:
