@@ -9,27 +9,27 @@ import os
 load_dotenv()
 
 # Create Flask app
-application = Flask(__name__)
-application.config.from_object('config.Config')
+app = Flask(__name__)
+app.config.from_object('config.Config')
 
 # logging
 logging.basicConfig(filename='app.log', level=logging.DEBUG)
 
 # CORS Setup
 frontend_origin = os.getenv('FRONTEND_URL')
-CORS(application, resources={r"/*": {"origins": frontend_origin}}, supports_credentials=True)
+CORS(app, resources={r"/*": {"origins": frontend_origin}}, supports_credentials=True)
 
 # Login manager
 login_manager = LoginManager()
-login_manager.init_app(application)
+login_manager.init_app(app)
 login_manager.login_view = 'login'
 
 # Register routes
-register_routes(application, login_manager)
-stock_routes(application)
-portfolio_routes(application)
-risk_routes(application)
-goal_routes(application)
-feedback_routes(application)
+register_routes(app, login_manager)
+stock_routes(app)
+portfolio_routes(app)
+risk_routes(app)
+goal_routes(app)
+feedback_routes(app)
 
 # No `app.run()` needed for Elastic Beanstalk
