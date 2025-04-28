@@ -1,7 +1,7 @@
 import pytest
 from flask import Flask
 from flask.testing import FlaskClient
-from app import register_routes, stock_routes, portfolio_routes
+from application import register_routes, stock_routes, portfolio_routes
 
 @pytest.fixture
 def app():

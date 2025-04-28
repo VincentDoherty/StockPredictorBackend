@@ -1,18 +1,30 @@
-import unittest
-from services.db_utils import download_model_from_s3
+# test_s3_utils.py
 
+import pytest
+import pickle
+import tempfile
+import os
+from unittest import mock
+from services.s3_utils import download_from_s3
 
-class TestS3BucketDownload(unittest.TestCase):
-    def test_download_model_from_s3(self):
-        # Replace with a valid S3 URL for testing
-        s3_url = "https://stock-prediction-models-fyp.s3.eu-north-1.amazonaws.com/models/AAPL.pkl"
+@pytest.fixture
+def dummy_pickle_file():
+    dummy_obj = {'key': 'value'}
+    fd, temp_path = tempfile.mkstemp()
+    with os.fdopen(fd, 'wb') as f:
+        pickle.dump(dummy_obj, f)
+    yield temp_path, dummy_obj
+    os.remove(temp_path)
 
-        # Attempt to download the model
-        model = download_model_from_s3(s3_url)
+def test_download_from_s3(dummy_pickle_file):
+    temp_file_path, expected_obj = dummy_pickle_file
 
-        # Assert that the model is not None
-        self.assertIsNotNone(model, "Model should be successfully downloaded from S3.")
+    with mock.patch('s3_utils.s3_client.download_file') as mock_download:
+        def copy_dummy_file(Bucket, Key, Filename):
+            os.replace(temp_file_path, Filename)
 
+        mock_download.side_effect = copy_dummy_file
 
-if __name__ == '__main__':
-    unittest.main()
+        result_obj = download_from_s3('dummy-key')
+
+        assert result_obj == expected_obj

@@ -1,6 +1,6 @@
 import pytest
 from flask import json
-from app import app as flask_app
+from application import app as flask_app
 from services.db_utils import get_db_connection
 
 @pytest.fixture
