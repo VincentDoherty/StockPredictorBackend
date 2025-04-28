@@ -4,7 +4,7 @@ from retrain_model import retrain_model
 
 @pytest.mark.integration
 def test_retrain_and_load_pipeline():
-    stock_symbol = "MSFT"
+    stock_symbol = "NVDA"
 
     # Step 1: Retrain the model and store it
     success = retrain_model(stock_symbol)
