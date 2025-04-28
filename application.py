@@ -1,9 +1,12 @@
 import logging
+from dotenv import load_dotenv
 from flask import Flask
 from flask_login import LoginManager
 from routes import register_routes, stock_routes, portfolio_routes, risk_routes, goal_routes, feedback_routes
 from flask_cors import CORS
 import os
+
+load_dotenv()
 
 # Create Flask app
 application = Flask(__name__)

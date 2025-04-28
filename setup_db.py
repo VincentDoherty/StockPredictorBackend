@@ -16,6 +16,13 @@ def create_tables():
         )
         """,
         """
+        CREATE TABLE if not exists portfolios (
+        id SERIAL PRIMARY KEY,
+        user_id INTEGER REFERENCES users(id),
+        name VARCHAR(255) NOT NULL
+        );
+        """,
+        """
         CREATE TABLE IF NOT EXISTS portfolio_stocks (
             id SERIAL PRIMARY KEY,
             portfolio_id INTEGER REFERENCES portfolios(id),
@@ -25,13 +32,6 @@ def create_tables():
             purchase_date DATE NOT NULL DEFAULT CURRENT_DATE
         )
         """,
-        """
-        CREATE TABLE if not exists portfolios (
-        id SERIAL PRIMARY KEY,
-        user_id INTEGER REFERENCES users(id),
-        name VARCHAR(255) NOT NULL
-        );
-        """
         """
         CREATE TABLE IF NOT EXISTS transactions (
             id SERIAL PRIMARY KEY,
