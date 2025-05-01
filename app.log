@@ -4572,3 +4572,537 @@ DEBUG:s3transfer.tasks:IORenameFileTask(transfer_id=0, {'final_filename': 'C:\\U
 DEBUG:s3transfer.tasks:Executing task IORenameFileTask(transfer_id=0, {'final_filename': 'C:\\Users\\vpjd8\\AppData\\Local\\Temp\\tmphzqwj772'}) with kwargs {'fileobj': <s3transfer.utils.DeferredOpenFile object at 0x000002147500EA10>, 'final_filename': 'C:\\Users\\vpjd8\\AppData\\Local\\Temp\\tmphzqwj772', 'osutil': <s3transfer.utils.OSUtils object at 0x0000021475034650>}
 DEBUG:s3transfer.utils:Releasing acquire 0/None
 INFO:werkzeug:127.0.0.1 - - [29/Apr/2025 00:25:25] "POST /api/stock HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2025 16:54:41] "POST /api/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2025 16:54:45] "GET /api/stock/AAPL/history HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2025 16:54:46] "[33mGET /api/stock/AAPL/predictions HTTP/1.1[0m" 404 -
+DEBUG:root:Request payload: {'stock_symbol': 'AAPL'}
+DEBUG:root:Received stock symbol: AAPL
+DEBUG:yfinance:Entering download()
+DEBUG:yfinance:Disabling multithreading because DEBUG logging enabled
+DEBUG:yfinance:Using User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36
+DEBUG:yfinance: Entering history()
+DEBUG:peewee:('CREATE TABLE IF NOT EXISTS "_kv" ("key" VARCHAR(255) NOT NULL PRIMARY KEY, "value" VARCHAR(255)) WITHOUT ROWID', [])
+DEBUG:peewee:('SELECT "t1"."key", "t1"."value" FROM "_kv" AS "t1" WHERE ("t1"."key" = ?) LIMIT ? OFFSET ?', ['AAPL', 1, 0])
+DEBUG:yfinance:  Entering history()
+DEBUG:yfinance:AAPL: Yahoo GET parameters: {'period1': '2020-01-01 00:00:00-05:00', 'period2': '2025-04-29 00:00:00-04:00', 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+DEBUG:yfinance:   Entering get()
+DEBUG:yfinance:    Entering _make_request()
+DEBUG:yfinance:url=https://query2.finance.yahoo.com/v8/finance/chart/AAPL
+DEBUG:yfinance:params=frozendict.frozendict({'period1': 1577854800, 'period2': 1745899200, 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'})
+DEBUG:yfinance:     Entering _get_cookie_and_crumb()
+DEBUG:yfinance:cookie_mode = 'basic'
+DEBUG:yfinance:      Entering _get_cookie_and_crumb_basic()
+DEBUG:peewee:('CREATE TABLE IF NOT EXISTS "_cookieschema" ("strategy" VARCHAR(255) NOT NULL PRIMARY KEY, "fetch_date" DATETIME NOT NULL, "cookie_bytes" BLOB NOT NULL) WITHOUT ROWID', [])
+DEBUG:peewee:('SELECT "t1"."strategy", "t1"."fetch_date", "t1"."cookie_bytes" FROM "_cookieschema" AS "t1" WHERE ("t1"."strategy" = ?) LIMIT ? OFFSET ?', ['basic', 1, 0])
+DEBUG:yfinance:loaded persistent cookie
+DEBUG:yfinance:reusing cookie
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): query1.finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://query1.finance.yahoo.com:443 "GET /v1/test/getcrumb HTTP/1.1" 200 11
+DEBUG:yfinance:crumb = 'qSJQHCK9UAW'
+DEBUG:yfinance:      Exiting _get_cookie_and_crumb_basic()
+DEBUG:yfinance:     Exiting _get_cookie_and_crumb()
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): query2.finance.yahoo.com:443
+DEBUG:urllib3.connectionpool:https://query2.finance.yahoo.com:443 "GET /v8/finance/chart/AAPL?period1=1577854800&period2=1745899200&interval=1d&includePrePost=False&events=div%2Csplits%2CcapitalGains&crumb=qSJQHCK9UAW HTTP/1.1" 200 None
+DEBUG:yfinance:response code=200
+DEBUG:yfinance:    Exiting _make_request()
+DEBUG:yfinance:   Exiting get()
+DEBUG:yfinance:AAPL: yfinance received OHLC data: 2020-01-02 14:30:00 -> 2025-04-28 13:30:00
+DEBUG:yfinance:AAPL: OHLC after cleaning: 2020-01-02 09:30:00-05:00 -> 2025-04-28 09:30:00-04:00
+DEBUG:yfinance:AAPL: OHLC after combining events: 2020-01-02 00:00:00-05:00 -> 2025-04-28 00:00:00-04:00
+DEBUG:yfinance:AAPL: yfinance returning OHLC: 2020-01-02 00:00:00-05:00 -> 2025-04-28 00:00:00-04:00
+DEBUG:yfinance:  Exiting history()
+DEBUG:yfinance: Exiting history()
+DEBUG:yfinance:Exiting download()
+DEBUG:yfinance:Entering download()
+DEBUG:yfinance:Disabling multithreading because DEBUG logging enabled
+DEBUG:yfinance: Entering history()
+DEBUG:peewee:('SELECT "t1"."key", "t1"."value" FROM "_kv" AS "t1" WHERE ("t1"."key" = ?) LIMIT ? OFFSET ?', ['AAPL', 1, 0])
+DEBUG:yfinance:  Entering history()
+DEBUG:yfinance:AAPL: Yahoo GET parameters: {'period1': '2025-04-28 00:00:00-04:00', 'period2': '2025-04-29 00:00:00-04:00', 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+DEBUG:yfinance:   Entering get()
+DEBUG:yfinance:    Entering _make_request()
+DEBUG:yfinance:url=https://query2.finance.yahoo.com/v8/finance/chart/AAPL
+DEBUG:yfinance:params=frozendict.frozendict({'period1': 1745812800, 'period2': 1745899200, 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'})
+DEBUG:yfinance:     Entering _get_cookie_and_crumb()
+DEBUG:yfinance:cookie_mode = 'basic'
+DEBUG:yfinance:      Entering _get_cookie_and_crumb_basic()
+DEBUG:yfinance:reusing cookie
+DEBUG:yfinance:reusing crumb
+DEBUG:yfinance:      Exiting _get_cookie_and_crumb_basic()
+DEBUG:yfinance:     Exiting _get_cookie_and_crumb()
+DEBUG:urllib3.connectionpool:https://query2.finance.yahoo.com:443 "GET /v8/finance/chart/AAPL?period1=1745812800&period2=1745899200&interval=1d&includePrePost=False&events=div%2Csplits%2CcapitalGains&crumb=qSJQHCK9UAW HTTP/1.1" 200 1164
+DEBUG:yfinance:response code=200
+DEBUG:yfinance:    Exiting _make_request()
+DEBUG:yfinance:   Exiting get()
+DEBUG:yfinance:AAPL: yfinance received OHLC data: 2025-04-28 13:30:00 only
+DEBUG:yfinance:AAPL: OHLC after cleaning: 2025-04-28 09:30:00-04:00 only
+DEBUG:yfinance:AAPL: OHLC after combining events: 2025-04-28 00:00:00-04:00 only
+DEBUG:yfinance:AAPL: yfinance returning OHLC: 2025-04-28 00:00:00-04:00 only
+DEBUG:yfinance:  Exiting history()
+DEBUG:yfinance: Exiting history()
+DEBUG:yfinance:Exiting download()
+DEBUG:h5py._conv:Creating converter from 5 to 3
+DEBUG:boto3.s3.transfer:Opting out of CRT Transfer Manager. Preferred client: auto, CRT available: False, Instance Optimized: False.
+DEBUG:boto3.s3.transfer:Using default client. pid: 22588, thread: 2704
+DEBUG:s3transfer.utils:Acquiring 0
+DEBUG:s3transfer.tasks:UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000002677B3B4050>}) about to wait for the following futures []
+DEBUG:s3transfer.tasks:UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000002677B3B4050>}) done waiting for dependent futures
+DEBUG:s3transfer.tasks:Executing task UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000002677B3B4050>}) with kwargs {'client': <botocore.client.S3 object at 0x000002677A71DFD0>, 'config': <boto3.s3.transfer.TransferConfig object at 0x000002676D991090>, 'osutil': <s3transfer.utils.OSUtils object at 0x000002677CF5FE10>, 'request_executor': <s3transfer.futures.BoundedExecutor object at 0x000002677CFA4E90>, 'transfer_future': <s3transfer.futures.TransferFuture object at 0x000002677B3B4050>}
+DEBUG:s3transfer.futures:Submitting task PutObjectTask(transfer_id=0, {'bucket': 'stock-prediction-models-fyp', 'key': 'models/AAPL.pkl', 'extra_args': {'ChecksumAlgorithm': 'CRC32'}}) to executor <s3transfer.futures.BoundedExecutor object at 0x000002677CFA4E90> for transfer request: 0.
+DEBUG:s3transfer.utils:Acquiring 0
+DEBUG:s3transfer.tasks:PutObjectTask(transfer_id=0, {'bucket': 'stock-prediction-models-fyp', 'key': 'models/AAPL.pkl', 'extra_args': {'ChecksumAlgorithm': 'CRC32'}}) about to wait for the following futures []
+DEBUG:s3transfer.utils:Releasing acquire 0/None
+DEBUG:s3transfer.tasks:PutObjectTask(transfer_id=0, {'bucket': 'stock-prediction-models-fyp', 'key': 'models/AAPL.pkl', 'extra_args': {'ChecksumAlgorithm': 'CRC32'}}) done waiting for dependent futures
+DEBUG:s3transfer.tasks:Executing task PutObjectTask(transfer_id=0, {'bucket': 'stock-prediction-models-fyp', 'key': 'models/AAPL.pkl', 'extra_args': {'ChecksumAlgorithm': 'CRC32'}}) with kwargs {'client': <botocore.client.S3 object at 0x000002677A71DFD0>, 'fileobj': <s3transfer.utils.ReadFileChunk object at 0x000002677A897510>, 'bucket': 'stock-prediction-models-fyp', 'key': 'models/AAPL.pkl', 'extra_args': {'ChecksumAlgorithm': 'CRC32'}}
+DEBUG:botocore.hooks:Event before-parameter-build.s3.PutObject: calling handler <function validate_ascii_metadata at 0x0000026779BE7420>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.PutObject: calling handler <function sse_md5 at 0x0000026779BE6700>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.PutObject: calling handler <function convert_body_to_file_like_object at 0x0000026779BE7E20>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.PutObject: calling handler <function validate_bucket_name at 0x0000026779BE6660>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.PutObject: calling handler <function remove_bucket_from_url_paths_from_model at 0x0000026779C0C900>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.PutObject: calling handler <bound method S3RegionRedirectorv2.annotate_request_context of <botocore.utils.S3RegionRedirectorv2 object at 0x000002677A81B490>>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.PutObject: calling handler <bound method ClientCreator._inject_s3_input_parameters of <botocore.client.ClientCreator object at 0x000002677588B290>>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.PutObject: calling handler <function generate_idempotent_uuid at 0x0000026779BE6480>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.PutObject: calling handler <function _handle_request_validation_mode_member at 0x0000026779C0D080>
+DEBUG:botocore.hooks:Event before-endpoint-resolution.s3: calling handler <function customize_endpoint_resolver_builtins at 0x0000026779C0CAE0>
+DEBUG:botocore.hooks:Event before-endpoint-resolution.s3: calling handler <bound method S3RegionRedirectorv2.redirect_from_cache of <botocore.utils.S3RegionRedirectorv2 object at 0x000002677A81B490>>
+DEBUG:botocore.regions:Calling endpoint provider with parameters: {'Bucket': 'stock-prediction-models-fyp', 'Region': 'eu-north-1', 'UseFIPS': False, 'UseDualStack': False, 'ForcePathStyle': False, 'Accelerate': False, 'UseGlobalEndpoint': False, 'Key': 'models/AAPL.pkl', 'DisableMultiRegionAccessPoints': False, 'UseArnRegion': True}
+DEBUG:botocore.regions:Endpoint provider result: https://stock-prediction-models-fyp.s3.eu-north-1.amazonaws.com
+DEBUG:botocore.regions:Selecting from endpoint provider's list of auth schemes: "sigv4". User selected auth scheme is: "None"
+DEBUG:botocore.regions:Selected auth type "v4" as "v4" with signing context params: {'region': 'eu-north-1', 'signing_name': 's3', 'disableDoubleEncoding': True}
+DEBUG:botocore.hooks:Event before-call.s3.PutObject: calling handler <function add_expect_header at 0x0000026779BE6A20>
+DEBUG:botocore.handlers:Adding expect 100 continue header to request.
+DEBUG:botocore.hooks:Event before-call.s3.PutObject: calling handler <bound method S3ExpressIdentityResolver.apply_signing_cache_key of <botocore.utils.S3ExpressIdentityResolver object at 0x000002677A82ADD0>>
+DEBUG:botocore.hooks:Event before-call.s3.PutObject: calling handler <function add_recursion_detection_header at 0x0000026779BE53A0>
+DEBUG:botocore.hooks:Event before-call.s3.PutObject: calling handler <function add_query_compatibility_header at 0x0000026779C0CFE0>
+DEBUG:botocore.hooks:Event before-call.s3.PutObject: calling handler <function inject_api_version_header_if_needed at 0x0000026779BE7F60>
+DEBUG:botocore.endpoint:Making request for OperationModel(name=PutObject) with params: {'url_path': '/models/AAPL.pkl', 'query_string': {}, 'method': 'PUT', 'headers': {'x-amz-sdk-checksum-algorithm': 'CRC32', 'User-Agent': 'Boto3/1.37.33 md/Botocore#1.37.33 ua/2.1 os/windows#10 md/arch#amd64 lang/python#3.11.9 md/pyimpl#CPython m/G cfg/retry-mode#legacy Botocore/1.37.33', 'Expect': '100-continue', 'Transfer-Encoding': 'chunked', 'Content-Encoding': 'aws-chunked', 'X-Amz-Trailer': 'x-amz-checksum-crc32', 'X-Amz-Decoded-Content-Length': '2503371'}, 'body': <botocore.httpchecksum.AwsChunkedWrapper object at 0x000002677B32B490>, 'auth_path': '/stock-prediction-models-fyp/models/AAPL.pkl', 'url': 'https://stock-prediction-models-fyp.s3.eu-north-1.amazonaws.com/models/AAPL.pkl', 'context': {'client_region': 'eu-north-1', 'client_config': <botocore.config.Config object at 0x000002677A7FDE90>, 'has_streaming_input': True, 'auth_type': 'v4', 'unsigned_payload': None, 's3_redirect': {'redirected': False, 'bucket': 'stock-prediction-models-fyp', 'params': {'Bucket': 'stock-prediction-models-fyp', 'Key': 'models/AAPL.pkl', 'Body': <s3transfer.utils.ReadFileChunk object at 0x000002677A897510>, 'ChecksumAlgorithm': 'CRC32'}}, 'input_params': {'Bucket': 'stock-prediction-models-fyp', 'Key': 'models/AAPL.pkl'}, 'signing': {'region': 'eu-north-1', 'signing_name': 's3', 'disableDoubleEncoding': True}, 'endpoint_properties': {'authSchemes': [{'disableDoubleEncoding': True, 'name': 'sigv4', 'signingName': 's3', 'signingRegion': 'eu-north-1'}]}, 'checksum': {'request_algorithm': {'algorithm': 'crc32', 'in': 'trailer', 'name': 'x-amz-checksum-crc32'}}}}
+DEBUG:botocore.hooks:Event request-created.s3.PutObject: calling handler <function signal_not_transferring at 0x000002677A782340>
+DEBUG:botocore.hooks:Event request-created.s3.PutObject: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x000002677A7FDE50>>
+DEBUG:botocore.hooks:Event choose-signer.s3.PutObject: calling handler <function set_operation_specific_signer at 0x0000026779BE62A0>
+DEBUG:botocore.hooks:Event before-sign.s3.PutObject: calling handler <function remove_arn_from_signing_path at 0x0000026779C0CA40>
+DEBUG:botocore.hooks:Event before-sign.s3.PutObject: calling handler <function _set_extra_headers_for_unsigned_request at 0x0000026779C0D120>
+DEBUG:botocore.hooks:Event before-sign.s3.PutObject: calling handler <bound method S3ExpressIdentityResolver.resolve_s3express_identity of <botocore.utils.S3ExpressIdentityResolver object at 0x000002677A82ADD0>>
+DEBUG:botocore.auth:Calculating signature using v4 auth.
+DEBUG:botocore.auth:CanonicalRequest:
+PUT
+/models/AAPL.pkl
+
+content-encoding:aws-chunked
+host:stock-prediction-models-fyp.s3.eu-north-1.amazonaws.com
+x-amz-content-sha256:STREAMING-UNSIGNED-PAYLOAD-TRAILER
+x-amz-date:20250429T155659Z
+x-amz-decoded-content-length:2503371
+x-amz-sdk-checksum-algorithm:CRC32
+x-amz-trailer:x-amz-checksum-crc32
+
+content-encoding;host;x-amz-content-sha256;x-amz-date;x-amz-decoded-content-length;x-amz-sdk-checksum-algorithm;x-amz-trailer
+STREAMING-UNSIGNED-PAYLOAD-TRAILER
+DEBUG:botocore.auth:StringToSign:
+AWS4-HMAC-SHA256
+20250429T155659Z
+20250429/eu-north-1/s3/aws4_request
+206db9afa1de7242badc5cb5c689bfabd99ad1826cd9a5b9b80826f7bcd2f459
+DEBUG:botocore.auth:Signature:
+4ca41eb78b8b30b75321d469178d63e3d167472b7bd530a9c1fe417aa6bd8a4a
+DEBUG:botocore.hooks:Event request-created.s3.PutObject: calling handler <bound method UserAgentString.rebuild_and_replace_user_agent_handler of <botocore.useragent.UserAgentString object at 0x0000026771695F90>>
+DEBUG:botocore.hooks:Event request-created.s3.PutObject: calling handler <function signal_transferring at 0x000002677A7825C0>
+DEBUG:botocore.hooks:Event request-created.s3.PutObject: calling handler <function add_retry_headers at 0x0000026779C0C860>
+DEBUG:botocore.endpoint:Sending http request: <AWSPreparedRequest stream_output=False, method=PUT, url=https://stock-prediction-models-fyp.s3.eu-north-1.amazonaws.com/models/AAPL.pkl, headers={'x-amz-sdk-checksum-algorithm': b'CRC32', 'User-Agent': b'Boto3/1.37.33 md/Botocore#1.37.33 ua/2.1 os/windows#10 md/arch#amd64 lang/python#3.11.9 md/pyimpl#CPython m/G cfg/retry-mode#legacy Botocore/1.37.33', 'Expect': b'100-continue', 'Transfer-Encoding': b'chunked', 'Content-Encoding': b'aws-chunked', 'X-Amz-Trailer': b'x-amz-checksum-crc32', 'X-Amz-Decoded-Content-Length': b'2503371', 'X-Amz-Date': b'20250429T155659Z', 'X-Amz-Content-SHA256': b'STREAMING-UNSIGNED-PAYLOAD-TRAILER', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAZQ3DRSO6NAD6HT2M/20250429/eu-north-1/s3/aws4_request, SignedHeaders=content-encoding;host;x-amz-content-sha256;x-amz-date;x-amz-decoded-content-length;x-amz-sdk-checksum-algorithm;x-amz-trailer, Signature=4ca41eb78b8b30b75321d469178d63e3d167472b7bd530a9c1fe417aa6bd8a4a', 'amz-sdk-invocation-id': b'9d8035f7-3e1d-4c56-b31c-3904eff226db', 'amz-sdk-request': b'attempt=1'}>
+DEBUG:botocore.httpsession:Certificate path: C:\Users\vpjd8\PycharmProjects\StockPredictorBackend\.venv\Lib\site-packages\certifi\cacert.pem
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): stock-prediction-models-fyp.s3.eu-north-1.amazonaws.com:443
+DEBUG:botocore.awsrequest:Waiting for 100 Continue response.
+DEBUG:botocore.awsrequest:100 Continue response seen, now sending request body.
+DEBUG:urllib3.connectionpool:https://stock-prediction-models-fyp.s3.eu-north-1.amazonaws.com:443 "PUT /models/AAPL.pkl HTTP/1.1" 200 0
+DEBUG:botocore.hooks:Event before-parse.s3.PutObject: calling handler <function _handle_200_error at 0x0000026779C0CE00>
+DEBUG:botocore.hooks:Event before-parse.s3.PutObject: calling handler <function handle_expires_header at 0x0000026779C0CC20>
+DEBUG:botocore.parsers:Response headers: {'x-amz-id-2': 'omInyNaepn/tAgYMHR/phJJuyMakYsOEX/3Nx77urUiJGpVz9eUhyrdPhSUOPmY3ssBUC4n1srG4bldkkdK31yxLZ0SgddDG27IXsQVzhNA=', 'x-amz-request-id': '5QZTF8H1FF5XFTGW', 'Date': 'Tue, 29 Apr 2025 15:57:02 GMT', 'x-amz-version-id': 'BVVJjjWpi8ZwFl_1OWQmtBOfbUXtqRjt', 'x-amz-server-side-encryption': 'AES256', 'ETag': '"7882edc496f3f59dd7491561fca9a66d"', 'x-amz-checksum-crc32': 'sgPGcg==', 'x-amz-checksum-type': 'FULL_OBJECT', 'Content-Length': '0', 'Server': 'AmazonS3'}
+DEBUG:botocore.parsers:Response body:
+b''
+DEBUG:botocore.hooks:Event needs-retry.s3.PutObject: calling handler <function _update_status_code at 0x0000026779C0CF40>
+DEBUG:botocore.hooks:Event needs-retry.s3.PutObject: calling handler <botocore.retryhandler.RetryHandler object at 0x0000026775F54910>
+DEBUG:botocore.retryhandler:No retry needed.
+DEBUG:botocore.hooks:Event needs-retry.s3.PutObject: calling handler <bound method S3RegionRedirectorv2.redirect_from_error of <botocore.utils.S3RegionRedirectorv2 object at 0x000002677A81B490>>
+DEBUG:s3transfer.utils:Releasing acquire 0/None
+DEBUG:boto3.s3.transfer:Opting out of CRT Transfer Manager. Preferred client: auto, CRT available: False, Instance Optimized: False.
+DEBUG:boto3.s3.transfer:Using default client. pid: 22588, thread: 2704
+DEBUG:s3transfer.utils:Acquiring 0
+DEBUG:s3transfer.tasks:UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000002677E0E0DD0>}) about to wait for the following futures []
+DEBUG:s3transfer.tasks:UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000002677E0E0DD0>}) done waiting for dependent futures
+DEBUG:s3transfer.tasks:Executing task UploadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000002677E0E0DD0>}) with kwargs {'client': <botocore.client.S3 object at 0x000002677A71DFD0>, 'config': <boto3.s3.transfer.TransferConfig object at 0x000002677CDE0C50>, 'osutil': <s3transfer.utils.OSUtils object at 0x000002677E22AD10>, 'request_executor': <s3transfer.futures.BoundedExecutor object at 0x000002677B423A90>, 'transfer_future': <s3transfer.futures.TransferFuture object at 0x000002677E0E0DD0>}
+DEBUG:s3transfer.futures:Submitting task PutObjectTask(transfer_id=0, {'bucket': 'stock-prediction-models-fyp', 'key': 'scalers/AAPL.pkl', 'extra_args': {'ChecksumAlgorithm': 'CRC32'}}) to executor <s3transfer.futures.BoundedExecutor object at 0x000002677B423A90> for transfer request: 0.
+DEBUG:s3transfer.utils:Acquiring 0
+DEBUG:s3transfer.tasks:PutObjectTask(transfer_id=0, {'bucket': 'stock-prediction-models-fyp', 'key': 'scalers/AAPL.pkl', 'extra_args': {'ChecksumAlgorithm': 'CRC32'}}) about to wait for the following futures []
+DEBUG:s3transfer.tasks:PutObjectTask(transfer_id=0, {'bucket': 'stock-prediction-models-fyp', 'key': 'scalers/AAPL.pkl', 'extra_args': {'ChecksumAlgorithm': 'CRC32'}}) done waiting for dependent futures
+DEBUG:s3transfer.utils:Releasing acquire 0/None
+DEBUG:s3transfer.tasks:Executing task PutObjectTask(transfer_id=0, {'bucket': 'stock-prediction-models-fyp', 'key': 'scalers/AAPL.pkl', 'extra_args': {'ChecksumAlgorithm': 'CRC32'}}) with kwargs {'client': <botocore.client.S3 object at 0x000002677A71DFD0>, 'fileobj': <s3transfer.utils.ReadFileChunk object at 0x000002677B32A510>, 'bucket': 'stock-prediction-models-fyp', 'key': 'scalers/AAPL.pkl', 'extra_args': {'ChecksumAlgorithm': 'CRC32'}}
+DEBUG:botocore.hooks:Event before-parameter-build.s3.PutObject: calling handler <function validate_ascii_metadata at 0x0000026779BE7420>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.PutObject: calling handler <function sse_md5 at 0x0000026779BE6700>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.PutObject: calling handler <function convert_body_to_file_like_object at 0x0000026779BE7E20>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.PutObject: calling handler <function validate_bucket_name at 0x0000026779BE6660>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.PutObject: calling handler <function remove_bucket_from_url_paths_from_model at 0x0000026779C0C900>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.PutObject: calling handler <bound method S3RegionRedirectorv2.annotate_request_context of <botocore.utils.S3RegionRedirectorv2 object at 0x000002677A81B490>>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.PutObject: calling handler <bound method ClientCreator._inject_s3_input_parameters of <botocore.client.ClientCreator object at 0x000002677588B290>>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.PutObject: calling handler <function generate_idempotent_uuid at 0x0000026779BE6480>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.PutObject: calling handler <function _handle_request_validation_mode_member at 0x0000026779C0D080>
+DEBUG:botocore.hooks:Event before-endpoint-resolution.s3: calling handler <function customize_endpoint_resolver_builtins at 0x0000026779C0CAE0>
+DEBUG:botocore.hooks:Event before-endpoint-resolution.s3: calling handler <bound method S3RegionRedirectorv2.redirect_from_cache of <botocore.utils.S3RegionRedirectorv2 object at 0x000002677A81B490>>
+DEBUG:botocore.regions:Calling endpoint provider with parameters: {'Bucket': 'stock-prediction-models-fyp', 'Region': 'eu-north-1', 'UseFIPS': False, 'UseDualStack': False, 'ForcePathStyle': False, 'Accelerate': False, 'UseGlobalEndpoint': False, 'Key': 'scalers/AAPL.pkl', 'DisableMultiRegionAccessPoints': False, 'UseArnRegion': True}
+DEBUG:botocore.regions:Endpoint provider result: https://stock-prediction-models-fyp.s3.eu-north-1.amazonaws.com
+DEBUG:botocore.regions:Selecting from endpoint provider's list of auth schemes: "sigv4". User selected auth scheme is: "None"
+DEBUG:botocore.regions:Selected auth type "v4" as "v4" with signing context params: {'region': 'eu-north-1', 'signing_name': 's3', 'disableDoubleEncoding': True}
+DEBUG:botocore.hooks:Event before-call.s3.PutObject: calling handler <function add_expect_header at 0x0000026779BE6A20>
+DEBUG:botocore.handlers:Adding expect 100 continue header to request.
+DEBUG:botocore.hooks:Event before-call.s3.PutObject: calling handler <bound method S3ExpressIdentityResolver.apply_signing_cache_key of <botocore.utils.S3ExpressIdentityResolver object at 0x000002677A82ADD0>>
+DEBUG:botocore.hooks:Event before-call.s3.PutObject: calling handler <function add_recursion_detection_header at 0x0000026779BE53A0>
+DEBUG:botocore.hooks:Event before-call.s3.PutObject: calling handler <function add_query_compatibility_header at 0x0000026779C0CFE0>
+DEBUG:botocore.hooks:Event before-call.s3.PutObject: calling handler <function inject_api_version_header_if_needed at 0x0000026779BE7F60>
+DEBUG:botocore.endpoint:Making request for OperationModel(name=PutObject) with params: {'url_path': '/scalers/AAPL.pkl', 'query_string': {}, 'method': 'PUT', 'headers': {'x-amz-sdk-checksum-algorithm': 'CRC32', 'User-Agent': 'Boto3/1.37.33 md/Botocore#1.37.33 ua/2.1 os/windows#10 md/arch#amd64 lang/python#3.11.9 md/pyimpl#CPython m/G cfg/retry-mode#legacy Botocore/1.37.33', 'Expect': '100-continue', 'Transfer-Encoding': 'chunked', 'Content-Encoding': 'aws-chunked', 'X-Amz-Trailer': 'x-amz-checksum-crc32', 'X-Amz-Decoded-Content-Length': '616'}, 'body': <botocore.httpchecksum.AwsChunkedWrapper object at 0x000002677CE5CCD0>, 'auth_path': '/stock-prediction-models-fyp/scalers/AAPL.pkl', 'url': 'https://stock-prediction-models-fyp.s3.eu-north-1.amazonaws.com/scalers/AAPL.pkl', 'context': {'client_region': 'eu-north-1', 'client_config': <botocore.config.Config object at 0x000002677A7FDE90>, 'has_streaming_input': True, 'auth_type': 'v4', 'unsigned_payload': None, 's3_redirect': {'redirected': False, 'bucket': 'stock-prediction-models-fyp', 'params': {'Bucket': 'stock-prediction-models-fyp', 'Key': 'scalers/AAPL.pkl', 'Body': <s3transfer.utils.ReadFileChunk object at 0x000002677B32A510>, 'ChecksumAlgorithm': 'CRC32'}}, 'input_params': {'Bucket': 'stock-prediction-models-fyp', 'Key': 'scalers/AAPL.pkl'}, 'signing': {'region': 'eu-north-1', 'signing_name': 's3', 'disableDoubleEncoding': True}, 'endpoint_properties': {'authSchemes': [{'disableDoubleEncoding': True, 'name': 'sigv4', 'signingName': 's3', 'signingRegion': 'eu-north-1'}]}, 'checksum': {'request_algorithm': {'algorithm': 'crc32', 'in': 'trailer', 'name': 'x-amz-checksum-crc32'}}}}
+DEBUG:botocore.hooks:Event request-created.s3.PutObject: calling handler <function signal_not_transferring at 0x000002677A782340>
+DEBUG:botocore.hooks:Event request-created.s3.PutObject: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x000002677A7FDE50>>
+DEBUG:botocore.hooks:Event choose-signer.s3.PutObject: calling handler <function set_operation_specific_signer at 0x0000026779BE62A0>
+DEBUG:botocore.hooks:Event before-sign.s3.PutObject: calling handler <function remove_arn_from_signing_path at 0x0000026779C0CA40>
+DEBUG:botocore.hooks:Event before-sign.s3.PutObject: calling handler <function _set_extra_headers_for_unsigned_request at 0x0000026779C0D120>
+DEBUG:botocore.hooks:Event before-sign.s3.PutObject: calling handler <bound method S3ExpressIdentityResolver.resolve_s3express_identity of <botocore.utils.S3ExpressIdentityResolver object at 0x000002677A82ADD0>>
+DEBUG:botocore.auth:Calculating signature using v4 auth.
+DEBUG:botocore.auth:CanonicalRequest:
+PUT
+/scalers/AAPL.pkl
+
+content-encoding:aws-chunked
+host:stock-prediction-models-fyp.s3.eu-north-1.amazonaws.com
+x-amz-content-sha256:STREAMING-UNSIGNED-PAYLOAD-TRAILER
+x-amz-date:20250429T155701Z
+x-amz-decoded-content-length:616
+x-amz-sdk-checksum-algorithm:CRC32
+x-amz-trailer:x-amz-checksum-crc32
+
+content-encoding;host;x-amz-content-sha256;x-amz-date;x-amz-decoded-content-length;x-amz-sdk-checksum-algorithm;x-amz-trailer
+STREAMING-UNSIGNED-PAYLOAD-TRAILER
+DEBUG:botocore.auth:StringToSign:
+AWS4-HMAC-SHA256
+20250429T155701Z
+20250429/eu-north-1/s3/aws4_request
+313433dd06fa53439230878ebebdc24ac161a4618a422a926f0dd003a6f293d9
+DEBUG:botocore.auth:Signature:
+92c218ff4e9e21fbf4b53ab5dcdb4fb3d234f99ed6c67a57b4ca4f03d6b949b4
+DEBUG:botocore.hooks:Event request-created.s3.PutObject: calling handler <bound method UserAgentString.rebuild_and_replace_user_agent_handler of <botocore.useragent.UserAgentString object at 0x0000026771695F90>>
+DEBUG:botocore.hooks:Event request-created.s3.PutObject: calling handler <function signal_transferring at 0x000002677A7825C0>
+DEBUG:botocore.hooks:Event request-created.s3.PutObject: calling handler <function add_retry_headers at 0x0000026779C0C860>
+DEBUG:botocore.endpoint:Sending http request: <AWSPreparedRequest stream_output=False, method=PUT, url=https://stock-prediction-models-fyp.s3.eu-north-1.amazonaws.com/scalers/AAPL.pkl, headers={'x-amz-sdk-checksum-algorithm': b'CRC32', 'User-Agent': b'Boto3/1.37.33 md/Botocore#1.37.33 ua/2.1 os/windows#10 md/arch#amd64 lang/python#3.11.9 md/pyimpl#CPython m/G cfg/retry-mode#legacy Botocore/1.37.33', 'Expect': b'100-continue', 'Transfer-Encoding': b'chunked', 'Content-Encoding': b'aws-chunked', 'X-Amz-Trailer': b'x-amz-checksum-crc32', 'X-Amz-Decoded-Content-Length': b'616', 'X-Amz-Date': b'20250429T155701Z', 'X-Amz-Content-SHA256': b'STREAMING-UNSIGNED-PAYLOAD-TRAILER', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAZQ3DRSO6NAD6HT2M/20250429/eu-north-1/s3/aws4_request, SignedHeaders=content-encoding;host;x-amz-content-sha256;x-amz-date;x-amz-decoded-content-length;x-amz-sdk-checksum-algorithm;x-amz-trailer, Signature=92c218ff4e9e21fbf4b53ab5dcdb4fb3d234f99ed6c67a57b4ca4f03d6b949b4', 'amz-sdk-invocation-id': b'4de59264-990e-484e-aed6-7736628e63f2', 'amz-sdk-request': b'attempt=1'}>
+DEBUG:botocore.httpsession:Certificate path: C:\Users\vpjd8\PycharmProjects\StockPredictorBackend\.venv\Lib\site-packages\certifi\cacert.pem
+DEBUG:botocore.awsrequest:Waiting for 100 Continue response.
+DEBUG:botocore.awsrequest:100 Continue response seen, now sending request body.
+DEBUG:urllib3.connectionpool:https://stock-prediction-models-fyp.s3.eu-north-1.amazonaws.com:443 "PUT /scalers/AAPL.pkl HTTP/1.1" 200 0
+DEBUG:botocore.hooks:Event before-parse.s3.PutObject: calling handler <function _handle_200_error at 0x0000026779C0CE00>
+DEBUG:botocore.hooks:Event before-parse.s3.PutObject: calling handler <function handle_expires_header at 0x0000026779C0CC20>
+DEBUG:botocore.parsers:Response headers: {'x-amz-id-2': 'mQSeprZkT7FDL3mAKMOeurzP+08YCSb3+lMywC9KNa4Ow9NA2hsuJIYcbAeNAvkh5ljHEU1usrXO+VWeDouzPE8OcA64w7kWl9R7TvIFllk=', 'x-amz-request-id': '8H42XAS3KWA4XEN2', 'Date': 'Tue, 29 Apr 2025 15:57:03 GMT', 'x-amz-version-id': 'zFicTtMKWBDRHbFjoVz3FBwtkegiizZm', 'x-amz-server-side-encryption': 'AES256', 'ETag': '"718987006f4b2b0eca9eeb7f362585cb"', 'x-amz-checksum-crc32': 'bx3qTw==', 'x-amz-checksum-type': 'FULL_OBJECT', 'Content-Length': '0', 'Server': 'AmazonS3'}
+DEBUG:botocore.parsers:Response body:
+b''
+DEBUG:botocore.hooks:Event needs-retry.s3.PutObject: calling handler <function _update_status_code at 0x0000026779C0CF40>
+DEBUG:botocore.hooks:Event needs-retry.s3.PutObject: calling handler <botocore.retryhandler.RetryHandler object at 0x0000026775F54910>
+DEBUG:botocore.retryhandler:No retry needed.
+DEBUG:botocore.hooks:Event needs-retry.s3.PutObject: calling handler <bound method S3RegionRedirectorv2.redirect_from_error of <botocore.utils.S3RegionRedirectorv2 object at 0x000002677A81B490>>
+DEBUG:s3transfer.utils:Releasing acquire 0/None
+DEBUG:boto3.s3.transfer:Opting out of CRT Transfer Manager. Preferred client: auto, CRT available: False, Instance Optimized: False.
+DEBUG:boto3.s3.transfer:Using default client. pid: 22588, thread: 2704
+DEBUG:s3transfer.utils:Acquiring 0
+DEBUG:s3transfer.tasks:DownloadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000002677B328BD0>}) about to wait for the following futures []
+DEBUG:s3transfer.tasks:DownloadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000002677B328BD0>}) done waiting for dependent futures
+DEBUG:s3transfer.tasks:Executing task DownloadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000002677B328BD0>}) with kwargs {'client': <botocore.client.S3 object at 0x000002677A71DFD0>, 'config': <boto3.s3.transfer.TransferConfig object at 0x000002677CE4DC50>, 'osutil': <s3transfer.utils.OSUtils object at 0x0000026777FA7790>, 'request_executor': <s3transfer.futures.BoundedExecutor object at 0x000002677A8B7250>, 'transfer_future': <s3transfer.futures.TransferFuture object at 0x000002677B328BD0>, 'io_executor': <s3transfer.futures.BoundedExecutor object at 0x000002677E0E0DD0>}
+DEBUG:botocore.hooks:Event before-parameter-build.s3.HeadObject: calling handler <function sse_md5 at 0x0000026779BE6700>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.HeadObject: calling handler <function validate_bucket_name at 0x0000026779BE6660>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.HeadObject: calling handler <function remove_bucket_from_url_paths_from_model at 0x0000026779C0C900>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.HeadObject: calling handler <bound method S3RegionRedirectorv2.annotate_request_context of <botocore.utils.S3RegionRedirectorv2 object at 0x000002677A81B490>>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.HeadObject: calling handler <bound method ClientCreator._inject_s3_input_parameters of <botocore.client.ClientCreator object at 0x000002677588B290>>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.HeadObject: calling handler <function generate_idempotent_uuid at 0x0000026779BE6480>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.HeadObject: calling handler <function _handle_request_validation_mode_member at 0x0000026779C0D080>
+DEBUG:botocore.hooks:Event before-endpoint-resolution.s3: calling handler <function customize_endpoint_resolver_builtins at 0x0000026779C0CAE0>
+DEBUG:botocore.hooks:Event before-endpoint-resolution.s3: calling handler <bound method S3RegionRedirectorv2.redirect_from_cache of <botocore.utils.S3RegionRedirectorv2 object at 0x000002677A81B490>>
+DEBUG:botocore.regions:Calling endpoint provider with parameters: {'Bucket': 'stock-prediction-models-fyp', 'Region': 'eu-north-1', 'UseFIPS': False, 'UseDualStack': False, 'ForcePathStyle': False, 'Accelerate': False, 'UseGlobalEndpoint': False, 'Key': 'models/AAPL.pkl', 'DisableMultiRegionAccessPoints': False, 'UseArnRegion': True}
+DEBUG:botocore.regions:Endpoint provider result: https://stock-prediction-models-fyp.s3.eu-north-1.amazonaws.com
+DEBUG:botocore.regions:Selecting from endpoint provider's list of auth schemes: "sigv4". User selected auth scheme is: "None"
+DEBUG:botocore.regions:Selected auth type "v4" as "v4" with signing context params: {'region': 'eu-north-1', 'signing_name': 's3', 'disableDoubleEncoding': True}
+DEBUG:botocore.hooks:Event before-call.s3.HeadObject: calling handler <function add_expect_header at 0x0000026779BE6A20>
+DEBUG:botocore.hooks:Event before-call.s3.HeadObject: calling handler <bound method S3ExpressIdentityResolver.apply_signing_cache_key of <botocore.utils.S3ExpressIdentityResolver object at 0x000002677A82ADD0>>
+DEBUG:botocore.hooks:Event before-call.s3.HeadObject: calling handler <function add_recursion_detection_header at 0x0000026779BE53A0>
+DEBUG:botocore.hooks:Event before-call.s3.HeadObject: calling handler <function add_query_compatibility_header at 0x0000026779C0CFE0>
+DEBUG:botocore.hooks:Event before-call.s3.HeadObject: calling handler <function inject_api_version_header_if_needed at 0x0000026779BE7F60>
+DEBUG:botocore.endpoint:Making request for OperationModel(name=HeadObject) with params: {'url_path': '/models/AAPL.pkl', 'query_string': {}, 'method': 'HEAD', 'headers': {'User-Agent': 'Boto3/1.37.33 md/Botocore#1.37.33 ua/2.1 os/windows#10 md/arch#amd64 lang/python#3.11.9 md/pyimpl#CPython m/G cfg/retry-mode#legacy Botocore/1.37.33'}, 'body': b'', 'auth_path': '/stock-prediction-models-fyp/models/AAPL.pkl', 'url': 'https://stock-prediction-models-fyp.s3.eu-north-1.amazonaws.com/models/AAPL.pkl', 'context': {'client_region': 'eu-north-1', 'client_config': <botocore.config.Config object at 0x000002677A7FDE90>, 'has_streaming_input': False, 'auth_type': 'v4', 'unsigned_payload': None, 's3_redirect': {'redirected': False, 'bucket': 'stock-prediction-models-fyp', 'params': {'Bucket': 'stock-prediction-models-fyp', 'Key': 'models/AAPL.pkl'}}, 'input_params': {'Bucket': 'stock-prediction-models-fyp', 'Key': 'models/AAPL.pkl'}, 'signing': {'region': 'eu-north-1', 'signing_name': 's3', 'disableDoubleEncoding': True}, 'endpoint_properties': {'authSchemes': [{'disableDoubleEncoding': True, 'name': 'sigv4', 'signingName': 's3', 'signingRegion': 'eu-north-1'}]}}}
+DEBUG:botocore.hooks:Event request-created.s3.HeadObject: calling handler <function signal_not_transferring at 0x000002677A782340>
+DEBUG:botocore.hooks:Event request-created.s3.HeadObject: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x000002677A7FDE50>>
+DEBUG:botocore.hooks:Event choose-signer.s3.HeadObject: calling handler <function set_operation_specific_signer at 0x0000026779BE62A0>
+DEBUG:botocore.hooks:Event before-sign.s3.HeadObject: calling handler <function remove_arn_from_signing_path at 0x0000026779C0CA40>
+DEBUG:botocore.hooks:Event before-sign.s3.HeadObject: calling handler <function _set_extra_headers_for_unsigned_request at 0x0000026779C0D120>
+DEBUG:botocore.hooks:Event before-sign.s3.HeadObject: calling handler <bound method S3ExpressIdentityResolver.resolve_s3express_identity of <botocore.utils.S3ExpressIdentityResolver object at 0x000002677A82ADD0>>
+DEBUG:botocore.auth:Calculating signature using v4 auth.
+DEBUG:botocore.auth:CanonicalRequest:
+HEAD
+/models/AAPL.pkl
+
+host:stock-prediction-models-fyp.s3.eu-north-1.amazonaws.com
+x-amz-content-sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+x-amz-date:20250429T155703Z
+
+host;x-amz-content-sha256;x-amz-date
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+DEBUG:botocore.auth:StringToSign:
+AWS4-HMAC-SHA256
+20250429T155703Z
+20250429/eu-north-1/s3/aws4_request
+535a966c10d43a33a958927f2b833e0479159b19e1346005092673339e68ee4c
+DEBUG:botocore.auth:Signature:
+cbc11a204183843a6d4d8260edfb15db321ecab370f43b62f21aab5f01782e38
+DEBUG:botocore.hooks:Event request-created.s3.HeadObject: calling handler <bound method UserAgentString.rebuild_and_replace_user_agent_handler of <botocore.useragent.UserAgentString object at 0x0000026771695F90>>
+DEBUG:botocore.hooks:Event request-created.s3.HeadObject: calling handler <function signal_transferring at 0x000002677A7825C0>
+DEBUG:botocore.hooks:Event request-created.s3.HeadObject: calling handler <function add_retry_headers at 0x0000026779C0C860>
+DEBUG:botocore.endpoint:Sending http request: <AWSPreparedRequest stream_output=False, method=HEAD, url=https://stock-prediction-models-fyp.s3.eu-north-1.amazonaws.com/models/AAPL.pkl, headers={'User-Agent': b'Boto3/1.37.33 md/Botocore#1.37.33 ua/2.1 os/windows#10 md/arch#amd64 lang/python#3.11.9 md/pyimpl#CPython m/G cfg/retry-mode#legacy Botocore/1.37.33', 'X-Amz-Date': b'20250429T155703Z', 'X-Amz-Content-SHA256': b'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAZQ3DRSO6NAD6HT2M/20250429/eu-north-1/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=cbc11a204183843a6d4d8260edfb15db321ecab370f43b62f21aab5f01782e38', 'amz-sdk-invocation-id': b'bd6f5e36-1f93-4145-90b8-8c9c5e115829', 'amz-sdk-request': b'attempt=1'}>
+DEBUG:botocore.httpsession:Certificate path: C:\Users\vpjd8\PycharmProjects\StockPredictorBackend\.venv\Lib\site-packages\certifi\cacert.pem
+DEBUG:urllib3.connectionpool:https://stock-prediction-models-fyp.s3.eu-north-1.amazonaws.com:443 "HEAD /models/AAPL.pkl HTTP/1.1" 200 0
+DEBUG:botocore.hooks:Event before-parse.s3.HeadObject: calling handler <function _handle_200_error at 0x0000026779C0CE00>
+DEBUG:botocore.hooks:Event before-parse.s3.HeadObject: calling handler <function handle_expires_header at 0x0000026779C0CC20>
+DEBUG:botocore.parsers:Response headers: {'x-amz-id-2': 'g3NTr/VLRHqVTIcy+jSGXhVilMSrygHQwTGApJqrXhFhTGuHtmF+KESLD9GzRjeaeWnLk0MLdJhi51lR2QQld6z2+45gQ/bfAcxgjOZuizU=', 'x-amz-request-id': 'CCHVDVYPFQHJK5XW', 'Date': 'Tue, 29 Apr 2025 15:57:05 GMT', 'Last-Modified': 'Tue, 29 Apr 2025 15:57:02 GMT', 'ETag': '"7882edc496f3f59dd7491561fca9a66d"', 'x-amz-server-side-encryption': 'AES256', 'x-amz-version-id': 'BVVJjjWpi8ZwFl_1OWQmtBOfbUXtqRjt', 'Accept-Ranges': 'bytes', 'Content-Type': 'binary/octet-stream', 'Content-Length': '2503371', 'Server': 'AmazonS3'}
+DEBUG:botocore.parsers:Response body:
+b''
+DEBUG:botocore.hooks:Event needs-retry.s3.HeadObject: calling handler <function _update_status_code at 0x0000026779C0CF40>
+DEBUG:botocore.hooks:Event needs-retry.s3.HeadObject: calling handler <botocore.retryhandler.RetryHandler object at 0x0000026775F54910>
+DEBUG:botocore.retryhandler:No retry needed.
+DEBUG:botocore.hooks:Event needs-retry.s3.HeadObject: calling handler <bound method S3RegionRedirectorv2.redirect_from_error of <botocore.utils.S3RegionRedirectorv2 object at 0x000002677A81B490>>
+DEBUG:s3transfer.futures:Submitting task ImmediatelyWriteIOGetObjectTask(transfer_id=0, {'bucket': 'stock-prediction-models-fyp', 'key': 'models/AAPL.pkl', 'extra_args': {}}) to executor <s3transfer.futures.BoundedExecutor object at 0x000002677A8B7250> for transfer request: 0.
+DEBUG:s3transfer.utils:Acquiring 0
+DEBUG:s3transfer.tasks:ImmediatelyWriteIOGetObjectTask(transfer_id=0, {'bucket': 'stock-prediction-models-fyp', 'key': 'models/AAPL.pkl', 'extra_args': {}}) about to wait for the following futures []
+DEBUG:s3transfer.utils:Releasing acquire 0/None
+DEBUG:s3transfer.tasks:ImmediatelyWriteIOGetObjectTask(transfer_id=0, {'bucket': 'stock-prediction-models-fyp', 'key': 'models/AAPL.pkl', 'extra_args': {}}) done waiting for dependent futures
+DEBUG:s3transfer.tasks:Executing task ImmediatelyWriteIOGetObjectTask(transfer_id=0, {'bucket': 'stock-prediction-models-fyp', 'key': 'models/AAPL.pkl', 'extra_args': {}}) with kwargs {'client': <botocore.client.S3 object at 0x000002677A71DFD0>, 'bucket': 'stock-prediction-models-fyp', 'key': 'models/AAPL.pkl', 'fileobj': <s3transfer.utils.DeferredOpenFile object at 0x000002677E2BD810>, 'extra_args': {}, 'callbacks': [], 'max_attempts': 5, 'download_output_manager': <s3transfer.download.DownloadFilenameOutputManager object at 0x000002677E233450>, 'io_chunksize': 262144, 'bandwidth_limiter': None}
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <function sse_md5 at 0x0000026779BE6700>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <function validate_bucket_name at 0x0000026779BE6660>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <function remove_bucket_from_url_paths_from_model at 0x0000026779C0C900>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <bound method S3RegionRedirectorv2.annotate_request_context of <botocore.utils.S3RegionRedirectorv2 object at 0x000002677A81B490>>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <bound method ClientCreator._inject_s3_input_parameters of <botocore.client.ClientCreator object at 0x000002677588B290>>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <function generate_idempotent_uuid at 0x0000026779BE6480>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <function _handle_request_validation_mode_member at 0x0000026779C0D080>
+DEBUG:botocore.hooks:Event before-endpoint-resolution.s3: calling handler <function customize_endpoint_resolver_builtins at 0x0000026779C0CAE0>
+DEBUG:botocore.hooks:Event before-endpoint-resolution.s3: calling handler <bound method S3RegionRedirectorv2.redirect_from_cache of <botocore.utils.S3RegionRedirectorv2 object at 0x000002677A81B490>>
+DEBUG:botocore.regions:Calling endpoint provider with parameters: {'Bucket': 'stock-prediction-models-fyp', 'Region': 'eu-north-1', 'UseFIPS': False, 'UseDualStack': False, 'ForcePathStyle': False, 'Accelerate': False, 'UseGlobalEndpoint': False, 'Key': 'models/AAPL.pkl', 'DisableMultiRegionAccessPoints': False, 'UseArnRegion': True}
+DEBUG:botocore.regions:Endpoint provider result: https://stock-prediction-models-fyp.s3.eu-north-1.amazonaws.com
+DEBUG:botocore.regions:Selecting from endpoint provider's list of auth schemes: "sigv4". User selected auth scheme is: "None"
+DEBUG:botocore.regions:Selected auth type "v4" as "v4" with signing context params: {'region': 'eu-north-1', 'signing_name': 's3', 'disableDoubleEncoding': True}
+DEBUG:botocore.hooks:Event before-call.s3.GetObject: calling handler <function add_expect_header at 0x0000026779BE6A20>
+DEBUG:botocore.hooks:Event before-call.s3.GetObject: calling handler <bound method S3ExpressIdentityResolver.apply_signing_cache_key of <botocore.utils.S3ExpressIdentityResolver object at 0x000002677A82ADD0>>
+DEBUG:botocore.hooks:Event before-call.s3.GetObject: calling handler <function add_recursion_detection_header at 0x0000026779BE53A0>
+DEBUG:botocore.hooks:Event before-call.s3.GetObject: calling handler <function add_query_compatibility_header at 0x0000026779C0CFE0>
+DEBUG:botocore.hooks:Event before-call.s3.GetObject: calling handler <function inject_api_version_header_if_needed at 0x0000026779BE7F60>
+DEBUG:botocore.endpoint:Making request for OperationModel(name=GetObject) with params: {'url_path': '/models/AAPL.pkl', 'query_string': {}, 'method': 'GET', 'headers': {'x-amz-checksum-mode': 'ENABLED', 'User-Agent': 'Boto3/1.37.33 md/Botocore#1.37.33 ua/2.1 os/windows#10 md/arch#amd64 lang/python#3.11.9 md/pyimpl#CPython m/G cfg/retry-mode#legacy Botocore/1.37.33'}, 'body': b'', 'auth_path': '/stock-prediction-models-fyp/models/AAPL.pkl', 'url': 'https://stock-prediction-models-fyp.s3.eu-north-1.amazonaws.com/models/AAPL.pkl', 'context': {'client_region': 'eu-north-1', 'client_config': <botocore.config.Config object at 0x000002677A7FDE90>, 'has_streaming_input': False, 'auth_type': 'v4', 'unsigned_payload': None, 's3_redirect': {'redirected': False, 'bucket': 'stock-prediction-models-fyp', 'params': {'Bucket': 'stock-prediction-models-fyp', 'Key': 'models/AAPL.pkl', 'ChecksumMode': 'ENABLED'}}, 'input_params': {'Bucket': 'stock-prediction-models-fyp', 'Key': 'models/AAPL.pkl'}, 'signing': {'region': 'eu-north-1', 'signing_name': 's3', 'disableDoubleEncoding': True}, 'endpoint_properties': {'authSchemes': [{'disableDoubleEncoding': True, 'name': 'sigv4', 'signingName': 's3', 'signingRegion': 'eu-north-1'}]}, 'checksum': {'response_algorithms': ['crc32', 'sha1', 'sha256']}}}
+DEBUG:botocore.hooks:Event request-created.s3.GetObject: calling handler <function signal_not_transferring at 0x000002677A782340>
+DEBUG:botocore.hooks:Event request-created.s3.GetObject: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x000002677A7FDE50>>
+DEBUG:botocore.hooks:Event choose-signer.s3.GetObject: calling handler <function set_operation_specific_signer at 0x0000026779BE62A0>
+DEBUG:botocore.hooks:Event before-sign.s3.GetObject: calling handler <function remove_arn_from_signing_path at 0x0000026779C0CA40>
+DEBUG:botocore.hooks:Event before-sign.s3.GetObject: calling handler <function _set_extra_headers_for_unsigned_request at 0x0000026779C0D120>
+DEBUG:botocore.hooks:Event before-sign.s3.GetObject: calling handler <bound method S3ExpressIdentityResolver.resolve_s3express_identity of <botocore.utils.S3ExpressIdentityResolver object at 0x000002677A82ADD0>>
+DEBUG:botocore.auth:Calculating signature using v4 auth.
+DEBUG:botocore.auth:CanonicalRequest:
+GET
+/models/AAPL.pkl
+
+host:stock-prediction-models-fyp.s3.eu-north-1.amazonaws.com
+x-amz-checksum-mode:ENABLED
+x-amz-content-sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+x-amz-date:20250429T155703Z
+
+host;x-amz-checksum-mode;x-amz-content-sha256;x-amz-date
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+DEBUG:botocore.auth:StringToSign:
+AWS4-HMAC-SHA256
+20250429T155703Z
+20250429/eu-north-1/s3/aws4_request
+3fbf1411f5ea0b5d575759b2f83d9f67aca9a6f6d1704f728f279ceb2dc244b2
+DEBUG:botocore.auth:Signature:
+3f80d11a59ff186dcaaa833ee43dcfcc438a0010190d3a6bc1dfc69158de9e65
+DEBUG:botocore.hooks:Event request-created.s3.GetObject: calling handler <bound method UserAgentString.rebuild_and_replace_user_agent_handler of <botocore.useragent.UserAgentString object at 0x0000026771695F90>>
+DEBUG:botocore.hooks:Event request-created.s3.GetObject: calling handler <function signal_transferring at 0x000002677A7825C0>
+DEBUG:botocore.hooks:Event request-created.s3.GetObject: calling handler <function add_retry_headers at 0x0000026779C0C860>
+DEBUG:botocore.endpoint:Sending http request: <AWSPreparedRequest stream_output=True, method=GET, url=https://stock-prediction-models-fyp.s3.eu-north-1.amazonaws.com/models/AAPL.pkl, headers={'x-amz-checksum-mode': b'ENABLED', 'User-Agent': b'Boto3/1.37.33 md/Botocore#1.37.33 ua/2.1 os/windows#10 md/arch#amd64 lang/python#3.11.9 md/pyimpl#CPython m/G cfg/retry-mode#legacy Botocore/1.37.33', 'X-Amz-Date': b'20250429T155703Z', 'X-Amz-Content-SHA256': b'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAZQ3DRSO6NAD6HT2M/20250429/eu-north-1/s3/aws4_request, SignedHeaders=host;x-amz-checksum-mode;x-amz-content-sha256;x-amz-date, Signature=3f80d11a59ff186dcaaa833ee43dcfcc438a0010190d3a6bc1dfc69158de9e65', 'amz-sdk-invocation-id': b'cc53a1e8-ded9-4a93-b014-1fff33153338', 'amz-sdk-request': b'attempt=1'}>
+DEBUG:botocore.httpsession:Certificate path: C:\Users\vpjd8\PycharmProjects\StockPredictorBackend\.venv\Lib\site-packages\certifi\cacert.pem
+DEBUG:urllib3.connectionpool:https://stock-prediction-models-fyp.s3.eu-north-1.amazonaws.com:443 "GET /models/AAPL.pkl HTTP/1.1" 200 2503371
+DEBUG:botocore.hooks:Event before-parse.s3.GetObject: calling handler <function _handle_200_error at 0x0000026779C0CE00>
+DEBUG:botocore.hooks:Event before-parse.s3.GetObject: calling handler <function handle_expires_header at 0x0000026779C0CC20>
+DEBUG:botocore.parsers:Response headers: {'x-amz-id-2': 'SAQKGMn3WkGikxXAZnuSEMAhYtncACaxKxxsSyZKjx2fk0AVPgqcwO+urEU6ahC2AwS6KEf8JrkOh+2KzaO6IpWp2Z3U7sLlpBbhDdzdHYg=', 'x-amz-request-id': 'CCHM3G5PG872J3EN', 'Date': 'Tue, 29 Apr 2025 15:57:05 GMT', 'Last-Modified': 'Tue, 29 Apr 2025 15:57:02 GMT', 'ETag': '"7882edc496f3f59dd7491561fca9a66d"', 'x-amz-checksum-crc32': 'sgPGcg==', 'x-amz-checksum-type': 'FULL_OBJECT', 'x-amz-server-side-encryption': 'AES256', 'x-amz-version-id': 'BVVJjjWpi8ZwFl_1OWQmtBOfbUXtqRjt', 'Accept-Ranges': 'bytes', 'Content-Type': 'binary/octet-stream', 'Content-Length': '2503371', 'Server': 'AmazonS3'}
+DEBUG:botocore.parsers:Response body:
+<botocore.httpchecksum.StreamingChecksumBody object at 0x000002677E2D6860>
+DEBUG:botocore.hooks:Event needs-retry.s3.GetObject: calling handler <function _update_status_code at 0x0000026779C0CF40>
+DEBUG:botocore.hooks:Event needs-retry.s3.GetObject: calling handler <botocore.retryhandler.RetryHandler object at 0x0000026775F54910>
+DEBUG:botocore.retryhandler:No retry needed.
+DEBUG:botocore.hooks:Event needs-retry.s3.GetObject: calling handler <bound method S3RegionRedirectorv2.redirect_from_error of <botocore.utils.S3RegionRedirectorv2 object at 0x000002677A81B490>>
+DEBUG:s3transfer.tasks:IOWriteTask(transfer_id=0, {'offset': 0}) about to wait for the following futures []
+DEBUG:s3transfer.tasks:IOWriteTask(transfer_id=0, {'offset': 0}) done waiting for dependent futures
+DEBUG:s3transfer.tasks:Executing task IOWriteTask(transfer_id=0, {'offset': 0}) with kwargs {'fileobj': <s3transfer.utils.DeferredOpenFile object at 0x000002677E2BD810>, 'offset': 0}
+DEBUG:s3transfer.tasks:IOWriteTask(transfer_id=0, {'offset': 262144}) about to wait for the following futures []
+DEBUG:s3transfer.tasks:IOWriteTask(transfer_id=0, {'offset': 262144}) done waiting for dependent futures
+DEBUG:s3transfer.tasks:Executing task IOWriteTask(transfer_id=0, {'offset': 262144}) with kwargs {'fileobj': <s3transfer.utils.DeferredOpenFile object at 0x000002677E2BD810>, 'offset': 262144}
+DEBUG:s3transfer.tasks:IOWriteTask(transfer_id=0, {'offset': 524288}) about to wait for the following futures []
+DEBUG:s3transfer.tasks:IOWriteTask(transfer_id=0, {'offset': 524288}) done waiting for dependent futures
+DEBUG:s3transfer.tasks:Executing task IOWriteTask(transfer_id=0, {'offset': 524288}) with kwargs {'fileobj': <s3transfer.utils.DeferredOpenFile object at 0x000002677E2BD810>, 'offset': 524288}
+DEBUG:s3transfer.tasks:IOWriteTask(transfer_id=0, {'offset': 786432}) about to wait for the following futures []
+DEBUG:s3transfer.tasks:IOWriteTask(transfer_id=0, {'offset': 786432}) done waiting for dependent futures
+DEBUG:s3transfer.tasks:Executing task IOWriteTask(transfer_id=0, {'offset': 786432}) with kwargs {'fileobj': <s3transfer.utils.DeferredOpenFile object at 0x000002677E2BD810>, 'offset': 786432}
+DEBUG:s3transfer.tasks:IOWriteTask(transfer_id=0, {'offset': 1048576}) about to wait for the following futures []
+DEBUG:s3transfer.tasks:IOWriteTask(transfer_id=0, {'offset': 1048576}) done waiting for dependent futures
+DEBUG:s3transfer.tasks:Executing task IOWriteTask(transfer_id=0, {'offset': 1048576}) with kwargs {'fileobj': <s3transfer.utils.DeferredOpenFile object at 0x000002677E2BD810>, 'offset': 1048576}
+DEBUG:s3transfer.tasks:IOWriteTask(transfer_id=0, {'offset': 1310720}) about to wait for the following futures []
+DEBUG:s3transfer.tasks:IOWriteTask(transfer_id=0, {'offset': 1310720}) done waiting for dependent futures
+DEBUG:s3transfer.tasks:Executing task IOWriteTask(transfer_id=0, {'offset': 1310720}) with kwargs {'fileobj': <s3transfer.utils.DeferredOpenFile object at 0x000002677E2BD810>, 'offset': 1310720}
+DEBUG:s3transfer.tasks:IOWriteTask(transfer_id=0, {'offset': 1572864}) about to wait for the following futures []
+DEBUG:s3transfer.tasks:IOWriteTask(transfer_id=0, {'offset': 1572864}) done waiting for dependent futures
+DEBUG:s3transfer.tasks:Executing task IOWriteTask(transfer_id=0, {'offset': 1572864}) with kwargs {'fileobj': <s3transfer.utils.DeferredOpenFile object at 0x000002677E2BD810>, 'offset': 1572864}
+DEBUG:s3transfer.tasks:IOWriteTask(transfer_id=0, {'offset': 1835008}) about to wait for the following futures []
+DEBUG:s3transfer.tasks:IOWriteTask(transfer_id=0, {'offset': 1835008}) done waiting for dependent futures
+DEBUG:s3transfer.tasks:Executing task IOWriteTask(transfer_id=0, {'offset': 1835008}) with kwargs {'fileobj': <s3transfer.utils.DeferredOpenFile object at 0x000002677E2BD810>, 'offset': 1835008}
+DEBUG:s3transfer.tasks:IOWriteTask(transfer_id=0, {'offset': 2097152}) about to wait for the following futures []
+DEBUG:s3transfer.tasks:IOWriteTask(transfer_id=0, {'offset': 2097152}) done waiting for dependent futures
+DEBUG:s3transfer.tasks:Executing task IOWriteTask(transfer_id=0, {'offset': 2097152}) with kwargs {'fileobj': <s3transfer.utils.DeferredOpenFile object at 0x000002677E2BD810>, 'offset': 2097152}
+DEBUG:s3transfer.tasks:IOWriteTask(transfer_id=0, {'offset': 2359296}) about to wait for the following futures []
+DEBUG:s3transfer.tasks:IOWriteTask(transfer_id=0, {'offset': 2359296}) done waiting for dependent futures
+DEBUG:s3transfer.tasks:Executing task IOWriteTask(transfer_id=0, {'offset': 2359296}) with kwargs {'fileobj': <s3transfer.utils.DeferredOpenFile object at 0x000002677E2BD810>, 'offset': 2359296}
+DEBUG:s3transfer.tasks:IORenameFileTask(transfer_id=0, {'final_filename': 'C:\\Users\\vpjd8\\AppData\\Local\\Temp\\tmp3ew2t63a'}) about to wait for the following futures []
+DEBUG:s3transfer.tasks:IORenameFileTask(transfer_id=0, {'final_filename': 'C:\\Users\\vpjd8\\AppData\\Local\\Temp\\tmp3ew2t63a'}) done waiting for dependent futures
+DEBUG:s3transfer.tasks:Executing task IORenameFileTask(transfer_id=0, {'final_filename': 'C:\\Users\\vpjd8\\AppData\\Local\\Temp\\tmp3ew2t63a'}) with kwargs {'fileobj': <s3transfer.utils.DeferredOpenFile object at 0x000002677E2BD810>, 'final_filename': 'C:\\Users\\vpjd8\\AppData\\Local\\Temp\\tmp3ew2t63a', 'osutil': <s3transfer.utils.OSUtils object at 0x0000026777FA7790>}
+DEBUG:s3transfer.utils:Releasing acquire 0/None
+DEBUG:boto3.s3.transfer:Opting out of CRT Transfer Manager. Preferred client: auto, CRT available: False, Instance Optimized: False.
+DEBUG:boto3.s3.transfer:Using default client. pid: 22588, thread: 2704
+DEBUG:s3transfer.utils:Acquiring 0
+DEBUG:s3transfer.tasks:DownloadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000002677B7BE9D0>}) about to wait for the following futures []
+DEBUG:s3transfer.tasks:DownloadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000002677B7BE9D0>}) done waiting for dependent futures
+DEBUG:s3transfer.tasks:Executing task DownloadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x000002677B7BE9D0>}) with kwargs {'client': <botocore.client.S3 object at 0x000002677A71DFD0>, 'config': <boto3.s3.transfer.TransferConfig object at 0x000002677E062690>, 'osutil': <s3transfer.utils.OSUtils object at 0x000002677E248490>, 'request_executor': <s3transfer.futures.BoundedExecutor object at 0x000002677A8B7250>, 'transfer_future': <s3transfer.futures.TransferFuture object at 0x000002677B7BE9D0>, 'io_executor': <s3transfer.futures.BoundedExecutor object at 0x000002677B7ABD90>}
+DEBUG:botocore.hooks:Event before-parameter-build.s3.HeadObject: calling handler <function sse_md5 at 0x0000026779BE6700>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.HeadObject: calling handler <function validate_bucket_name at 0x0000026779BE6660>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.HeadObject: calling handler <function remove_bucket_from_url_paths_from_model at 0x0000026779C0C900>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.HeadObject: calling handler <bound method S3RegionRedirectorv2.annotate_request_context of <botocore.utils.S3RegionRedirectorv2 object at 0x000002677A81B490>>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.HeadObject: calling handler <bound method ClientCreator._inject_s3_input_parameters of <botocore.client.ClientCreator object at 0x000002677588B290>>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.HeadObject: calling handler <function generate_idempotent_uuid at 0x0000026779BE6480>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.HeadObject: calling handler <function _handle_request_validation_mode_member at 0x0000026779C0D080>
+DEBUG:botocore.hooks:Event before-endpoint-resolution.s3: calling handler <function customize_endpoint_resolver_builtins at 0x0000026779C0CAE0>
+DEBUG:botocore.hooks:Event before-endpoint-resolution.s3: calling handler <bound method S3RegionRedirectorv2.redirect_from_cache of <botocore.utils.S3RegionRedirectorv2 object at 0x000002677A81B490>>
+DEBUG:botocore.regions:Calling endpoint provider with parameters: {'Bucket': 'stock-prediction-models-fyp', 'Region': 'eu-north-1', 'UseFIPS': False, 'UseDualStack': False, 'ForcePathStyle': False, 'Accelerate': False, 'UseGlobalEndpoint': False, 'Key': 'scalers/AAPL.pkl', 'DisableMultiRegionAccessPoints': False, 'UseArnRegion': True}
+DEBUG:botocore.regions:Endpoint provider result: https://stock-prediction-models-fyp.s3.eu-north-1.amazonaws.com
+DEBUG:botocore.regions:Selecting from endpoint provider's list of auth schemes: "sigv4". User selected auth scheme is: "None"
+DEBUG:botocore.regions:Selected auth type "v4" as "v4" with signing context params: {'region': 'eu-north-1', 'signing_name': 's3', 'disableDoubleEncoding': True}
+DEBUG:botocore.hooks:Event before-call.s3.HeadObject: calling handler <function add_expect_header at 0x0000026779BE6A20>
+DEBUG:botocore.hooks:Event before-call.s3.HeadObject: calling handler <bound method S3ExpressIdentityResolver.apply_signing_cache_key of <botocore.utils.S3ExpressIdentityResolver object at 0x000002677A82ADD0>>
+DEBUG:botocore.hooks:Event before-call.s3.HeadObject: calling handler <function add_recursion_detection_header at 0x0000026779BE53A0>
+DEBUG:botocore.hooks:Event before-call.s3.HeadObject: calling handler <function add_query_compatibility_header at 0x0000026779C0CFE0>
+DEBUG:botocore.hooks:Event before-call.s3.HeadObject: calling handler <function inject_api_version_header_if_needed at 0x0000026779BE7F60>
+DEBUG:botocore.endpoint:Making request for OperationModel(name=HeadObject) with params: {'url_path': '/scalers/AAPL.pkl', 'query_string': {}, 'method': 'HEAD', 'headers': {'User-Agent': 'Boto3/1.37.33 md/Botocore#1.37.33 ua/2.1 os/windows#10 md/arch#amd64 lang/python#3.11.9 md/pyimpl#CPython m/G cfg/retry-mode#legacy Botocore/1.37.33'}, 'body': b'', 'auth_path': '/stock-prediction-models-fyp/scalers/AAPL.pkl', 'url': 'https://stock-prediction-models-fyp.s3.eu-north-1.amazonaws.com/scalers/AAPL.pkl', 'context': {'client_region': 'eu-north-1', 'client_config': <botocore.config.Config object at 0x000002677A7FDE90>, 'has_streaming_input': False, 'auth_type': 'v4', 'unsigned_payload': None, 's3_redirect': {'redirected': False, 'bucket': 'stock-prediction-models-fyp', 'params': {'Bucket': 'stock-prediction-models-fyp', 'Key': 'scalers/AAPL.pkl'}}, 'input_params': {'Bucket': 'stock-prediction-models-fyp', 'Key': 'scalers/AAPL.pkl'}, 'signing': {'region': 'eu-north-1', 'signing_name': 's3', 'disableDoubleEncoding': True}, 'endpoint_properties': {'authSchemes': [{'disableDoubleEncoding': True, 'name': 'sigv4', 'signingName': 's3', 'signingRegion': 'eu-north-1'}]}}}
+DEBUG:botocore.hooks:Event request-created.s3.HeadObject: calling handler <function signal_not_transferring at 0x000002677A782340>
+DEBUG:botocore.hooks:Event request-created.s3.HeadObject: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x000002677A7FDE50>>
+DEBUG:botocore.hooks:Event choose-signer.s3.HeadObject: calling handler <function set_operation_specific_signer at 0x0000026779BE62A0>
+DEBUG:botocore.hooks:Event before-sign.s3.HeadObject: calling handler <function remove_arn_from_signing_path at 0x0000026779C0CA40>
+DEBUG:botocore.hooks:Event before-sign.s3.HeadObject: calling handler <function _set_extra_headers_for_unsigned_request at 0x0000026779C0D120>
+DEBUG:botocore.hooks:Event before-sign.s3.HeadObject: calling handler <bound method S3ExpressIdentityResolver.resolve_s3express_identity of <botocore.utils.S3ExpressIdentityResolver object at 0x000002677A82ADD0>>
+DEBUG:botocore.auth:Calculating signature using v4 auth.
+DEBUG:botocore.auth:CanonicalRequest:
+HEAD
+/scalers/AAPL.pkl
+
+host:stock-prediction-models-fyp.s3.eu-north-1.amazonaws.com
+x-amz-content-sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+x-amz-date:20250429T155703Z
+
+host;x-amz-content-sha256;x-amz-date
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+DEBUG:botocore.auth:StringToSign:
+AWS4-HMAC-SHA256
+20250429T155703Z
+20250429/eu-north-1/s3/aws4_request
+4e7da001cf6b916650031bcaedaca561b3e3286304344bfde449b6f568643c85
+DEBUG:botocore.auth:Signature:
+cf3439fd1e7fb5a741785a71b65a5024cc1c40a7aea02585c6904621970bd5a4
+DEBUG:botocore.hooks:Event request-created.s3.HeadObject: calling handler <bound method UserAgentString.rebuild_and_replace_user_agent_handler of <botocore.useragent.UserAgentString object at 0x0000026771695F90>>
+DEBUG:botocore.hooks:Event request-created.s3.HeadObject: calling handler <function signal_transferring at 0x000002677A7825C0>
+DEBUG:botocore.hooks:Event request-created.s3.HeadObject: calling handler <function add_retry_headers at 0x0000026779C0C860>
+DEBUG:botocore.endpoint:Sending http request: <AWSPreparedRequest stream_output=False, method=HEAD, url=https://stock-prediction-models-fyp.s3.eu-north-1.amazonaws.com/scalers/AAPL.pkl, headers={'User-Agent': b'Boto3/1.37.33 md/Botocore#1.37.33 ua/2.1 os/windows#10 md/arch#amd64 lang/python#3.11.9 md/pyimpl#CPython m/G cfg/retry-mode#legacy Botocore/1.37.33', 'X-Amz-Date': b'20250429T155703Z', 'X-Amz-Content-SHA256': b'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAZQ3DRSO6NAD6HT2M/20250429/eu-north-1/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=cf3439fd1e7fb5a741785a71b65a5024cc1c40a7aea02585c6904621970bd5a4', 'amz-sdk-invocation-id': b'21d22626-73f6-4374-96cf-b2fd5dc12459', 'amz-sdk-request': b'attempt=1'}>
+DEBUG:botocore.httpsession:Certificate path: C:\Users\vpjd8\PycharmProjects\StockPredictorBackend\.venv\Lib\site-packages\certifi\cacert.pem
+DEBUG:urllib3.connectionpool:https://stock-prediction-models-fyp.s3.eu-north-1.amazonaws.com:443 "HEAD /scalers/AAPL.pkl HTTP/1.1" 200 0
+DEBUG:botocore.hooks:Event before-parse.s3.HeadObject: calling handler <function _handle_200_error at 0x0000026779C0CE00>
+DEBUG:botocore.hooks:Event before-parse.s3.HeadObject: calling handler <function handle_expires_header at 0x0000026779C0CC20>
+DEBUG:botocore.parsers:Response headers: {'x-amz-id-2': 'suRSjY+bp0NFsgNE1qyjMIVVw0fSCFlWKpVpU3mLWck90JEYvlCp2EHQdHLY+YwcrDnmlNIXrGVh8Mg6GylNgPHxvuQAM24GFrDiZ63rkXE=', 'x-amz-request-id': 'CCHM9JB5VYHS4FZD', 'Date': 'Tue, 29 Apr 2025 15:57:05 GMT', 'Last-Modified': 'Tue, 29 Apr 2025 15:57:03 GMT', 'ETag': '"718987006f4b2b0eca9eeb7f362585cb"', 'x-amz-server-side-encryption': 'AES256', 'x-amz-version-id': 'zFicTtMKWBDRHbFjoVz3FBwtkegiizZm', 'Accept-Ranges': 'bytes', 'Content-Type': 'binary/octet-stream', 'Content-Length': '616', 'Server': 'AmazonS3'}
+DEBUG:botocore.parsers:Response body:
+b''
+DEBUG:botocore.hooks:Event needs-retry.s3.HeadObject: calling handler <function _update_status_code at 0x0000026779C0CF40>
+DEBUG:botocore.hooks:Event needs-retry.s3.HeadObject: calling handler <botocore.retryhandler.RetryHandler object at 0x0000026775F54910>
+DEBUG:botocore.retryhandler:No retry needed.
+DEBUG:botocore.hooks:Event needs-retry.s3.HeadObject: calling handler <bound method S3RegionRedirectorv2.redirect_from_error of <botocore.utils.S3RegionRedirectorv2 object at 0x000002677A81B490>>
+DEBUG:s3transfer.futures:Submitting task ImmediatelyWriteIOGetObjectTask(transfer_id=0, {'bucket': 'stock-prediction-models-fyp', 'key': 'scalers/AAPL.pkl', 'extra_args': {}}) to executor <s3transfer.futures.BoundedExecutor object at 0x000002677A8B7250> for transfer request: 0.
+DEBUG:s3transfer.utils:Acquiring 0
+DEBUG:s3transfer.tasks:ImmediatelyWriteIOGetObjectTask(transfer_id=0, {'bucket': 'stock-prediction-models-fyp', 'key': 'scalers/AAPL.pkl', 'extra_args': {}}) about to wait for the following futures []
+DEBUG:s3transfer.utils:Releasing acquire 0/None
+DEBUG:s3transfer.tasks:ImmediatelyWriteIOGetObjectTask(transfer_id=0, {'bucket': 'stock-prediction-models-fyp', 'key': 'scalers/AAPL.pkl', 'extra_args': {}}) done waiting for dependent futures
+DEBUG:s3transfer.tasks:Executing task ImmediatelyWriteIOGetObjectTask(transfer_id=0, {'bucket': 'stock-prediction-models-fyp', 'key': 'scalers/AAPL.pkl', 'extra_args': {}}) with kwargs {'client': <botocore.client.S3 object at 0x000002677A71DFD0>, 'bucket': 'stock-prediction-models-fyp', 'key': 'scalers/AAPL.pkl', 'fileobj': <s3transfer.utils.DeferredOpenFile object at 0x000002677E370550>, 'extra_args': {}, 'callbacks': [], 'max_attempts': 5, 'download_output_manager': <s3transfer.download.DownloadFilenameOutputManager object at 0x000002677A87B050>, 'io_chunksize': 262144, 'bandwidth_limiter': None}
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <function sse_md5 at 0x0000026779BE6700>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <function validate_bucket_name at 0x0000026779BE6660>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <function remove_bucket_from_url_paths_from_model at 0x0000026779C0C900>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <bound method S3RegionRedirectorv2.annotate_request_context of <botocore.utils.S3RegionRedirectorv2 object at 0x000002677A81B490>>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <bound method ClientCreator._inject_s3_input_parameters of <botocore.client.ClientCreator object at 0x000002677588B290>>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <function generate_idempotent_uuid at 0x0000026779BE6480>
+DEBUG:botocore.hooks:Event before-parameter-build.s3.GetObject: calling handler <function _handle_request_validation_mode_member at 0x0000026779C0D080>
+DEBUG:botocore.hooks:Event before-endpoint-resolution.s3: calling handler <function customize_endpoint_resolver_builtins at 0x0000026779C0CAE0>
+DEBUG:botocore.hooks:Event before-endpoint-resolution.s3: calling handler <bound method S3RegionRedirectorv2.redirect_from_cache of <botocore.utils.S3RegionRedirectorv2 object at 0x000002677A81B490>>
+DEBUG:botocore.regions:Calling endpoint provider with parameters: {'Bucket': 'stock-prediction-models-fyp', 'Region': 'eu-north-1', 'UseFIPS': False, 'UseDualStack': False, 'ForcePathStyle': False, 'Accelerate': False, 'UseGlobalEndpoint': False, 'Key': 'scalers/AAPL.pkl', 'DisableMultiRegionAccessPoints': False, 'UseArnRegion': True}
+DEBUG:botocore.regions:Endpoint provider result: https://stock-prediction-models-fyp.s3.eu-north-1.amazonaws.com
+DEBUG:botocore.regions:Selecting from endpoint provider's list of auth schemes: "sigv4". User selected auth scheme is: "None"
+DEBUG:botocore.regions:Selected auth type "v4" as "v4" with signing context params: {'region': 'eu-north-1', 'signing_name': 's3', 'disableDoubleEncoding': True}
+DEBUG:botocore.hooks:Event before-call.s3.GetObject: calling handler <function add_expect_header at 0x0000026779BE6A20>
+DEBUG:botocore.hooks:Event before-call.s3.GetObject: calling handler <bound method S3ExpressIdentityResolver.apply_signing_cache_key of <botocore.utils.S3ExpressIdentityResolver object at 0x000002677A82ADD0>>
+DEBUG:botocore.hooks:Event before-call.s3.GetObject: calling handler <function add_recursion_detection_header at 0x0000026779BE53A0>
+DEBUG:botocore.hooks:Event before-call.s3.GetObject: calling handler <function add_query_compatibility_header at 0x0000026779C0CFE0>
+DEBUG:botocore.hooks:Event before-call.s3.GetObject: calling handler <function inject_api_version_header_if_needed at 0x0000026779BE7F60>
+DEBUG:botocore.endpoint:Making request for OperationModel(name=GetObject) with params: {'url_path': '/scalers/AAPL.pkl', 'query_string': {}, 'method': 'GET', 'headers': {'x-amz-checksum-mode': 'ENABLED', 'User-Agent': 'Boto3/1.37.33 md/Botocore#1.37.33 ua/2.1 os/windows#10 md/arch#amd64 lang/python#3.11.9 md/pyimpl#CPython m/G cfg/retry-mode#legacy Botocore/1.37.33'}, 'body': b'', 'auth_path': '/stock-prediction-models-fyp/scalers/AAPL.pkl', 'url': 'https://stock-prediction-models-fyp.s3.eu-north-1.amazonaws.com/scalers/AAPL.pkl', 'context': {'client_region': 'eu-north-1', 'client_config': <botocore.config.Config object at 0x000002677A7FDE90>, 'has_streaming_input': False, 'auth_type': 'v4', 'unsigned_payload': None, 's3_redirect': {'redirected': False, 'bucket': 'stock-prediction-models-fyp', 'params': {'Bucket': 'stock-prediction-models-fyp', 'Key': 'scalers/AAPL.pkl', 'ChecksumMode': 'ENABLED'}}, 'input_params': {'Bucket': 'stock-prediction-models-fyp', 'Key': 'scalers/AAPL.pkl'}, 'signing': {'region': 'eu-north-1', 'signing_name': 's3', 'disableDoubleEncoding': True}, 'endpoint_properties': {'authSchemes': [{'disableDoubleEncoding': True, 'name': 'sigv4', 'signingName': 's3', 'signingRegion': 'eu-north-1'}]}, 'checksum': {'response_algorithms': ['crc32', 'sha1', 'sha256']}}}
+DEBUG:botocore.hooks:Event request-created.s3.GetObject: calling handler <function signal_not_transferring at 0x000002677A782340>
+DEBUG:botocore.hooks:Event request-created.s3.GetObject: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x000002677A7FDE50>>
+DEBUG:botocore.hooks:Event choose-signer.s3.GetObject: calling handler <function set_operation_specific_signer at 0x0000026779BE62A0>
+DEBUG:botocore.hooks:Event before-sign.s3.GetObject: calling handler <function remove_arn_from_signing_path at 0x0000026779C0CA40>
+DEBUG:botocore.hooks:Event before-sign.s3.GetObject: calling handler <function _set_extra_headers_for_unsigned_request at 0x0000026779C0D120>
+DEBUG:botocore.hooks:Event before-sign.s3.GetObject: calling handler <bound method S3ExpressIdentityResolver.resolve_s3express_identity of <botocore.utils.S3ExpressIdentityResolver object at 0x000002677A82ADD0>>
+DEBUG:botocore.auth:Calculating signature using v4 auth.
+DEBUG:botocore.auth:CanonicalRequest:
+GET
+/scalers/AAPL.pkl
+
+host:stock-prediction-models-fyp.s3.eu-north-1.amazonaws.com
+x-amz-checksum-mode:ENABLED
+x-amz-content-sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+x-amz-date:20250429T155703Z
+
+host;x-amz-checksum-mode;x-amz-content-sha256;x-amz-date
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+DEBUG:botocore.auth:StringToSign:
+AWS4-HMAC-SHA256
+20250429T155703Z
+20250429/eu-north-1/s3/aws4_request
+5ec719c603a424d778c01982dbfff0d84aa904fca524ae80e7bc0da221206588
+DEBUG:botocore.auth:Signature:
+2e8f0be2582e2f551c9b8404cf8a29cb3a33ca3187c1ed67ee9c95ca3f235804
+DEBUG:botocore.hooks:Event request-created.s3.GetObject: calling handler <bound method UserAgentString.rebuild_and_replace_user_agent_handler of <botocore.useragent.UserAgentString object at 0x0000026771695F90>>
+DEBUG:botocore.hooks:Event request-created.s3.GetObject: calling handler <function signal_transferring at 0x000002677A7825C0>
+DEBUG:botocore.hooks:Event request-created.s3.GetObject: calling handler <function add_retry_headers at 0x0000026779C0C860>
+DEBUG:botocore.endpoint:Sending http request: <AWSPreparedRequest stream_output=True, method=GET, url=https://stock-prediction-models-fyp.s3.eu-north-1.amazonaws.com/scalers/AAPL.pkl, headers={'x-amz-checksum-mode': b'ENABLED', 'User-Agent': b'Boto3/1.37.33 md/Botocore#1.37.33 ua/2.1 os/windows#10 md/arch#amd64 lang/python#3.11.9 md/pyimpl#CPython m/G cfg/retry-mode#legacy Botocore/1.37.33', 'X-Amz-Date': b'20250429T155703Z', 'X-Amz-Content-SHA256': b'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAZQ3DRSO6NAD6HT2M/20250429/eu-north-1/s3/aws4_request, SignedHeaders=host;x-amz-checksum-mode;x-amz-content-sha256;x-amz-date, Signature=2e8f0be2582e2f551c9b8404cf8a29cb3a33ca3187c1ed67ee9c95ca3f235804', 'amz-sdk-invocation-id': b'22f06d9f-6de3-4adb-90a0-6233070bf3ee', 'amz-sdk-request': b'attempt=1'}>
+DEBUG:botocore.httpsession:Certificate path: C:\Users\vpjd8\PycharmProjects\StockPredictorBackend\.venv\Lib\site-packages\certifi\cacert.pem
+DEBUG:urllib3.connectionpool:https://stock-prediction-models-fyp.s3.eu-north-1.amazonaws.com:443 "GET /scalers/AAPL.pkl HTTP/1.1" 200 616
+DEBUG:botocore.hooks:Event before-parse.s3.GetObject: calling handler <function _handle_200_error at 0x0000026779C0CE00>
+DEBUG:botocore.hooks:Event before-parse.s3.GetObject: calling handler <function handle_expires_header at 0x0000026779C0CC20>
+DEBUG:botocore.parsers:Response headers: {'x-amz-id-2': '7UZiNo+uDNzfZWL4Cg6zZQHO33MA0bF5jZB7T+fJWdXkXxcNZ6OXYGNf1OWPeaIcllMSChSzm7tqCT26NX+tETBD3/lWgZ7rEfK9Bf3ztc4=', 'x-amz-request-id': 'CCHP3M8E2CASHXQM', 'Date': 'Tue, 29 Apr 2025 15:57:05 GMT', 'Last-Modified': 'Tue, 29 Apr 2025 15:57:03 GMT', 'ETag': '"718987006f4b2b0eca9eeb7f362585cb"', 'x-amz-checksum-crc32': 'bx3qTw==', 'x-amz-checksum-type': 'FULL_OBJECT', 'x-amz-server-side-encryption': 'AES256', 'x-amz-version-id': 'zFicTtMKWBDRHbFjoVz3FBwtkegiizZm', 'Accept-Ranges': 'bytes', 'Content-Type': 'binary/octet-stream', 'Content-Length': '616', 'Server': 'AmazonS3'}
+DEBUG:botocore.parsers:Response body:
+<botocore.httpchecksum.StreamingChecksumBody object at 0x000002677B7ADAE0>
+DEBUG:botocore.hooks:Event needs-retry.s3.GetObject: calling handler <function _update_status_code at 0x0000026779C0CF40>
+DEBUG:botocore.hooks:Event needs-retry.s3.GetObject: calling handler <botocore.retryhandler.RetryHandler object at 0x0000026775F54910>
+DEBUG:botocore.retryhandler:No retry needed.
+DEBUG:botocore.hooks:Event needs-retry.s3.GetObject: calling handler <bound method S3RegionRedirectorv2.redirect_from_error of <botocore.utils.S3RegionRedirectorv2 object at 0x000002677A81B490>>
+DEBUG:s3transfer.tasks:IOWriteTask(transfer_id=0, {'offset': 0}) about to wait for the following futures []
+DEBUG:s3transfer.tasks:IOWriteTask(transfer_id=0, {'offset': 0}) done waiting for dependent futures
+DEBUG:s3transfer.tasks:Executing task IOWriteTask(transfer_id=0, {'offset': 0}) with kwargs {'fileobj': <s3transfer.utils.DeferredOpenFile object at 0x000002677E370550>, 'offset': 0}
+DEBUG:s3transfer.tasks:IORenameFileTask(transfer_id=0, {'final_filename': 'C:\\Users\\vpjd8\\AppData\\Local\\Temp\\tmpttld1m6_'}) about to wait for the following futures []
+DEBUG:s3transfer.tasks:IORenameFileTask(transfer_id=0, {'final_filename': 'C:\\Users\\vpjd8\\AppData\\Local\\Temp\\tmpttld1m6_'}) done waiting for dependent futures
+DEBUG:s3transfer.tasks:Executing task IORenameFileTask(transfer_id=0, {'final_filename': 'C:\\Users\\vpjd8\\AppData\\Local\\Temp\\tmpttld1m6_'}) with kwargs {'fileobj': <s3transfer.utils.DeferredOpenFile object at 0x000002677E370550>, 'final_filename': 'C:\\Users\\vpjd8\\AppData\\Local\\Temp\\tmpttld1m6_', 'osutil': <s3transfer.utils.OSUtils object at 0x000002677E248490>}
+DEBUG:s3transfer.utils:Releasing acquire 0/None
+INFO:werkzeug:127.0.0.1 - - [29/Apr/2025 16:57:05] "POST /api/stock HTTP/1.1" 200 -
